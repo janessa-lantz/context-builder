@@ -3,12 +3,13 @@
 Every piece of content that exists, one row per asset. This is the current-state registry:
 what content the company has, and which messaging components each piece carries.
 
-It answers "what do we have, and what's in it?" Pair it with the ingestion log, which answers
-"what came in, and when?" The index is the current state. The log is the event history.
+It answers "what do we have, and what's in it?" The builder populates it by running
+[jobs](../jobs/jobs.md) through the [parser](../builder/parser.md). The index is the result,
+not something you maintain by hand.
 
 The `components` column references the component IDs in
-[`../messaging/messaging-components.md`](../messaging/messaging-components.md). That link is
-the point of the index: it tells you, for any asset, exactly which messaging it is carrying.
+[`messaging/messaging-components.md`](messaging/messaging-components.md). That link is the
+point of the index: it tells you, for any asset, exactly which messaging it is carrying.
 
 ---
 
