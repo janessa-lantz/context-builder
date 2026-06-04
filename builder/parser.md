@@ -19,7 +19,7 @@ URL or a file).
 
 1. Take the next `pending` job.
 2. Fetch the source. A website: discover and pull the key pages (below). A transcript or document: read it directly, and save it to [raw-assets](raw-assets/) (hosted URLs stay where they live).
-3. Classify the source into a `ledger` and `surface` (see the content index for the values).
+3. Classify the source by `surface` (see the content index for the values). Whether it is a marketing surface decides if it gets indexed.
 4. Extract against the [component definitions](../context/README.md). For each component, capture how it appears in this source, or record that it is absent. Put each section of content under exactly one component, and note secondary signals rather than double-filing.
 5. Write the [parsed summary](parsed-summaries/). For marketing surfaces, aggregate it into a content index row; for key pages, fold it into the canon.
 6. Mark the job `done` and record the result.

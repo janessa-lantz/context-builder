@@ -13,7 +13,7 @@ Each summary is a markdown file named by the asset id, with frontmatter and a bo
 
 - `id`: matches the filename and the content-index row
 - `source`: the locator (a URL for hosted, a file path for captured)
-- `ledger`, `surface`: classification (see the content index)
+- `surface`: where the asset lives (see the content index)
 - `ingested`: date the asset came in
 - `parsed`: date it was parsed
 - `components_version`: which version of the components was used
@@ -30,7 +30,6 @@ Each summary is a markdown file named by the asset id, with frontmatter and a bo
 ---
 id: homepage
 source: https://example.com
-ledger: company
 surface: key_page
 ingested: 2026-06-04
 parsed: 2026-06-04
