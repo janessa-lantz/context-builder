@@ -1,12 +1,18 @@
 # Issues
 
-Messaging issues the builder surfaces by comparing parsed summaries against the canon. Each
-issue points to a place the messaging needs attention, for you to act on.
+Messaging issues produced by the [analyzer](../../jobs/analyzer.md). Each issue points to a
+place the messaging needs attention, for you to act on. Every issue has a **kind**, and the
+set of kinds is open.
 
-The set of issue types is still open. Current examples:
+The analyzer's gap analysis produces three:
 
-- **mismatched**: the canon doesn't match the customer's language (what shows up in sales calls, reviews, and interviews)
-- **misaligned**: a published surface contradicts the canon
-- **missing**: a gap in a messaging component or in the content index's coverage
+- **mismatched**: the canon does not match your customers
+- **misaligned**: company content is misaligned to the canon
+- **missing**: a gap exists in the canon or your content
 
-The full set of types and the format are still to be defined.
+Other kinds capture signals that aren't canon comparisons, for example:
+
+- **objection**: a recurring customer objection the messaging should address
+- **product**: a product signal customers raise
+
+More kinds can be added. The backlog format is still to be defined.
