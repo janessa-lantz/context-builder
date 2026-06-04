@@ -2,7 +2,7 @@
 
 The context builder is a proactive approach to managing messaging. It builds your messaging canon (based on what you're saying publicly), then maps sales calls and your current content index against that canon to proactively identify messaging that is mismatched to voice of the customer, misaligned to the canon, or simply missing. 
 
-![How context-builder works: jobs feed the builder, which parses each source against 26 messaging components and writes to the canon and content index](system.png)
+![How context-builder works: jobs feed the builder, which parses each source against 26 messaging components and writes to the canon and content index](system-diagram.png)
 
 ## Why it exists
 
