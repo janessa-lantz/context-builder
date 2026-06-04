@@ -6,6 +6,11 @@ how it proves its claims, and how it's priced.
 Define each component once, keep it current, and every piece of customer-facing work (and
 every AI tool you point at it) draws from the same source of truth.
 
+This folder holds two things organized by these components: the
+[canon](messaging-canon.md), your approved messaging, and the
+[content index](content-index.md), a registry of everything you've published and which
+components each piece carries.
+
 Each component is identified by a stable **ID** in lowercase kebab-case, derived from the
 component's name (for example `point-of-view` or `value-drivers`). The ID is the handle
 downstream assets and AI tools use to reference the component. To add a component, give it a

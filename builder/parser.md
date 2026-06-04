@@ -10,7 +10,7 @@ there and files it.
 file).
 
 **Out:**
-- a row in [`../context/content-index.md`](../context/content-index.md) listing the component IDs found
+- a row in the [content index](../context/messaging/content-index.md) listing the component IDs found
 - for key pages, updated entries in [`../context/messaging/messaging-canon.md`](../context/messaging/messaging-canon.md)
 - the job marked `done` (or `skipped`), with a note on what it produced
 
@@ -19,7 +19,7 @@ file).
 1. Take the next `pending` job.
 2. Fetch the source. A website: discover and pull the key pages (below). A transcript or document: read it directly.
 3. Classify the source into a `ledger` and `surface` (see the content index for the values).
-4. Extract against the components in [`../context/messaging/messaging-components.md`](../context/messaging/messaging-components.md). For each component, capture how it appears in this source, or record that it is absent. Put each section of content under exactly one component, and note secondary signals rather than double-filing.
+4. Extract against the components defined in the [messaging README](../context/messaging/README.md). For each component, capture how it appears in this source, or record that it is absent. Put each section of content under exactly one component, and note secondary signals rather than double-filing.
 5. Write to context: add or update the source's row in the content index, and for key pages fold the extraction into the canon.
 6. Mark the job `done` and record the result.
 

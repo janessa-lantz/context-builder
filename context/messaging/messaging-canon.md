@@ -4,8 +4,7 @@ Your company's approved messaging, one section per component. Fill each field in
 field blank only when you've decided it doesn't apply. This is the source your team and your
 AI tools draw from, so keep it current.
 
-Sections are labeled by component ID. See
-[`messaging-components.md`](messaging-components.md) for what each component is.
+Sections are labeled by component ID. See the [README](README.md) for what each component is.
 
 ---
 

@@ -3,7 +3,7 @@
 The work you hand to the builder. Each row is one job: a source to ingest and parse. Add a
 job by appending a row that names its source. The builder reads pending jobs, runs each
 through the [parser](../builder/parser.md), writes the results into
-[context](../context/content-index.md), and marks the job done.
+[context](../context/messaging/content-index.md), and marks the job done.
 
 A website scan is one batch of jobs that share a `scan_id`, one per page discovered.
 Re-processing a source later is a new job, not an edit of an old one. Jobs accumulate, so the
@@ -21,7 +21,7 @@ list doubles as the record of everything the builder has ever taken in.
 - `status`: `pending`, `done`, or `skipped`
 - `result`: what the builder did, or why it was skipped
 
-See the [content index](../context/content-index.md) for the full `ledger` / `surface` values.
+See the [content index](../context/messaging/content-index.md) for the full `ledger` / `surface` values.
 
 ---
 

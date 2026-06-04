@@ -4,12 +4,12 @@ Every piece of content that exists, one row per asset. This is the current-state
 what content the company has, and which messaging components each piece carries.
 
 It answers "what do we have, and what's in it?" The builder populates it by running
-[jobs](../jobs/jobs.md) through the [parser](../builder/parser.md). The index is the result,
-not something you maintain by hand.
+[jobs](../../jobs/jobs.md) through the [parser](../../builder/parser.md). The index is the
+result, not something you maintain by hand.
 
-The `components` column references the component IDs in
-[`messaging/messaging-components.md`](messaging/messaging-components.md). That link is the
-point of the index: it tells you, for any asset, exactly which messaging it is carrying.
+The `components` column references the component IDs defined in this folder's
+[README](README.md). That link is the point of the index: it tells you, for any asset,
+exactly which messaging it is carrying.
 
 ---
 
