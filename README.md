@@ -1,22 +1,27 @@
 # context-builder
 
-Maintain the unique knowledge behind your messaging, and keep your team and your AI tools drawing from one source of truth.
+The context builder is a proactive approach to managing messaging. It builds your messaging canon (based on what you're saying publicly), then maps sales calls and your current content index against that canon to proactively identify messaging that is mismatched to voice of the customer, misaligned to the canon, or simply missing. 
 
 ![How context-builder works: jobs feed the builder, which parses each source against 26 messaging components and writes to the canon and content index](system.png)
 
 ## Why it exists
 
-Your marketing team can only move as fast as your messaging. And great messaging is built on something only you have: the exact words customers use for the problem, why they really buy, the objection behind the objection, who they compare you to. SEO keyword lists, analyst reports, and generic personas are available to everyone, and to every LLM. Your unique knowledge of the customer and the market is the last advantage you have left.
+Your marketing team can only move as fast as your messaging. Great messaging:
+1. Matches how the customer describes their problem and pain
+2. Aligns across all marketing surfaces
+3. Is complete and has depth 
 
-The tools for managing that knowledge were built for a slower world. The messaging doc goes stale the moment product ships or a competitor moves. Turn it into a skill and someone has to update it by hand and pass it around. Even storing context in GitHub, today's gold standard, still depends on a human remembering to add the new context. These tools are reactive by design: not current, not shared, not proactive.
+Your unique knowledge of the customer and the market is the last advantage you have left. The Context Builder is a partner to your entire marketing team, ensuring a foundation that everyone can work from, while proactively surfacing issues and themes to watch. 
+
+The existing tools for managing messaging were built for a slower world. The messaging doc goes stale the moment product ships or a competitor moves. Turn it into a skill and someone has to update it by hand and pass it around. Even storing context in GitHub, today's gold standard, still depends on a human remembering to add the new context. These tools are reactive by design. The Context Builder is a system that helps product marketing identify issues before anyone else in the org notices. 
 
 ## The problem it solves: messaging drift
 
-When teams move fast without a living source of truth, messaging drifts. Drift shows up three ways, and the [analyzer](jobs/analyzer.md) names each one:
+When teams move fast without a living source of truth, messaging drifts. Drift shows up three ways:
 
 - **Mismatched.** Your messaging describes the problem in your internal language instead of the customer's, so buyers miss that you can solve it. The cost is wasted spend.
 - **Misaligned.** Your site, your outreach, and your decks each say something different, so buyers stop trusting you'll deliver. Ask an LLM what you do and it answers differently every time. The cost is eroded trust.
-- **Missing.** A value prop resonates on the homepage but no campaign or asset is built around it, and a new seller who hits an objection can't find a single asset that addresses it. The cost is lost pipeline.
+- **Missing.** A common objection comes up on calls and no content exists to resolve it. The cost is stalled pipeline.
 
 ## What it does
 
@@ -30,8 +35,6 @@ With the canon stable and current, you build shared skills on top of it, so ever
 
 ## How it works
 
-Three parts. The flow runs one direction: add a source, the builder parses it against the components, and the result lands in context.
-
 - **[jobs/](jobs/)** is the work you hand the builder. The [ingestion log](jobs/ingestion-log.md) is the front door: every source (a URL, a transcript, a PDF) is logged and routed to the parser. [Scans](jobs/scans/) discover sources to feed it. The [analyzer](jobs/analyzer.md) is a job you run to find drift.
 - **[builder/](builder/)** is the engine. The [parser](builder/parser.md) fetches each source, maps it to the components, and writes a durable summary. The analyzer's findings land in [issues/](builder/issues/) for you to act on.
 - **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages) and the [content index](context/content-index.md) (every asset you've published and which components it carries). Both are organized by a shared library of 26 messaging components.
@@ -39,7 +42,7 @@ Three parts. The flow runs one direction: add a source, the builder parses it ag
 ## Key Concepts
 
 - **Component**: one of the 26 building blocks of messaging (like positioning or value-drivers), each with a stable kebab-case ID. The schema everything files under.
-- **Canon**: your approved messaging, one entry per component, recorded verbatim from live copy. The source of truth your team and AI draw from.
+- **Canon**: your approved messaging structured into approved components. The source of truth your team and AI draw from.
 - **Content index**: a findable library of your company-owned assets and which components each one carries.
 - **Surface**: where an asset lives (key_page, owned, earned, paid, or internal).
 - **Raw asset**: a source the system reads, either a live URL or a stored transcript or doc. A pointer, not a copy.
