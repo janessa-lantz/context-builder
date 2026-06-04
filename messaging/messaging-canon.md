@@ -1,113 +1,114 @@
 # Messaging Canon
 
-Your company's approved messaging, one section per component. Fill each field in; leave a
+Your company's approved messaging, one section per component. Fill each field in. Leave a
 field blank only when you've decided it doesn't apply. This is the source your team and your
-AI tools draw from — keep it current.
+AI tools draw from, so keep it current.
 
-See [`messaging-components.md`](messaging-components.md) for what each component is.
+See [`messaging-components.md`](messaging-components.md) for what each component is and its ID.
 
 ---
 
 ## Who We Are
 
-### Point of View
+### Point of View `point-of-view`
 
 
-### Narrative
+### Narrative `narrative`
 
 
-### Positioning
+### Positioning `positioning`
 
 
-### Founder Story
+### Founder Story `founder-story`
 
 
-### Lexicon
-*(coined or redefined terms — term: definition)*
+### Lexicon `lexicon`
+*(coined or redefined terms. term: definition)*
 
 
-### Company Description
+### Company Description `company-description`
 
 
 ---
 
 ## What We Do
 
-### Category Name
+### Category Name `category-name`
 
 
-### Product
-*(named products — each has its own capabilities)*
+### Product `product`
+*(named products; each has its own capabilities)*
 
 
-### Capabilities
+### Capabilities `capabilities`
 *(one line per capability, grouped by product)*
 
 
-### Benefits
+### Benefits `benefits`
 
 
-### Differentiators
-*(one entry per alternative — vs. [name]: how we're different)*
+### Differentiators `differentiators`
+*(one entry per alternative. vs. [name]: how we're different)*
 
 
-### How It Works
+### How It Works `how-it-works`
 *(numbered steps)*
 
 
-### Ecosystem & Integrations
+### Ecosystem & Integrations `ecosystem-integrations`
 
 
 ---
 
 ## Who It's For
 
-### Account
+### Account `account`
 
 
-### Buying Committee
+### Buying Committee `buying-committee`
 *(champion, economic buyer, end user, other titles mentioned)*
 
 
-### Jobs to Be Done
-*(per JTBD — level: business outcome / initiative / use case · current approach · competitive alternatives)*
-
-### Value Drivers
-*(only the categories your messaging supports: revenue generation / efficiency / cost savings / risk mitigation)*
+### Jobs to Be Done `jobs-to-be-done`
+*(per JTBD: level [business outcome / initiative / use case], current approach, competitive alternatives)*
 
 
-### Objections
-*(one entry per objection — concern → response)*
+### Value Drivers `value-drivers`
+*(only the categories your messaging supports: revenue generation, efficiency, cost savings, risk mitigation)*
+
+
+### Objections `objections`
+*(one entry per objection: the concern, then the response)*
 
 
 ---
 
 ## Proof
 
-### Customer Proof
+### Customer Proof `customer-proof`
 
 
-### Market Proof
+### Market Proof `market-proof`
 
 
-### Social Proof
+### Social Proof `social-proof`
 
 
-### Key Metrics
+### Key Metrics `key-metrics`
 
 
 ---
 
 ## Pricing
 
-### Pricing Model
+### Pricing Model `pricing-model`
 
 
-### Packaging
+### Packaging `packaging`
 
 
-### Add-ons & Services
+### Add-ons & Services `add-ons-services`
 
 
-### Offers
+### Offers `offers`
 
