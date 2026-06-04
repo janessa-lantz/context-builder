@@ -44,6 +44,30 @@ Add when found:
 If there is no about or manifesto page, check the blog for founder posts, fundraising
 announcements, or category-defining essays for `point-of-view` and `founder-story`.
 
+## Sales calls and other non-marketing sources
+
+Not every source is your own marketing. Sales-call and customer transcripts, win/loss notes,
+and competitor material are parsed for signal but are **not** indexed (they are not your
+published assets). Classify them with a non-owned surface (`sales-call`, `customer`,
+`competitor`) and parse them like this:
+
+- **The prospect's own words are the signal.** Quote them and attach a timestamp or location. Your paraphrase is the last resort.
+- **1:1 with this source.** Never reference another call, customer, or source by name inside a summary, even when a connection feels obvious. Cross-source patterns are the analyzer's job, not the parser's. If you notice one, hold it.
+- **Capture every objection**, even the ones handled well. Patterns across calls matter more than how any single one went.
+- **"Nothing to note"** for a section with no finding, so a reader knows you looked and found nothing rather than skipped it.
+
+For a sales or customer call, the components that usually carry signal are `account` (who the
+buyer is), `buying-committee` (who is involved in the decision), `jobs-to-be-done` (what they
+are trying to do), `value-drivers` (the business rationale), `objections`, and any competitor
+or alternative they mention (a `differentiators` signal). The company-side components
+(product, capabilities, positioning, proof) appear only where the seller described them;
+record those as the seller's framing, not as approved messaging.
+
+Two fields specific to these sources (see the [parsed summary](parsed-summaries/) frontmatter):
+
+- **`discovery-channel`** = first touch: how this person originally found the company, not how they reached today's meeting. Minor in one summary; across all of them it reveals which channels actually convert.
+- **`icp-fit`** = whether the source is your ideal customer. Flag the ones that are **not** (a channel/reseller partner, a procurement-side buyer, an out-of-segment company) with a short reason, so an off-profile call is not mistaken for a pattern.
+
 ## Classification notes
 
 A few components are easy to confuse. The lines that matter:

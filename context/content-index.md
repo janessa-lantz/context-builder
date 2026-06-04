@@ -36,6 +36,12 @@ Company-owned content, by surface:
 - `paid`: ads, sponsored content
 - `internal`: positioning docs, messaging guides, sales enablement
 
+Customer and market sources, by surface. These are parsed for signal but **not** indexed (they are not your published assets); they inform the canon and the analyzer, not your asset library:
+
+- `sales-call`: a sales or customer call transcript
+- `customer`: a customer interview, win/loss, or support conversation
+- `competitor`: a competitor's page, deck, or other material
+
 ---
 
 ## Index

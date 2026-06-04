@@ -19,6 +19,11 @@ Each summary is a markdown file named by the asset id, with frontmatter and a bo
 - `components_version`: which version of the components was used
 - one field per component id: a short note on how that component appears in this asset, or `null` if absent
 
+For `sales-call` and `customer` sources, also include:
+
+- `discovery-channel`: how this source first found the company (first touch, not how they got to today's meeting), or `null`
+- `icp-fit`: `yes` when the source is your ideal customer, or `no` with a short reason (a channel/reseller partner, a procurement-side buyer, an out-of-segment company). Flagging non-ICP keeps the analyzer from treating an off-profile call as a pattern.
+
 ## Body
 
 - one section per component that was found, with the full extracted content
