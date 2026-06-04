@@ -35,3 +35,17 @@ Three parts. The flow runs one direction: add a source, the builder parses it ag
 - **[jobs/](jobs/)** is the work you hand the builder. The [ingestion log](jobs/ingestion-log.md) is the front door: every source (a URL, a transcript, a PDF) is logged and routed to the parser. [Scans](jobs/scans/) discover sources to feed it. The [analyzer](jobs/analyzer.md) is a job you run to find drift.
 - **[builder/](builder/)** is the engine. The [parser](builder/parser.md) fetches each source, maps it to the components, and writes a durable summary. The analyzer's findings land in [issues/](builder/issues/) for you to act on.
 - **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages) and the [content index](context/content-index.md) (every asset you've published and which components it carries). Both are organized by a shared library of 26 messaging components.
+
+## Key Concepts
+
+- **Component**: one of the 26 building blocks of messaging (like positioning or value-drivers), each with a stable kebab-case ID. The schema everything files under.
+- **Canon**: your approved messaging, one entry per component, recorded verbatim from live copy. The source of truth your team and AI draw from.
+- **Content index**: a findable library of your company-owned assets and which components each one carries.
+- **Surface**: where an asset lives (key_page, owned, earned, paid, or internal).
+- **Raw asset**: a source the system reads, either a live URL or a stored transcript or doc. A pointer, not a copy.
+- **Parsed summary**: the parser's record of one asset, mapping it to the components it carries.
+- **Job**: a unit of work you hand the builder (an ingested source, a scan, or an analysis run).
+- **Scan**: a job that discovers many URLs to ingest (key-pages, competitive, domain, blog).
+- **Parser**: the engine that maps each raw asset against your canon and writes the result into context.
+- **Analyzer**: the job that compares your summaries against the canon and surfaces issues.
+- **Issue (theme)**: a place your messaging needs attention, with a kind (mismatched, misaligned, missing, and more) and a confidence (high, medium, low).
