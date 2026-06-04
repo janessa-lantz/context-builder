@@ -6,12 +6,12 @@ invent messaging; it reads what is already there and files it.
 
 ## In and out
 
-**In:** a pending job from [`../jobs/jobs.md`](../jobs/jobs.md), naming a source (a URL or a
-file).
+**In:** a pending job from the [ingestion log](../jobs/ingestion-log.md), naming a source (a
+URL or a file).
 
 **Out:**
 - a [parsed summary](parsed-summaries/) mapping the asset to the components
-- a row in the [content index](../context/content-index.md), aggregated from that summary
+- for marketing surfaces, a row in the [content index](../context/content-index.md), aggregated from that summary
 - for key pages, updated entries in the [canon](../context/messaging-canon.md)
 - the job marked `done` (or `skipped`), with a note on what it produced
 
@@ -21,7 +21,7 @@ file).
 2. Fetch the source. A website: discover and pull the key pages (below). A transcript or document: read it directly, and save it to [raw-assets](raw-assets/) (hosted URLs stay where they live).
 3. Classify the source into a `ledger` and `surface` (see the content index for the values).
 4. Extract against the [component definitions](../context/README.md). For each component, capture how it appears in this source, or record that it is absent. Put each section of content under exactly one component, and note secondary signals rather than double-filing.
-5. Write the [parsed summary](parsed-summaries/), then aggregate it into context: a row in the content index, and for key pages fold it into the canon.
+5. Write the [parsed summary](parsed-summaries/). For marketing surfaces, aggregate it into a content index row; for key pages, fold it into the canon.
 6. Mark the job `done` and record the result.
 
 Rule throughout: do not fill gaps with assumptions. If a component is absent, say so. Absence

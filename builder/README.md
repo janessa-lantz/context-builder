@@ -17,8 +17,8 @@ and compares what it finds against the canon to surface issues.
 job → raw asset → parsed summary → context (canon + index) → issues
 ```
 
-A [job](../jobs/jobs.md) names a source. The builder saves it as a **raw asset**, writes a
+A [job](../jobs/ingestion-log.md) names a source. The builder saves it as a **raw asset**, writes a
 **parsed summary** that maps it to the components, and folds the result into **context** (a
-row in the [content index](../context/content-index.md), and for key pages the
-[canon](../context/messaging-canon.md)). It then compares what it found against the canon and
-records any **issues**.
+row in the [content index](../context/content-index.md) for marketing surfaces, and for key
+pages the [canon](../context/messaging-canon.md)). It then compares what it found against the
+canon and records any **issues**.
