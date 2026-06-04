@@ -1,8 +1,8 @@
 # Parser
 
-The builder's engine. It takes one job (a source), extracts the messaging components present,
-and writes the result into context. It does not invent messaging. It reads what is already
-there and files it.
+The builder's engine. It maps each raw asset against your messaging canon: it reads a source,
+finds which components the asset carries, and writes the result into context. It does not
+invent messaging; it reads what is already there and files it.
 
 ## In and out
 
@@ -10,17 +10,18 @@ there and files it.
 file).
 
 **Out:**
-- a row in the [content index](../context/content-index.md) listing the component IDs found
+- a [parsed summary](parsed-summaries/) mapping the asset to the components
+- a row in the [content index](../context/content-index.md), aggregated from that summary
 - for key pages, updated entries in the [canon](../context/messaging-canon.md)
 - the job marked `done` (or `skipped`), with a note on what it produced
 
 ## The run
 
 1. Take the next `pending` job.
-2. Fetch the source. A website: discover and pull the key pages (below). A transcript or document: read it directly.
+2. Fetch the source. A website: discover and pull the key pages (below). A transcript or document: read it directly, and save it to [raw-assets](raw-assets/) (hosted URLs stay where they live).
 3. Classify the source into a `ledger` and `surface` (see the content index for the values).
 4. Extract against the [component definitions](../context/README.md). For each component, capture how it appears in this source, or record that it is absent. Put each section of content under exactly one component, and note secondary signals rather than double-filing.
-5. Write to context: add or update the source's row in the content index, and for key pages fold the extraction into the canon.
+5. Write the [parsed summary](parsed-summaries/), then aggregate it into context: a row in the content index, and for key pages fold it into the canon.
 6. Mark the job `done` and record the result.
 
 Rule throughout: do not fill gaps with assumptions. If a component is absent, say so. Absence
