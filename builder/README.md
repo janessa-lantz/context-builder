@@ -14,7 +14,7 @@ and compares what it finds against the canon to surface issues.
 ## Flow
 
 ```
-ingest:   job → raw asset → parsed summary → context (canon + index)
+build:    job → raw asset → parsed summary → context (canon + index)
 analyze:  analyzer → parsed summaries → issues
 ```
 
