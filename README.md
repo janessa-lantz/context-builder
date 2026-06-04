@@ -5,7 +5,7 @@ Build your context layer for messaging. Keep your team and your AI tools drawing
 
 Three parts:
 
-- **[context/](context/)** is the source of truth your team and AI draw from: the messaging components and canon, plus the content index of everything you've published.
+- **[context/](context/)** is the source of truth your team and AI draw from: your messaging canon (built on defined components), plus the content index of everything you've published.
 - **[builder/](builder/)** is the engine. The parser reads jobs, extracts the messaging components it finds, and writes into context.
 - **[jobs/](jobs/)** is the work you hand the builder. Add a source (a URL or a transcript) and the builder runs it.
 
