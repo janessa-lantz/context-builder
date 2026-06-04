@@ -26,8 +26,9 @@ is open (see [issues](../builder/issues/)).
 
 ## Output
 
-Findings land in [issues](../builder/issues/), each tagged by kind (mismatched / misaligned /
-missing) and by component. The backlog format is still being defined (see issues).
+Findings land in [issues](../builder/issues/) as **themes**: recurring patterns, each tagged
+by kind and component, scored with a confidence and an attention band, and backed by the
+summary IDs that evidence them. See [issues](../builder/issues/) for the backlog format.
 
 The analyzer reads customer summaries from
 [parsed-summaries](../builder/parsed-summaries/), which exist even though customer content is
