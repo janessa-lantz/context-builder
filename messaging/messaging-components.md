@@ -1,6 +1,6 @@
 # Messaging Components
 
-The building blocks of a company's messaging — what it believes, what it does, who it's
+The building blocks of a company's messaging: what it believe, what it does, who it's
 for, how it proves its claims, and how it's priced.
 
 Define each component once, keep it current, and every piece of customer-facing work — and
