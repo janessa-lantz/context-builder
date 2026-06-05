@@ -50,14 +50,14 @@ announcements, or category-defining essays for `point-of-view` and `founder-stor
 A full-domain scan queues hundreds of pages of uneven value. Parse by expected signal rather
 than treating every job the same:
 
-- **Rich** — homepage, pricing, about, product, segment, and blog pages: full extraction
+- **Rich**: homepage, pricing, about, product, segment, and blog pages: full extraction
   across every component the page carries.
-- **Light** — repetitive or low-signal pages (near-duplicate variants, versioned or archived
+- **Light**: repetitive or low-signal pages (near-duplicate variants, versioned or archived
   copies, thin technical or changelog notes): a focused pass for product, capabilities,
   positioning, and metrics. If the page carries no distinct message, mark it `skipped`.
 
 Skip rather than pad. A near-duplicate of a page you already parsed, a legal/policy page, or a
-purely technical note is `skipped` with a one-line reason — not a thin summary. Every skip is a
+purely technical note is `skipped` with a one-line reason, not a thin summary. Every skip is a
 signal: feed the skipped URLs back to the scan's ignore list (see [scans](../jobs/scans/README.md))
 so the next run does not re-queue them.
 

@@ -1,6 +1,6 @@
 # Key Pages Scan
 
-Discovers your load-bearing company pages: homepage, pricing, about, product pages, and
+Discovers your core company pages: homepage, pricing, about, product pages, and
 signup or contact-sales. These are the source for the
 [canon](../../context/messaging-canon.md), so they route to the parser and the index.
 

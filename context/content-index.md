@@ -30,7 +30,7 @@ Customer and market sources are out of scope here for now.
 
 Company-owned content, by surface:
 
-- `key_page`: load-bearing pages expected to carry full messaging (homepage, pricing, about, product pages, signup/contact-sales). These are the source for the canon.
+- `key_page`: core pages expected to carry full messaging (homepage, pricing, about, product pages, signup/contact-sales). These are the source for the canon.
 - `owned`: blog, docs, case studies, ebooks, sales decks
 - `earned`: press, keynotes, podcast appearances, media placements
 - `paid`: ads, sponsored content

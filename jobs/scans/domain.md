@@ -14,7 +14,7 @@ Crawls a full company domain to discover every page worth ingesting.
   domain. List every domain under Targets.
 - **No XML sitemap?** Link-crawl from the homepage (nav + footer). Common for standalone
   product or sub-brand sites.
-- **Out of scope:** category/tag archives and pagination — they list other pages, they aren't
+- **Out of scope:** category/tag archives and pagination, which list other pages and aren't
   pages themselves. Leave them unqueued.
 
 ## Ignore on future scans
@@ -22,10 +22,10 @@ Crawls a full company domain to discover every page worth ingesting.
 Do not re-queue pages the parser already judged non-substantive. Seed this from past `skipped`
 results and keep two forms:
 
-- **Patterns** — categories that are never a messaging surface, applied as discovery-time
+- **Patterns**: categories that are never a messaging surface, applied as discovery-time
   filters: legal/policy pages (terms, privacy, disclaimer), versioned or archived duplicates
   (`/.../<version>/`, `/.../versions/`), pagination.
-- **Specific URLs** — judgment calls that don't generalize, where sibling pages of the same
+- **Specific URLs**: judgment calls that don't generalize, where sibling pages of the same
   type were indexed (a blanket pattern would over-exclude). List the exact URLs; still
   evaluate newly added pages of that type on their own merits.
 

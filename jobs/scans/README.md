@@ -14,7 +14,7 @@ outside world you track.
 
 Inward:
 
-- **[key-pages](key-pages.md)**: your load-bearing company pages; the source for the canon
+- **[key-pages](key-pages.md)**: your core company pages; the source for the canon
 - **[domain](domain.md)**: a full company domain
 - **[blog](blog.md)**: a blog
 
@@ -30,7 +30,7 @@ What each scan crawls precisely is still to be defined.
 A re-run should not re-queue pages the parser already judged non-substantive. Each scan keeps
 an **ignore list** (see [domain](domain.md)), seeded from past `skipped` results:
 
-- **Patterns** for categories that are never a messaging surface — legal/policy pages,
+- **Patterns** for categories that are never a messaging surface: legal/policy pages,
   versioned or archived duplicates, pagination.
 - **Specific URLs** for judgment calls that don't generalize, where sibling pages of the same
   type were kept (a blanket pattern would over-exclude).
