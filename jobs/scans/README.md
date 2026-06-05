@@ -24,3 +24,16 @@ Outward:
 - **[competitive-feed](competitive-feed.md)**: competitor changes (product, pricing, messaging, funding, partnerships, hiring, press), into each competitor's entity Feed
 
 What each scan crawls precisely is still to be defined.
+
+## Ignoring known non-substantive pages
+
+A re-run should not re-queue pages the parser already judged non-substantive. Each scan keeps
+an **ignore list** (see [domain](domain.md)), seeded from past `skipped` results:
+
+- **Patterns** for categories that are never a messaging surface — legal/policy pages,
+  versioned or archived duplicates, pagination.
+- **Specific URLs** for judgment calls that don't generalize, where sibling pages of the same
+  type were kept (a blanket pattern would over-exclude).
+
+Skips flow back from the [parser](../../builder/parser.md): what it marks `skipped`, the scan
+stops discovering.
