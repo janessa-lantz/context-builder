@@ -47,8 +47,11 @@ With the canon stable and current, you build shared skills on top of it, so ever
 - **Surface**: where an asset lives (key_page, owned, earned, paid, or internal).
 - **Raw asset**: a source the system reads, either a live URL or a stored transcript or doc. A pointer, not a copy.
 - **Parsed summary**: the parser's record of one asset, mapping it to the components it carries.
+- **Entity**: a durable record of an outside-world actor you track (a competitor first, later events or people). Raw intelligence, kept in the builder and never treated as vetted messaging.
+- **Profile**: an entity's current-state messaging, parsed against the same components as your own.
+- **Feed**: an entity's append-only history of changes, one row per signal.
 - **Job**: a unit of work you hand the builder (an ingested source, a scan, or an analysis run).
-- **Scan**: a job that discovers many URLs to ingest (key-pages, competitive, domain, blog).
+- **Scan**: a job that discovers many URLs to ingest (key-pages, competitive-profile, competitive-feed, domain, blog).
 - **Parser**: the engine that maps each raw asset against your canon and writes the result into context.
 - **Analyzer**: the job that compares your summaries against the canon and surfaces issues.
 - **Issue (theme)**: a place your messaging needs attention, with a kind (mismatched, misaligned, missing, and more) and a confidence (high, medium, low).

@@ -9,12 +9,14 @@ and compares what it finds against the canon to surface issues.
 - **[parser.md](parser.md)**: how the builder works, step by step.
 - **[raw-assets/](raw-assets/)**: the unprocessed source material it ingests (transcripts, scraped pages, documents).
 - **[parsed-summaries/](parsed-summaries/)**: one summary per raw asset, mapping the asset to the components.
+- **[entities/](entities/)**: durable records of the outside world you track (competitors first), kept raw and never treated as vetted messaging.
 - **[issues/](issues/)**: messaging issues the [analyzer](../jobs/analyzer.md) surfaces, for you to act on.
 
 ## Flow
 
 ```
 build:    job → raw asset → parsed summary → context (canon + index)
+track:    competitive scans → parsed summaries → entities (profile + feed)
 analyze:  analyzer → parsed summaries → issues
 ```
 
@@ -25,3 +27,7 @@ and for key pages the [canon](../context/messaging-canon.md)).
 
 **Issues** are produced separately by the [analyzer](../jobs/analyzer.md), a job that reads
 the parsed summaries and writes its findings to [issues/](issues/).
+
+The builder also keeps **[entities](entities/)**: raw records of the outside world the
+competitive scans track, each with a current-state Profile and an accumulating Feed. They stay
+in the builder and are never folded into vetted context.

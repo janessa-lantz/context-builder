@@ -13,6 +13,7 @@ URL or a file).
 - a [parsed summary](parsed-summaries/) mapping the asset to the components
 - for marketing surfaces, a row in the [content index](../context/content-index.md), aggregated from that summary
 - for key pages, updated entries in the [canon](../context/messaging-canon.md)
+- for competitor sources, an updated [entity](entities/) Profile, kept raw and never indexed or folded into the canon
 - the job marked `done` (or `skipped`), with a note on what it produced
 
 ## The run

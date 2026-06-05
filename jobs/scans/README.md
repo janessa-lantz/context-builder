@@ -8,11 +8,19 @@ tagged with the scan's id.
 Each scan is paired with the targets it should crawl. Fill in the targets in the scan's file,
 run it, and it queues a `url` job per source it finds.
 
-Four scans to start:
+Scans split by where their output lands. Inward scans feed your own context (the canon and
+content index). Outward scans feed [entities](../../builder/entities/), the raw record of the
+outside world you track.
+
+Inward:
 
 - **[key-pages](key-pages.md)**: your load-bearing company pages; the source for the canon
-- **[competitive](competitive.md)**: competitor domains
 - **[domain](domain.md)**: a full company domain
 - **[blog](blog.md)**: a blog
+
+Outward:
+
+- **[competitive-profile](competitive-profile.md)**: competitor key pages, parsed against all components, into each competitor's entity Profile
+- **[competitive-feed](competitive-feed.md)**: competitor changes (product, pricing, messaging, funding, partnerships, hiring, press), into each competitor's entity Feed
 
 What each scan crawls precisely is still to be defined.

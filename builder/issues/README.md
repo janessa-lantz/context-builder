@@ -4,11 +4,12 @@ Messaging issues produced by the [analyzer](../../jobs/analyzer.md). Each issue 
 place the messaging needs attention, for you to act on. Every issue has a **kind**, and the
 set of kinds is open.
 
-The analyzer's gap analysis produces three:
+The analyzer's canon comparisons produce four:
 
 - **mismatched**: the canon does not match your customers
 - **misaligned**: company content is misaligned to the canon
 - **missing**: a gap exists in the canon or your content
+- **competitive**: a competitor contests a component the canon claims
 
 Other kinds capture signals that aren't canon comparisons, for example:
 
@@ -40,11 +41,11 @@ it.
 ## Columns
 
 - `id`: unique identifier for the theme
-- `kind`: mismatched / misaligned / missing / objection / product / ...
+- `kind`: mismatched / misaligned / missing / competitive / objection / product / ...
 - `component`: which message component the theme is about
 - `description`: a short summary of the pattern
 - `confidence`: high / medium / low
-- `evidence`: the parsed-summary IDs supporting the theme
+- `evidence`: the parsed-summary or entity IDs supporting the theme
 - `status`: `open` (default), `actioned`, or `dismissed` (set by a human)
 - `last_run`: when the analyzer last touched the theme
 

@@ -1,0 +1,102 @@
+# Entities
+
+Durable records of the outside-world actors the system tracks. Competitors first, and later
+events, key people, and amplifiers. An entity page is the builder's accumulating knowledge of
+one actor: its current state and the history of how it changed.
+
+Entities are the outward-facing counterpart to the [content index](../../context/content-index.md).
+The content index aggregates *your* assets; entities aggregate *the outside world you track*.
+
+## Raw, not vetted
+
+Entities live in `builder/`, not `context/`, on purpose. `context/` is vetted and safe to
+ship. Entity pages are scraped and synthesized intelligence: useful, but unconfirmed and
+sometimes stale. Never treat an entity page as a sanctioned battlecard, and never drop its
+text into a published asset. Anything shippable is a separate, human-vetted artifact built on
+top of this raw material, never the material itself.
+
+## Structure
+
+`builder/entities/{type}/{slug}.md`, one file per entity. Types group entities by what they
+are:
+
+- `competitors/`: companies you position against
+- (future) `events/`, `key-people/`, `amplifiers/`
+
+## An entity page
+
+Two sections: a current-state **Profile** and an accumulating **Feed**.
+
+### Frontmatter
+
+- `id`: matches the filename
+- `type`: the entity type (`competitor`, ...)
+- `domain`: the entity's primary URL, when it has one
+- `status`: `active`, `acquired`, or `defunct`
+- `first_seen`: date the entity was first added, `YYYY-MM-DD`
+- `last_scanned`: date a scan last touched this page
+- `latest_summary`: id of the current [parsed summary](../parsed-summaries/) snapshot
+
+### Profile
+
+The current-state synthesis: who they are, their buyer, category posture, how they position.
+Itemized by component where the evidence supports it, so it stays diffable against the canon.
+Rewritten only when a scan detects the positioning shifted, not every cycle.
+
+### Feed
+
+Append-only. One row per detected change. Every row carries the `summary_id` of the source
+that evidenced it, so provenance holds no matter which job wrote the row.
+
+| column | meaning |
+|--------|---------|
+| `date` | when the change was observed or published, `YYYY-MM-DD` |
+| `kind` | the signal type (below) |
+| `component` | the message component it touches, by id, when one applies |
+| `detail` | a short description of the change |
+| `summary_id` | the parsed summary that evidenced it |
+
+Signal kinds: `product-update` / `pricing-change` / `messaging-shift` / `partnership` /
+`funding` / `hiring-signal` / `press-coverage` / `buyer-signal` / `other`.
+
+## How entity pages are maintained
+
+Two scans maintain a competitor entity, each owning one section:
+
+- **[scan-competitive-profile](../../jobs/scans/competitive-profile.md)** builds the **Profile**: parses each
+  competitor's key pages against all components. Periodic, since messaging moves slowly. It is
+  the [key-pages](../../jobs/scans/key-pages.md) scan pointed outward, with output landing here
+  rather than in the canon.
+- **[scan-competitive-feed](../../jobs/scans/competitive-feed.md)** builds the **Feed**: watches for the
+  signal kinds above across the competitor's own surfaces and third-party news. Frequent.
+
+The Feed has more than one producer. `buyer-signal` rows arrive from the sales-call parsing
+path, not the competitive scans. The `summary_id` on every row keeps the source unambiguous.
+
+## Example
+
+```markdown
+---
+id: ironclad
+type: competitor
+domain: ironclad.com
+status: active
+first_seen: 2026-04-26
+last_scanned: 2026-06-01
+latest_summary: ironclad-2026-06-01
+---
+
+## Profile
+
+- positioning: "Contract intelligence for every agreement." Positions as an enterprise CLM
+  platform spanning legal, procurement, finance, and sales.
+- buying-committee: enterprise legal and procurement leaders.
+- differentiators: breadth across the full agreement lifecycle.
+
+## Feed
+
+| date | kind | component | detail | summary_id |
+|------|------|-----------|--------|------------|
+| 2026-05-21 | buyer-signal | differentiators | Buyer evaluated Ironclad for redline automation, found CLM breadth did not solve it | lucas-raddavero-domaine-2026-05-21 |
+| 2026-03-19 | product-update | capabilities | Launched Ironclad Assistant plus AI agents across legal, procurement, finance, sales | ironclad-2026-03-19 |
+```
