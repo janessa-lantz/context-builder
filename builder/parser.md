@@ -99,11 +99,12 @@ A few components are easy to confuse. The lines that matter:
 
 ## The canon
 
-The [canon](../context/messaging-canon.md) is derived, not authored separately. It
-is compiled from the key-page extractions: one canonical statement per component, rolled up
-from every key page where that component appears. When key pages disagree (the homepage and
-pricing carry different positioning), flag the divergence rather than quietly picking one.
-Re-run the canon when key pages change.
+The [canon](../context/messaging-canon.md) holds two kinds of entry. What the LLM compiles is
+derived from the key-page extractions: one canonical statement per component, rolled up from
+every key page where that component appears, quoted verbatim and attributed. What a human adds
+is synthesis and context, marked `source: human`. On a re-run, refresh the verbatim entries and
+never overwrite a human-authored one. When key pages disagree (the homepage and pricing carry
+different positioning), flag the divergence rather than quietly picking one.
 
 ## Before you finish
 

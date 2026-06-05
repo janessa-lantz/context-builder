@@ -20,7 +20,7 @@ to run the system. The detailed specs live in each section's files, linked below
 
 ## Rules you must follow
 
-- **The canon records only what IS.** Populate each component from verbatim, currently-published copy, attributed to its source. If there is no published copy for a component, leave it blank. Never invent, draft, or aspirational-fill messaging in the canon.
+- **The LLM fills the canon from verbatim copy only; a human may synthesize.** When you populate a component, use verbatim, currently-published copy, attributed to its source; never invent, draft, or aspirational-fill, and leave a component blank if it has no published copy. A human may override or augment any component with synthesis and context; those entries are marked `source: human`, and you must never overwrite a human-authored entry on a re-scan.
 - **Nothing is indexed without being parsed.** Only marketing surfaces (company-owned content) go in the content index. Customer transcripts and competitor pages are parsed but not indexed.
 - **Entities are raw, never vetted.** Competitor and other entity pages live in the builder. Never treat them as approved messaging or ship their text. Anything shippable is a separate, human-vetted artifact built on top.
 - **Do not fill gaps with assumptions.** If a component is absent from a source, say so. Absence is a signal, not a hole to patch.

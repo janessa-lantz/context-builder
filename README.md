@@ -27,7 +27,7 @@ When teams move fast without a living source of truth, messaging drifts. Drift s
 
 The context builder maintains your unique knowledge, proactively flags issues for human intervention, and fights messaging drift. Three capabilities:
 
-1. **Keeps a human-validated canon.** One approved statement per messaging component, compiled from your key pages. The [canon](context/messaging-canon.md) is the core the whole system protects, and what your team and your AI tools read from.
+1. **Keeps a human-validated canon.** One approved statement per messaging component, compiled verbatim from your key pages, with synthesis and context a human can layer on top. The [canon](context/messaging-canon.md) is the core the whole system protects, and what your team and your AI tools read from.
 2. **Ingests your knowledge as it accumulates.** Sales calls, win/loss notes, customer interviews, and everything you publish enter through one front door, get parsed against the components, and land as durable summaries. Customer language is captured the moment it shows up, not months later in a doc rewrite.
 3. **Surfaces drift proactively.** The analyzer compares the canon against what customers actually say and what your company has published, then writes structured [issues](builder/issues/) tagged mismatched, misaligned, or missing for a human to act on. The LLM finds the drift; you decide what to do about it.
 

@@ -6,6 +6,10 @@ AI tools draw from, so keep it current.
 
 Sections are labeled by component ID. See the [README](README.md) for what each component is.
 
+Each entry is either verbatim from a live published surface (with the source noted) or
+human-authored synthesis (marked `source: human`). The LLM fills only the verbatim entries and
+never overwrites a human-authored one.
+
 ---
 
 ## Who We Are
