@@ -77,26 +77,26 @@ path, not the competitive scans. The `summary_id` on every row keeps the source 
 
 ```markdown
 ---
-id: ironclad
+id: rival-co
 type: competitor
-domain: ironclad.com
+domain: rival.example
 status: active
-first_seen: 2026-04-26
-last_scanned: 2026-06-01
-latest_summary: ironclad-2026-06-01
+first_seen: 2026-01-10
+last_scanned: 2026-03-01
+latest_summary: rival-co-2026-03-01
 ---
 
 ## Profile
 
-- positioning: "Contract intelligence for every agreement." Positions as an enterprise CLM
-  platform spanning legal, procurement, finance, and sales.
-- buying-committee: enterprise legal and procurement leaders.
-- differentiators: breadth across the full agreement lifecycle.
+- positioning: "The all-in-one platform for the close." Positions as a full-suite incumbent
+  spanning import, review, and sign-off.
+- buying-committee: finance and accounting leaders.
+- differentiators: breadth across the full close workflow.
 
 ## Feed
 
 | date | kind | component | detail | summary_id |
 |------|------|-----------|--------|------------|
-| 2026-05-21 | buyer-signal | differentiators | Buyer evaluated Ironclad for redline automation, found CLM breadth did not solve it | lucas-raddavero-domaine-2026-05-21 |
-| 2026-03-19 | product-update | capabilities | Launched Ironclad Assistant plus AI agents across legal, procurement, finance, sales | ironclad-2026-03-19 |
+| 2026-02-18 | buyer-signal | differentiators | A prospect evaluated them but found the broad suite did not solve the specific close need | acme-winloss-0218 |
+| 2026-01-22 | product-update | capabilities | Shipped an AI assistant across the suite | rival-co-2026-01-22 |
 ```

@@ -70,6 +70,6 @@ patterns, and you can seed hypotheses for it to evidence.
 
 | id | kind | component | description | confidence | evidence | status | last_run |
 |----|------|-----------|-------------|------------|----------|--------|----------|
-| iss-001 | mismatched | value-drivers | Customers frame the value as saving the deal; canon frames it as efficiency | high | acme-winloss-0603, neotax-0504, telos-0427 | open | 2026-06-04 |
-| iss-002 | missing | objections | Customers raise procurement-approval concerns; no canon objection covers it | medium | acme-winloss-0603, orbital-0417 | open | 2026-06-04 |
+| iss-001 | mismatched | value-drivers | Customers frame the value as saving the deal; canon frames it as efficiency | high | acme-winloss-0603, vertex-0504, summit-0427 | open | 2026-06-04 |
+| iss-002 | missing | objections | Customers raise procurement-approval concerns; no canon objection covers it | medium | acme-winloss-0603, meridian-0417 | open | 2026-06-04 |
 | iss-003 | misaligned | positioning | Blog positions as a reporting tool; canon positions as a decision platform | low | blog-close-faster | open | 2026-06-04 |
