@@ -1,7 +1,8 @@
 # Messaging Components
 
-The building blocks of a company's messaging: what it believes, what it does, who it's for,
-how it proves its claims, and how it's priced.
+The building blocks of a company's messaging and go-to-market: what it believes, what it
+does, who it's for, how it proves its claims, how it's priced, and what it talks about to
+reach the market.
 
 Define each component once, keep it current, and every piece of customer-facing work (and
 every AI tool you point at it) draws from the same source of truth.
@@ -16,7 +17,7 @@ component's name (for example `point-of-view` or `value-drivers`). The ID is the
 downstream assets and AI tools use to reference the component. To add a component, give it a
 fresh kebab-case ID that no other component uses.
 
-There are 26 components across 5 groups.
+There are 29 components across 6 groups.
 
 ---
 
@@ -120,3 +121,23 @@ Premium support, implementation.
 
 ### offers
 Free tier or trial and what's included.
+
+---
+
+## Programs
+
+The content and demand-gen activation layer, built on top of the messaging. These change
+faster than the components above and organize what the company talks about and runs, rather
+than what it claims.
+
+### themes
+The durable narrative pillars the company organizes its content around. A theme holds many
+topics.
+
+### topics
+The specific subjects the company creates content about, including the keywords each one
+targets. Topics sit under themes.
+
+### campaigns
+Time-boxed, coordinated pushes that activate themes and topics toward a goal, across owned,
+earned, and paid surfaces.
