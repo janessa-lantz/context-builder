@@ -7,10 +7,16 @@ reach the market.
 Define each component once, keep it current, and every piece of customer-facing work (and
 every AI tool you point at it) draws from the same source of truth.
 
-This folder holds two things organized by these components: the
-[canon](messaging-canon.md), your approved messaging, and the
-[content index](content-index.md), a registry of everything you've published and which
-components each piece carries.
+This folder is what you know: everything your team and AI tools draw from. It holds two
+things organized by these components: the [canon](messaging-canon.md), your approved
+messaging, and the [content index](content-index.md), a registry of everything you've
+published and which components each piece carries. Beside them sit two more files at
+different trust levels: the [visual identity](visual-identity.md), the brand's observable
+design facts (vetted, like the canon), and [entities](entities/), raw intelligence on the
+outside world you track (never vetted, never shipped).
+
+The [builder](../builder/) writes into this folder and keeps it current;
+[skills](../skills/) read out of it to generate assets.
 
 Each component is identified by a stable **ID** in lowercase kebab-case, derived from the
 component's name (for example `point-of-view` or `value-drivers`). The ID is the handle

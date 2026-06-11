@@ -9,7 +9,7 @@ Each scan is paired with the targets it should crawl. Fill in the targets in the
 run it, and it queues a `url` job per source it finds.
 
 Scans split by where their output lands. Inward scans feed your own context (the canon and
-content index). Outward scans feed [entities](../../builder/entities/), the raw record of the
+content index). Outward scans feed [entities](../../../context/entities/), the raw record of the
 outside world you track.
 
 Inward:
@@ -35,5 +35,5 @@ an **ignore list** (see [domain](domain.md)), seeded from past `skipped` results
 - **Specific URLs** for judgment calls that don't generalize, where sibling pages of the same
   type were kept (a blanket pattern would over-exclude).
 
-Skips flow back from the [parser](../../builder/parser.md): what it marks `skipped`, the scan
+Skips flow back from the [parser](../../parser.md): what it marks `skipped`, the scan
 stops discovering.

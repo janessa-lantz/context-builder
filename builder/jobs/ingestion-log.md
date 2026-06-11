@@ -14,8 +14,8 @@ A scan is not an input type. Scans are jobs that discover URLs and feed them bac
 
 ## Routing
 
-- **Everything** routes to the [parser](../builder/parser.md), which maps the asset against the canon.
-- **Marketing surfaces** (your company-owned content) also route to the [index](../context/content-index.md), so sales and marketing can find which assets carry which messaging.
+- **Everything** routes to the [parser](../parser.md), which maps the asset against the canon.
+- **Marketing surfaces** (your company-owned content) also route to the [index](../../context/content-index.md), so sales and marketing can find which assets carry which messaging.
 
 A sales transcript is parsed but not indexed. Competitor content is parsed but not indexed.
 Your own pages and posts are parsed and indexed.
@@ -24,7 +24,7 @@ Your own pages and posts are parsed and indexed.
 
 - `created`: date the input arrived, `YYYY-MM-DD`
 - `type`: `text`, `url`, or `pdf`
-- `source`: the input (a URL, or a [raw-asset](../builder/raw-assets/) path for captured text and PDFs)
+- `source`: the input (a URL, or a [raw-asset](../raw-assets/) path for captured text and PDFs)
 - `scan_id`: the scan that produced this input, if any; blank for direct inputs
 - `route`: `parser`, or `parser + index` for marketing surfaces
 - `status`: `pending`, `done`, or `skipped`

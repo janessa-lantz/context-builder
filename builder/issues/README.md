@@ -1,6 +1,6 @@
 # Issues
 
-Messaging issues produced by the [analyzer](../../jobs/analyzer.md). Each issue points to a
+Messaging issues produced by the [analyzer](../jobs/analyzer.md). Each issue points to a
 place the messaging needs attention, for you to act on. Every issue has a **kind**, and the
 set of kinds is open.
 
