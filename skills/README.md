@@ -5,6 +5,10 @@ carousel) from approved context when a human asks for one. Skills are the read s
 system: [jobs](../builder/jobs/) run on a cadence and write into
 [context](../context/); skills run when you need them and read out of it.
 
+> **Status: not battle-tested.** These skills are new and have not been proven across
+> repeated real use. Treat every output as a first draft, expect rough edges, and review
+> closely before anything ships. Refine the skills as you go.
+
 ## The rule
 
 **Skills read context; they never write it.** A skill never edits the canon, the content
