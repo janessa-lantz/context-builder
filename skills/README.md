@@ -40,6 +40,7 @@ blank-page and the off-brand failure modes, not the human judgment.
 | [artifact-sales-deck](artifact-sales-deck/) | slide-by-slide deck outline, speaker notes, and a design-generation prompt |
 | [artifact-one-pager](artifact-one-pager/) | print-ready one-pager spec (product, solution, integration, or vertical format) |
 | [artifact-landing-page](artifact-landing-page/) | 7-section campaign page wireframe with copy, plus mockup prompt or deploy-ready HTML |
+| [artifact-homepage-wireframe](artifact-homepage-wireframe/) | black-and-white homepage wireframe (plus linked page skeletons) showing information architecture and copy, deployed to S3 as a shareable link |
 | [artifact-paid-ad-creative](artifact-paid-ad-creative/) | multi-variant ad set for LinkedIn and Meta, each variant a distinct angle |
 | [artifact-linkedin-carousel](artifact-linkedin-carousel/) | carousel copy, PDF generation prompt, and the accompanying post |
 | [artifact-blog-featured-image](artifact-blog-featured-image/) | blog hero and social share card concepts, consistent per content category |
