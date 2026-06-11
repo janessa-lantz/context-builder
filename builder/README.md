@@ -1,33 +1,35 @@
 # Builder
 
-The engine that turns jobs into context, and flags where messaging breaks down. It reads a
+Everything that writes into [context](../context/) and keeps it current. The builder reads a
 job, fetches the source, parses it against the components, writes the result into context,
-and compares what it finds against the canon to surface issues.
+and compares what it finds against the canon to surface issues. Skills are the other side of
+the line: they [read out of context](../skills/) and never write into it.
 
 ## Elements
 
 - **[parser.md](parser.md)**: how the builder works, step by step.
 - **[raw-assets/](raw-assets/)**: the unprocessed source material it ingests (transcripts, scraped pages, documents).
 - **[parsed-summaries/](parsed-summaries/)**: one summary per raw asset, mapping the asset to the components.
-- **[entities/](entities/)**: durable records of the outside world you track (competitors first), kept raw and never treated as vetted messaging.
-- **[issues/](issues/)**: messaging issues the [analyzer](../jobs/analyzer.md) surfaces, for you to act on.
+- **[issues/](issues/)**: messaging issues the [analyzer](jobs/analyzer.md) surfaces, for you to act on.
+- **[jobs/](jobs/)**: the recurring work you run, each executed the same way every time: the [ingestion log](jobs/ingestion-log.md) (the front door and router), [scans](jobs/scans/) (discover sources), the [analyzer](jobs/analyzer.md) (find drift), and the [visual-identity job](jobs/visual-identity.md) (extract the brand's observable design facts).
 
 ## Flow
 
 ```
 build:    job → raw asset → parsed summary → context (canon + index)
-track:    competitive scans → parsed summaries → entities (profile + feed)
+track:    competitive scans → parsed summaries → context (entities: profile + feed)
 analyze:  analyzer → parsed summaries → issues
 ```
 
-A [job](../jobs/ingestion-log.md) names a source. The builder saves it as a **raw asset**,
+A [job](jobs/ingestion-log.md) names a source. The builder saves it as a **raw asset**,
 writes a **parsed summary** that maps it to the components, and folds the result into
 **context** (a row in the [content index](../context/content-index.md) for marketing surfaces,
 and for key pages the [canon](../context/messaging-canon.md)).
 
-**Issues** are produced separately by the [analyzer](../jobs/analyzer.md), a job that reads
+**Issues** are produced separately by the [analyzer](jobs/analyzer.md), a job that reads
 the parsed summaries and writes its findings to [issues/](issues/).
 
-The builder also keeps **[entities](entities/)**: raw records of the outside world the
-competitive scans track, each with a current-state Profile and an accumulating Feed. They stay
-in the builder and are never folded into vetted context.
+The competitive scans maintain **[entities](../context/entities/)**: raw records of the
+outside world, each with a current-state Profile and an accumulating Feed. Entities live in
+context because they are knowledge the team draws from, but at a different trust level: raw
+intelligence, never vetted messaging.

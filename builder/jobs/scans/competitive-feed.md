@@ -1,6 +1,6 @@
 # Competitive Feed Scan
 
-Builds the **Feed** section of each competitor [entity](../../builder/entities/) page. It
+Builds the **Feed** section of each competitor [entity](../../../context/entities/) page. It
 watches for discrete changes since the last cycle and appends one Feed row per signal, each
 carrying the `summary_id` of the source that evidenced it. It does not re-derive the Profile;
 for that, see [scan-competitive-profile](competitive-profile.md).

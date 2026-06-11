@@ -4,20 +4,21 @@ Durable records of the outside-world actors the system tracks. Competitors first
 events, key people, and amplifiers. An entity page is the builder's accumulating knowledge of
 one actor: its current state and the history of how it changed.
 
-Entities are the outward-facing counterpart to the [content index](../../context/content-index.md).
+Entities are the outward-facing counterpart to the [content index](../content-index.md).
 The content index aggregates *your* assets; entities aggregate *the outside world you track*.
 
 ## Raw, not vetted
 
-Entities live in `builder/`, not `context/`, on purpose. `context/` is vetted and safe to
-ship. Entity pages are scraped and synthesized intelligence: useful, but unconfirmed and
-sometimes stale. Never treat an entity page as a sanctioned battlecard, and never drop its
-text into a published asset. Anything shippable is a separate, human-vetted artifact built on
-top of this raw material, never the material itself.
+Entities live in `context/` because they are knowledge the team draws from, but they sit at a
+different trust level from everything else here. The canon, index, and visual identity are
+vetted and safe to ship. Entity pages are scraped and synthesized intelligence: useful, but
+unconfirmed and sometimes stale. Never treat an entity page as a sanctioned battlecard, and
+never drop its text into a published asset. Anything shippable is a separate, human-vetted
+artifact built on top of this raw material, never the material itself.
 
 ## Structure
 
-`builder/entities/{type}/{slug}.md`, one file per entity. Types group entities by what they
+`context/entities/{type}/{slug}.md`, one file per entity. Types group entities by what they
 are:
 
 - `competitors/`: companies you position against
@@ -35,7 +36,7 @@ Two sections: a current-state **Profile** and an accumulating **Feed**.
 - `status`: `active`, `acquired`, or `defunct`
 - `first_seen`: date the entity was first added, `YYYY-MM-DD`
 - `last_scanned`: date a scan last touched this page
-- `latest_summary`: id of the current [parsed summary](../parsed-summaries/) snapshot
+- `latest_summary`: id of the current [parsed summary](../../builder/parsed-summaries/) snapshot
 
 ### Profile
 
@@ -63,11 +64,11 @@ Signal kinds: `product-update` / `pricing-change` / `messaging-shift` / `partner
 
 Two scans maintain a competitor entity, each owning one section:
 
-- **[scan-competitive-profile](../../jobs/scans/competitive-profile.md)** builds the **Profile**: parses each
+- **[scan-competitive-profile](../../builder/jobs/scans/competitive-profile.md)** builds the **Profile**: parses each
   competitor's key pages against all components. Periodic, since messaging moves slowly. It is
-  the [key-pages](../../jobs/scans/key-pages.md) scan pointed outward, with output landing here
+  the [key-pages](../../builder/jobs/scans/key-pages.md) scan pointed outward, with output landing here
   rather than in the canon.
-- **[scan-competitive-feed](../../jobs/scans/competitive-feed.md)** builds the **Feed**: watches for the
+- **[scan-competitive-feed](../../builder/jobs/scans/competitive-feed.md)** builds the **Feed**: watches for the
   signal kinds above across the competitor's own surfaces and third-party news. Frequent.
 
 The Feed has more than one producer. `buyer-signal` rows arrive from the sales-call parsing

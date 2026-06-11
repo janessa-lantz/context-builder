@@ -6,14 +6,14 @@ invent messaging; it reads what is already there and files it.
 
 ## In and out
 
-**In:** a pending job from the [ingestion log](../jobs/ingestion-log.md), naming a source (a
+**In:** a pending job from the [ingestion log](jobs/ingestion-log.md), naming a source (a
 URL or a file).
 
 **Out:**
 - a [parsed summary](parsed-summaries/) mapping the asset to the components
 - for marketing surfaces, a row in the [content index](../context/content-index.md), aggregated from that summary
 - for key pages, updated entries in the [canon](../context/messaging-canon.md)
-- for competitor sources, an updated [entity](entities/) Profile, kept raw and never indexed or folded into the canon
+- for competitor sources, an updated [entity](../context/entities/) Profile, kept raw and never indexed or folded into the canon
 - the job marked `done` (or `skipped`), with a note on what it produced
 
 ## The run
@@ -58,7 +58,7 @@ than treating every job the same:
 
 Skip rather than pad. A near-duplicate of a page you already parsed, a legal/policy page, or a
 purely technical note is `skipped` with a one-line reason, not a thin summary. Every skip is a
-signal: feed the skipped URLs back to the scan's ignore list (see [scans](../jobs/scans/README.md))
+signal: feed the skipped URLs back to the scan's ignore list (see [scans](jobs/scans/README.md))
 so the next run does not re-queue them.
 
 ## Sales calls and other non-marketing sources

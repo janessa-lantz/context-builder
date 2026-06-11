@@ -4,7 +4,7 @@ Your company-owned content, one row per asset. This is your findable asset libra
 your published assets carries which messaging.
 
 It answers "which of our assets support this messaging?" so anyone in sales or marketing can
-find them. The builder populates it by running [jobs](../jobs/ingestion-log.md) through the
+find them. The builder populates it by running [jobs](../builder/jobs/ingestion-log.md) through the
 [parser](../builder/parser.md): marketing surfaces land here, while customer transcripts and
 competitor pages are parsed but not indexed. The index is the result, not something you
 maintain by hand.
