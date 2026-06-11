@@ -17,7 +17,7 @@ component's name (for example `point-of-view` or `value-drivers`). The ID is the
 downstream assets and AI tools use to reference the component. To add a component, give it a
 fresh kebab-case ID that no other component uses.
 
-There are 29 components across 6 groups.
+There are 24 components across 6 groups.
 
 ---
 
@@ -49,18 +49,14 @@ elevator pitch (for speaking).
 ### category-name
 What it is.
 
-### product
-The official proper nouns the company uses to name what it offers. A company may have several
-products, each with its own capabilities.
+### unique-attributes
+The "secret sauce": what the product does that makes it different. An overview, then the few
+attributes that genuinely set it apart — not a full feature list.
 
-### capabilities
-What the product can do.
-
-### benefits
-What the customer gains.
-
-### differentiators
-How the product differs from a given competitive alternative.
+### value-proposition
+The unique differentiated value competitors can't easily replicate: why a buyer chooses us
+over the alternative, whether that alternative is a competitor or the status quo. A one-line
+statement, then the distinct strands of value.
 
 ### how-it-works
 The technical details of the product and / or the customer's workflow using the product.
@@ -73,22 +69,24 @@ platforms, and SDKs, grouped by type.
 
 ## Who It's For
 
-### account
-The ideal company we sell to: firmographics, technographics, growth signals.
+### icp
+The ideal customer profile, built around an account and its champion. Repeat per profile when
+we serve more than one.
+- **Account** — firmographics, technographics, and triggers (the event or situation that makes
+  this profile ready to buy now).
+- **Champion** — the person advocating for the change, and their title: their job to be done
+  (business outcome, initiative, or use case), the competitive alternatives they weigh (how
+  they solve this today plus what else they're considering, and the problems with each), and
+  their objections to our approach.
 
 ### buying-committee
-Champion, economic buyer, end user, other titles mentioned.
-
-### jobs-to-be-done
-What the customer is trying to do. Per JTBD: level (business outcome / initiative / use
-case), current approach, competitive alternatives.
+The roles in the buying decision beyond the champion: economic buyer, end user, and anyone
+else. Per role: title, the part they play in the decision, and the common objections they
+raise.
 
 ### value-drivers
-Business outcomes this person is trying to achieve (revenue generation, efficiency, cost
-savings, risk mitigation).
-
-### objections
-Common objections, concerns.
+How the product delivers business value for the account, mapped to one or more of: revenue
+generation, efficiency, cost savings, risk mitigation.
 
 ---
 
@@ -100,11 +98,9 @@ Owned assets approved with customers: case studies, logos, quotes, references.
 ### market-proof
 Institutional recognition: analysts, awards, press.
 
-### social-proof
-Validation found online: reviews, mentions, ratings.
-
 ### key-metrics
-Company momentum: number of customers, revenue, money raised, users.
+Company momentum and adoption signals: number of customers, revenue, money raised, users,
+plus public reviews, ratings, and mentions.
 
 ---
 

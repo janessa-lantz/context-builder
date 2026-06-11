@@ -40,19 +40,12 @@ never overwrites a human-authored one.
 ### category-name
 
 
-### product
-*(named products; each has its own capabilities)*
+### unique-attributes
+*(overview, then the few attributes that set the product apart)*
 
 
-### capabilities
-*(one line per capability, grouped by product)*
-
-
-### benefits
-
-
-### differentiators
-*(one entry per alternative. vs. [name]: how we're different)*
+### value-proposition
+*(one-line statement, then the distinct strands of differentiated value)*
 
 
 ### how-it-works
@@ -66,23 +59,16 @@ never overwrites a human-authored one.
 
 ## Who It's For
 
-### account
+### icp
+*(repeat per profile. account: firmographics, technographics, triggers. champion + title: job to be done, competitive alternatives + the problems with each, objections to our approach)*
 
 
 ### buying-committee
-*(champion, economic buyer, end user, other titles mentioned)*
-
-
-### jobs-to-be-done
-*(per JTBD: level [business outcome / initiative / use case], current approach, competitive alternatives)*
+*(economic buyer, end user, others. per role: title, role in the buying decision, common objections)*
 
 
 ### value-drivers
-*(only the categories your messaging supports: revenue generation, efficiency, cost savings, risk mitigation)*
-
-
-### objections
-*(one entry per objection: the concern, then the response)*
+*(how the product delivers business value for the account — only the categories your messaging supports: revenue generation, efficiency, cost savings, risk mitigation)*
 
 
 ---
@@ -93,9 +79,6 @@ never overwrites a human-authored one.
 
 
 ### market-proof
-
-
-### social-proof
 
 
 ### key-metrics
