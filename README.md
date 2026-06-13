@@ -15,8 +15,6 @@ This project is built and maintained by [Janessa Lantz](https://www.linkedin.com
 
 ## What it does
 
-![context-builder system diagram: the builder writes each source into context, the analyzer surfaces drift, and skills read context to produce assets, all organized by 24 messaging components](system-diagram.png)
-
 The context-builder keeps your messaging current and flags it the moment it drifts. Three things it does:
 
 1. **Keeps a human-validated canon.** One approved statement per messaging component, compiled verbatim from your key pages, with synthesis and context a human can layer on top. The [canon](context/messaging-canon.md) is the core the whole system protects, and what your team and your AI tools read from.
@@ -24,6 +22,8 @@ The context-builder keeps your messaging current and flags it the moment it drif
 3. **Surfaces messaging issues proactively.** The analyzer compares the canon against what customers actually say and what your company has published, then writes structured [issues](builder/issues/) tagged mismatched, misaligned, or missing for a human to act on. The LLM finds the drift; you decide what to do about it.
 
 With the canon stable and current, your team builds shared [skills](skills/) on top of it, so every asset is generated from approved messaging rather than from scratch.
+
+![context-builder system diagram: the builder writes each source into context, the analyzer surfaces drift, and skills read context to produce assets, all organized by 24 messaging components](system-diagram.png)
 
 ## How it works
 
