@@ -2,7 +2,7 @@
 
 Context-builder is an always-on system that keeps your messaging accurate to your customer and consistent everywhere it shows up. It maintains an active source of truth for how you talk about yourself, then continuously checks your real messaging against it.
 
-Context-builder is for marketing leaders who own how the company talks about itself across all sufraces: product marketing, content & communications, and demand gen. 
+Context-builder is for **marketing leaders** who own how the company talks about itself across all sufraces: product marketing, content & communications, and demand gen. 
 
 Marketing teams are operating in chaos. AI allows everyone to move faster, but without guardrails, the message starts to deteriorate. Your knowledge and understanding of the customer is one of the last advantages you have left. 
 
