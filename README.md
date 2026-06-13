@@ -1,23 +1,17 @@
 # context-builder
 
-Context-builder is an always-on system that keeps your messaging accurate to your customer and consistent everywhere it shows up. It maintains an active source of truth for how you talk about yourself, then continuously checks your real messaging against it.
+Context-builder is a a system to help growing companies manage messaging across product marketing, content & communications, and demand gen. 
 
-Context-builder is for **marketing leaders** who own how the company talks about itself across all sufraces: product marketing, content & communications, and demand gen. 
+Context-builder is for **marketing leaders** who need their team to move fast with AI while keeping the quality bar high. It's like the old messaging doc, built for the AI era.
 
-Marketing teams are operating in chaos. AI allows everyone to move faster, but without guardrails, the message starts to deteriorate. Your knowledge and understanding of the customer is one of the last advantages you have left. 
-
-Context-builder is a **proactive** approach to managing messaging. It builds your messaging canon (based on what you're saying publicly), then maps sales calls and your current content index against that canon to proactively identify messaging that is mismatched to voice of the customer, misaligned to the canon, or simply missing. 
-
-![How context-builder works: jobs feed the builder, which parses each source against the messaging components and writes to the canon and content index](system-diagram.png)
+Common challenges marketing teams are facing today:
+- marketing needs to move fast while also keeping the quality bar high
+- messaging fragments across internal teams (marketing, CS, and sales) and channel (paid, PR, SEO, AEO)
+- AI is intermediating every interaction your customers have with your brand
 
 ## Why it exists
+This project is built and maintained by Janessa Lantz (that's me!). I built a communications team at HubSpot (post-IPO), built the dbt Labs marketing team from <$1M to close to $100M in revenue, and now work with earlier stage companies as a fractional marketing leader and consultant. Context-builder exists to support my work. I use pieces of it in every client engagement. If anything here is useful for your own work, take it!
 
-Your marketing team can only move as fast as your messaging. Great messaging:
-1. Matches how the customer describes their problem and pain
-2. Aligns across all marketing surfaces
-3. Is complete and has depth 
-
-The existing tools for managing messaging were built for a slower world. The messaging doc goes stale the moment product ships or a competitor moves. Turn it into a skill and someone has to update it by hand and pass it around. Even storing context in GitHub, today's gold standard, still depends on a human remembering to add the new context. These tools are reactive by design. The Context Builder is a system that helps product marketing identify issues before anyone else in the org notices. 
 
 ## What it does
 
