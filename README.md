@@ -1,5 +1,17 @@
 # context-builder
 
+## What it is
+
+Context-builder is an always-on system that keeps your messaging accurate to your customer and consistent everywhere it shows up. It maintains a living source of truth for how you talk about yourself, then continuously checks your real messaging against it.
+
+## Who it's for
+
+Marketing leaders who own how the company talks about itself. Context-builder helps marketing leaders put guardrails around a single unified message across product marketing, content & communications, and demand gen.
+
+## Why it matters
+
+Your messaging sets the ceiling on everything marketing ships. When it drifts, every page and campaign inherits the error, and you pay for it in wasted spend and stalled pipeline. Your understanding of the customer is the last advantage you have left, and this is what keeps it sharp.
+
 The context builder is a proactive approach to managing messaging. It builds your messaging canon (based on what you're saying publicly), then maps sales calls and your current content index against that canon to proactively identify messaging that is mismatched to voice of the customer, misaligned to the canon, or simply missing. 
 
 ![How context-builder works: jobs feed the builder, which parses each source against the messaging components and writes to the canon and content index](system-diagram.png)
@@ -37,13 +49,13 @@ With the canon stable and current, you build shared [skills](skills/) on top of 
 
 Three groups, separated by one rule: the builder writes into context; skills read out of it.
 
-- **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages), the [content index](context/content-index.md) (every asset you've published and which components it carries), the [visual identity](context/visual-identity.md) (the observable design facts of the brand), and [entities](context/entities/) (raw records of the outside world you track, kept at a different trust level from the canon). The canon and index are organized by a shared library of 29 messaging components.
+- **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages), the [content index](context/content-index.md) (every asset you've published and which components it carries), the [visual identity](context/visual-identity.md) (the observable design facts of the brand), and [entities](context/entities/) (raw records of the outside world you track, kept at a different trust level from the canon). The canon and index are organized by a shared library of 24 messaging components.
 - **[builder/](builder/)** is everything that keeps context current. The [parser](builder/parser.md) fetches each source, maps it to the components, and writes a durable summary. [Jobs](builder/jobs/) are the recurring work you run: the [ingestion log](builder/jobs/ingestion-log.md) is the front door where every source (a URL, a transcript, a PDF) is logged and routed; [scans](builder/jobs/scans/) discover sources to feed it; the [analyzer](builder/jobs/analyzer.md) finds drift, and its findings land in [issues/](builder/issues/) for you to act on.
 - **[skills/](skills/)** is on-demand production. Each skill reads the canon and visual identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs run on a cadence and write into context; skills run when you need them and read out of it.
 
 ## Key Concepts
 
-- **Component**: one of the 29 building blocks of messaging (like positioning or value-drivers), each with a stable kebab-case ID. The schema everything files under.
+- **Component**: one of the 24 building blocks of messaging (like positioning or value-drivers), each with a stable kebab-case ID. The schema everything files under.
 - **Canon**: your approved messaging structured into approved components. The source of truth your team and AI draw from.
 - **Content index**: a findable library of your company-owned assets and which components each one carries.
 - **Visual identity**: the observable design facts of the brand (colors, typography, logo treatment, style), kept in context beside the canon. The visual counterpart to the canon: skills read it so every generated asset looks like the company, not just sounds like it.
