@@ -1,6 +1,6 @@
 # context-builder
 
-Context-builder is a a system to help growing companies manage messaging across product marketing, content & communications, and demand gen. 
+Context-builder is a system to help growing companies manage messaging across product marketing, content & communications, and demand gen. 
 
 Context-builder is for **marketing leaders** who need their team to move fast with AI while keeping the quality bar high. It's like the old messaging doc, built for the AI era.
 
@@ -17,7 +17,7 @@ This project is built and maintained by [Janessa Lantz](https://www.linkedin.com
 
 ![context-builder system diagram: the builder writes each source into context, the analyzer surfaces drift, and skills read context to produce assets, all organized by 24 messaging components](system-diagram.png)
 
-The context builder keeps your messaging current and flags it the moment it drifts. Three things it does:
+The context-builder keeps your messaging current and flags it the moment it drifts. Three things it does:
 
 1. **Keeps a human-validated canon.** One approved statement per messaging component, compiled verbatim from your key pages, with synthesis and context a human can layer on top. The [canon](context/messaging-canon.md) is the core the whole system protects, and what your team and your AI tools read from.
 2. **Ingests your knowledge as it accumulates.** Sales calls, win/loss notes, customer interviews, and everything you publish enter through one front door, get parsed against the components, and land as durable summaries. Customer language is captured the moment it shows up, not months later in a doc rewrite.
