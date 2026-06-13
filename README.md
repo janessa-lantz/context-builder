@@ -10,18 +10,20 @@ Common challenges marketing teams are facing today:
 - AI is intermediating every interaction your customers have with your brand
 
 ## Why it exists
-This project is built and maintained by Janessa Lantz (that's me!). I built a communications team at HubSpot (post-IPO), built the dbt Labs marketing team from <$1M to close to $100M in revenue, and now work with earlier stage companies as a fractional marketing leader and consultant. Context-builder exists to support my work. I use pieces of it in every client engagement. If anything here is useful for your own work, take it!
+This project is built and maintained by [Janessa Lantz](https://www.linkedin.com/in/janessalantz/) (that's me!). I built a communications team at HubSpot (post-IPO), built the dbt Labs marketing team from <$1M to close to $100M in revenue, and now work with earlier stage companies as a fractional marketing leader and consultant. Context-builder exists to support my work. I use pieces of it in every client engagement. If anything here is useful for your own work, take it!
 
 
 ## What it does
 
-The context builder maintains your unique knowledge, proactively flags issues for human intervention, and fights messaging drift. Three capabilities:
+![context-builder system diagram: the builder writes each source into context, the analyzer surfaces drift, and skills read context to produce assets, all organized by 24 messaging components](system-diagram.png)
+
+The context builder keeps your messaging current and flags it the moment it drifts. Three things it does:
 
 1. **Keeps a human-validated canon.** One approved statement per messaging component, compiled verbatim from your key pages, with synthesis and context a human can layer on top. The [canon](context/messaging-canon.md) is the core the whole system protects, and what your team and your AI tools read from.
 2. **Ingests your knowledge as it accumulates.** Sales calls, win/loss notes, customer interviews, and everything you publish enter through one front door, get parsed against the components, and land as durable summaries. Customer language is captured the moment it shows up, not months later in a doc rewrite.
 3. **Surfaces messaging issues proactively.** The analyzer compares the canon against what customers actually say and what your company has published, then writes structured [issues](builder/issues/) tagged mismatched, misaligned, or missing for a human to act on. The LLM finds the drift; you decide what to do about it.
 
-With the canon stable and current, you build shared [skills](skills/) on top of it, so every brief, page, and deck is generated from approved messaging rather than from scratch.
+With the canon stable and current, your team builds shared [skills](skills/) on top of it, so every asset is generated from approved messaging rather than from scratch.
 
 ## How it works
 
@@ -29,7 +31,7 @@ Three groups, separated by one rule: the builder writes into context; skills rea
 
 - **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages), the [content index](context/content-index.md) (every asset you've published and which components it carries), the [visual identity](context/visual-identity.md) (the observable design facts of the brand), and [entities](context/entities/) (raw records of the outside world you track, kept at a different trust level from the canon). The canon and index are organized by a shared library of 24 messaging components.
 - **[builder/](builder/)** is everything that keeps context current. The [parser](builder/parser.md) fetches each source, maps it to the components, and writes a durable summary. [Jobs](builder/jobs/) are the recurring work you run: the [ingestion log](builder/jobs/ingestion-log.md) is the front door where every source (a URL, a transcript, a PDF) is logged and routed; [scans](builder/jobs/scans/) discover sources to feed it; the [analyzer](builder/jobs/analyzer.md) finds drift, and its findings land in [issues/](builder/issues/) for you to act on.
-- **[skills/](skills/)** is on-demand production. Each skill reads the canon and visual identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs run on a cadence and write into context; skills run when you need them and read out of it.
+- **[skills/](skills/)** is on-demand production. Each skill reads the canon and visual identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs write into context on a cadence; skills read out of it on demand.
 
 ## Key Concepts
 
