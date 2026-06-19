@@ -91,7 +91,7 @@ A few components are easy to confuse. The lines that matter:
 
 - `point-of-view` is a founding belief about the world, not culture statements or growth stats. A growth stat belongs in `key-metrics`.
 - `positioning` is the homepage canonical claim. Use-case and segment headlines are overlays, not positioning.
-- `lexicon` is only coined or redefined terms, not feature names or inherited industry vocabulary. If the lexicon is thin, say so rather than padding it.
+- `lexicon` (coined or redefined terms, not feature names or inherited vocabulary) is written to brand-writing-identity, not the canon. If it is thin, say so rather than padding it.
 - `benefits` are product-level outcomes ("90% of transactions auto-coded"). `value-drivers` are business-level rationale, and each must map to revenue generation, efficiency, cost savings, or risk mitigation.
 - `differentiators` need a competitive frame ("vs. X," "the only platform that..."). "Easy to use" is not a differentiator without a comparison.
 - `customer-proof` is customer-specific outcomes. `key-metrics` and `social-proof` are company-level momentum numbers.

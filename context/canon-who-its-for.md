@@ -11,5 +11,5 @@ Part of the [messaging canon](messaging-canon.md). One section per component; ea
 
 
 ## value-drivers
-*(how the product delivers business value for the account — only the categories your messaging supports: revenue generation, efficiency, cost savings, risk mitigation)*
+*(how the product delivers business value for the account, mapped to the categories your messaging supports: revenue generation, efficiency, cost savings, risk mitigation)*
 

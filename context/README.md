@@ -55,7 +55,7 @@ What it is.
 
 ### unique-attributes
 The "secret sauce": what the product does that makes it different. An overview, then the few
-attributes that genuinely set it apart — not a full feature list.
+attributes that genuinely set it apart, not a full feature list.
 
 ### value-proposition
 The unique differentiated value competitors can't easily replicate: why a buyer chooses us
@@ -76,9 +76,9 @@ platforms, and SDKs, grouped by type.
 ### icp
 The ideal customer profile, built around an account and its champion. Repeat per profile when
 we serve more than one.
-- **Account** — firmographics, technographics, and triggers (the event or situation that makes
+- **Account**: firmographics, technographics, and triggers (the event or situation that makes
   this profile ready to buy now).
-- **Champion** — the person advocating for the change, and their title: their job to be done
+- **Champion**: the person advocating for the change, and their title: their job to be done
   (business outcome, initiative, or use case), the competitive alternatives they weigh (how
   they solve this today plus what else they're considering, and the problems with each), and
   their objections to our approach.
