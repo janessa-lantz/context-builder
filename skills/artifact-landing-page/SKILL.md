@@ -21,7 +21,7 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 - `offers`: the conversion offer, when a trial or free tier is the destination
 - `buying-committee`: who the page is qualifying for
 
-And the full [visual identity](../../context/visual-identity.md) for both outputs.
+And the full [visual identity](../../context/brand-visual-identity.md) for both outputs.
 
 If a section's component has no canon entry, mark the section as a gap. Never invent proof,
 objections, or claims.

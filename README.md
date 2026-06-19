@@ -23,22 +23,23 @@ The context-builder keeps your messaging current and flags it the moment it drif
 
 With the canon stable and current, your team builds shared [skills](skills/) on top of it, so every asset is generated from approved messaging rather than from scratch.
 
-![context-builder system diagram: the builder writes each source into context, the analyzer surfaces drift, and skills read context to produce assets, all organized by 24 messaging components](system-diagram.png)
+![context-builder system diagram: the builder writes each source into context, the analyzer surfaces drift, and skills read context to produce assets, all organized by 23 messaging components](system-diagram.png)
 
 ## How it works
 
 Three groups, separated by one rule: the builder writes into context; skills read out of it.
 
-- **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages), the [content index](context/content-index.md) (every asset you've published and which components it carries), the [visual identity](context/visual-identity.md) (the observable design facts of the brand), and [entities](context/entities/) (raw records of the outside world you track, kept at a different trust level from the canon). The canon and index are organized by a shared library of 24 messaging components.
+- **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages), the [content index](context/content-index.md) (every asset you've published and which components it carries), the [brand writing identity](context/brand-writing-identity.md) (voice, guardrails, and lexicon) and the [brand visual identity](context/brand-visual-identity.md) (the observable design facts), and [entities](context/entities/) (raw records of the outside world you track, kept at a different trust level from the canon). The canon and index are organized by a shared library of 23 messaging components.
 - **[builder/](builder/)** is everything that keeps context current. The [parser](builder/parser.md) fetches each source, maps it to the components, and writes a durable summary. [Jobs](builder/jobs/) are the recurring work you run: the [ingestion log](builder/jobs/ingestion-log.md) is the front door where every source (a URL, a transcript, a PDF) is logged and routed; [scans](builder/jobs/scans/) discover sources to feed it; the [analyzer](builder/jobs/analyzer.md) finds drift, and its findings land in [issues/](builder/issues/) for you to act on.
 - **[skills/](skills/)** is on-demand production. Each skill reads the canon and visual identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs write into context on a cadence; skills read out of it on demand.
 
 ## Key Concepts
 
-- **Component**: one of the 24 building blocks of messaging (like positioning or value-drivers), each with a stable kebab-case ID. The schema everything files under.
+- **Component**: one of the 23 building blocks of messaging (like positioning or value-drivers), each with a stable kebab-case ID. The schema everything files under.
 - **Canon**: your approved messaging structured into approved components. The source of truth your team and AI draw from.
 - **Content index**: a findable library of your company-owned assets and which components each one carries.
 - **Visual identity**: the observable design facts of the brand (colors, typography, logo treatment, style), kept in context beside the canon. The visual counterpart to the canon: skills read it so every generated asset looks like the company, not just sounds like it.
+- **Brand writing identity**: how the company sounds: voice, guardrails, and lexicon, kept beside the visual identity. Skills read it so every generated asset sounds like the company, not just looks like it.
 - **Surface**: where an asset lives (key_page, owned, earned, paid, or internal).
 - **Raw asset**: a source the system reads, either a live URL or a stored transcript or doc. A pointer, not a copy.
 - **Parsed summary**: the parser's record of one asset, mapping it to the components it carries.

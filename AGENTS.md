@@ -9,7 +9,7 @@ to run the system. The detailed specs live in each section's files, linked below
 Three groups. The rule that separates them: **the builder writes into context; skills read
 out of it.**
 
-- **[context/](context/)** is what you know: the messaging **canon** (built on the components defined in [context/README.md](context/README.md)), the **content index** of company-owned assets, the **[visual identity](context/visual-identity.md)**, and **[entities](context/entities/)**, the raw record of the outside world you track. This is what the team and their AI tools draw from.
+- **[context/](context/)** is what you know: the messaging **canon** (built on the components defined in [context/README.md](context/README.md)), the **content index** of company-owned assets, the brand identities for how it sounds (**[brand-writing-identity](context/brand-writing-identity.md)**) and how it looks (**[brand-visual-identity](context/brand-visual-identity.md)**), and **[entities](context/entities/)**, the raw record of the outside world you track. This is what the team and their AI tools draw from.
 - **[builder/](builder/)** is everything that keeps context current: the [parser](builder/parser.md), [raw-assets](builder/raw-assets/), [parsed-summaries](builder/parsed-summaries/), [issues](builder/issues/), and [jobs/](builder/jobs/), the recurring work you run (the [ingestion log](builder/jobs/ingestion-log.md), [scans](builder/jobs/scans/), and the [analyzer](builder/jobs/analyzer.md)). Jobs run the same way every time, on a cadence.
 - **[skills/](skills/)** is on-demand production: each skill reads the canon and visual identity to generate an asset when a human asks for one. Skills consume context; they never write to it.
 
@@ -20,7 +20,7 @@ out of it.**
 - **"Add this source"** (a URL, transcript, or PDF) → append a row to [builder/jobs/ingestion-log.md](builder/jobs/ingestion-log.md), then follow [builder/parser.md](builder/parser.md): save captured sources to [builder/raw-assets/](builder/raw-assets/), write a parsed summary to [builder/parsed-summaries/](builder/parsed-summaries/), and for marketing surfaces add a [content-index](context/content-index.md) row.
 - **"Run the key-pages / domain / blog scan"** → read the scan's file in [builder/jobs/scans/](builder/jobs/scans/) for its targets, discover the URLs, and add each as a `url` row in the ingestion log.
 - **"Run the competitive scans"** → [competitive-profile](builder/jobs/scans/competitive-profile.md) parses each competitor's key pages into that competitor's [entity](context/entities/) Profile; [competitive-feed](builder/jobs/scans/competitive-feed.md) appends Feed rows for new competitor signals. Competitor intelligence is raw: it lands in [context/entities/](context/entities/), never the canon or index.
-- **"Build or refresh the visual identity"** → run [builder/jobs/visual-identity.md](builder/jobs/visual-identity.md): extract the observable identity from the live key pages, write it to [context/visual-identity.md](context/visual-identity.md), and never overwrite a human-authored entry.
+- **"Build or refresh the visual identity"** → run [builder/jobs/visual-identity.md](builder/jobs/visual-identity.md): extract the observable identity from the live key pages, write it to [context/brand-visual-identity.md](context/brand-visual-identity.md), and never overwrite a human-authored entry.
 - **"Find issues" or "what's off in our messaging"** → run the analyzer per [builder/jobs/analyzer.md](builder/jobs/analyzer.md): read the parsed summaries and the canon, and write themes to [builder/issues/](builder/issues/).
 - **"Build me a deck / one-pager / carousel / ..."** → run the matching skill in [skills/](skills/). Read the canon components and visual identity it names; ask the human only for the job-specific variables the skill defines, never for anything the context already holds.
 
@@ -41,7 +41,8 @@ out of it.**
 | how a source becomes context | [builder/parser.md](builder/parser.md) |
 | intake and routing | [builder/jobs/ingestion-log.md](builder/jobs/ingestion-log.md) |
 | discovering sources | [builder/jobs/scans/](builder/jobs/scans/) |
-| the visual identity and how it's built | [context/visual-identity.md](context/visual-identity.md) and [builder/jobs/visual-identity.md](builder/jobs/visual-identity.md) |
+| the visual identity and how it's built | [context/brand-visual-identity.md](context/brand-visual-identity.md) and [builder/jobs/visual-identity.md](builder/jobs/visual-identity.md) |
+| voice, guardrails, and lexicon | [context/brand-writing-identity.md](context/brand-writing-identity.md) |
 | the outside world you track | [context/entities/](context/entities/) |
 | finding messaging issues | [builder/jobs/analyzer.md](builder/jobs/analyzer.md) and [builder/issues/](builder/issues/) |
 | generating assets from context | [skills/](skills/) |

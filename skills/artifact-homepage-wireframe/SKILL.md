@@ -28,7 +28,7 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 
 This skill deliberately does **not** read the visual identity. A wireframe has no brand colors,
 fonts, or imagery; design comes after the IA and copy are approved. If you reach for
-`visual-identity.md`, stop. Theming a wireframe defeats its purpose.
+`brand-visual-identity.md`, stop. Theming a wireframe defeats its purpose.
 
 If a section's claim has no canon entry, flag it as a gap. Never invent proof, claims, or numbers.
 

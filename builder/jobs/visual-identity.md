@@ -1,6 +1,6 @@
 # Visual Identity Job
 
-A job you run to build or refresh [context/visual-identity.md](../../context/visual-identity.md).
+A job you run to build or refresh [context/brand-visual-identity.md](../../context/brand-visual-identity.md).
 It is the visual counterpart to the key-pages flow: where the parser extracts what the company
 says from its key pages, this job extracts what the company looks like from the same pages.
 Run it at setup, after a redesign, or when generated assets start looking off-brand.
@@ -18,7 +18,7 @@ Run it at setup, after a redesign, or when generated assets start looking off-br
      treated against light and dark backgrounds.
    - **style**: illustration vs. photography vs. geometric graphics, icon style, chart
      conventions, and any per-category image pattern visible on the blog.
-3. Write each finding to [context/visual-identity.md](../../context/visual-identity.md),
+3. Write each finding to [context/brand-visual-identity.md](../../context/brand-visual-identity.md),
    attributed to the URL where it was observed and dated.
 4. Never overwrite an entry marked `source: human`. On a re-run, refresh the observed entries
    and flag any conflict between a new observation and a human entry rather than resolving it.
