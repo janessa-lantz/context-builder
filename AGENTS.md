@@ -15,6 +15,7 @@ out of it.**
 
 ## What to do when the user asks
 
+- **"Set up" / "bootstrap a new deployment" / "build our v1"** → run [builder/jobs/setup.md](builder/jobs/setup.md): the one-time bootstrap that builds v1 of the canon (from the key pages) and v1 of the content index (from the full domain, docs, and blog). Run it once when first pointing context-builder at a company; after that, keep both current with the recurring jobs below rather than re-running setup.
 - **"Build or refresh our canon"** → run the key-pages flow. Read [builder/jobs/scans/key-pages.md](builder/jobs/scans/key-pages.md) for the targets, fetch the key pages, parse each per [builder/parser.md](builder/parser.md), and compile the canon ([context/messaging-canon.md](context/messaging-canon.md)) from the key-page extractions.
 - **"Add this source"** (a URL, transcript, or PDF) → append a row to [builder/jobs/ingestion-log.md](builder/jobs/ingestion-log.md), then follow [builder/parser.md](builder/parser.md): save captured sources to [builder/raw-assets/](builder/raw-assets/), write a parsed summary to [builder/parsed-summaries/](builder/parsed-summaries/), and for marketing surfaces add a [content-index](context/content-index.md) row.
 - **"Run the key-pages / domain / blog scan"** → read the scan's file in [builder/jobs/scans/](builder/jobs/scans/) for its targets, discover the URLs, and add each as a `url` row in the ingestion log.
