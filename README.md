@@ -31,7 +31,7 @@ Three groups, separated by one rule: the builder writes into context; skills rea
 
 - **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages), the [content index](context/content-index.md) (every asset you've published and which components it carries), the [brand writing identity](context/brand-writing-identity.md) (voice, guardrails, and lexicon) and the [brand visual identity](context/brand-visual-identity.md) (the observable design facts), and [entities](context/entities/) (raw records of the outside world you track, kept at a different trust level from the canon). The canon and index are organized by a shared library of 23 messaging components.
 - **[builder/](builder/)** is everything that keeps context current. The [parser](builder/parser.md) fetches each source, maps it to the components, and writes a durable summary. [Jobs](builder/jobs/) are the recurring work you run: the [ingestion log](builder/jobs/ingestion-log.md) is the front door where every source (a URL, a transcript, a PDF) is logged and routed; [scans](builder/jobs/scans/) discover sources to feed it; the [analyzer](builder/jobs/analyzer.md) finds drift, and its findings land in [issues/](builder/issues/) for you to act on.
-- **[skills/](skills/)** is on-demand production. Each skill reads the canon and visual identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs write into context on a cadence; skills read out of it on demand.
+- **[skills/](skills/)** is on-demand production. Each skill reads the canon and brand identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs write into context on a cadence; skills read out of it on demand.
 
 ## Key Concepts
 
@@ -51,4 +51,4 @@ Three groups, separated by one rule: the builder writes into context; skills rea
 - **Parser**: the engine that maps each raw asset against your canon and writes the result into context.
 - **Analyzer**: the job that compares your summaries against the canon and surfaces issues.
 - **Issue (theme)**: a place your messaging needs attention, with a kind (mismatched, misaligned, missing, and more) and a confidence (high, medium, low).
-- **Skill**: an on-demand generator that reads the canon and visual identity to produce an asset (a deck, a one-pager, a carousel). Skills read out of context and never write into it.
+- **Skill**: an on-demand generator that reads the canon and brand identity to produce an asset (a deck, a one-pager, a carousel). Skills read out of context and never write into it.
