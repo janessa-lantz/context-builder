@@ -7,13 +7,13 @@ build tool, names the output format per asset, and defines the QA pass.
 ## The principle
 
 Each skill reads the [canon](../context/messaging-canon.md) and
-[visual-identity](../context/visual-identity.md), asks its job-specific questions, drafts the
+[visual-identity](../context/brand-visual-identity.md), asks its job-specific questions, drafts the
 content, then **renders that content to a file** in the brand's colors and type. The render
 is the deliverable. No external design product is in the loop.
 
 ## Visual identity to design tokens
 
-Before building, read [visual-identity.md](../context/visual-identity.md) and pull:
+Before building, read [brand-visual-identity.md](../context/brand-visual-identity.md) and pull:
 
 - **colors**: each named hex with its role (primary, dark, light/background, accent, neutrals)
 - **typography**: display/heading face, body face, the weights in use
@@ -67,7 +67,7 @@ produce the actual `.png`:
 Assume the first render is wrong. Two passes:
 
 **Content.** For `.pptx`, extract text and check order, completeness, and that no banned term
-or em/en dash from the canon's lexicon survived:
+or em/en dash from the brand-writing-identity lexicon survived:
 
 ```bash
 python3 -m markitdown <file>.pptx        # or python-pptx to walk shapes

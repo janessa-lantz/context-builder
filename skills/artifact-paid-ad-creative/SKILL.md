@@ -22,7 +22,7 @@ Each ad angle maps to specific canon components (see the mapping in
 - `offers`: what the ad drives to, when a free tier or trial is the destination
 - `buying-committee`, `account`: who the targeting should reach
 
-And the full [visual identity](../../context/visual-identity.md) for the generation prompt.
+And the full [visual identity](../../context/brand-visual-identity.md) for the generation prompt.
 
 An angle whose components have no canon entry is dropped from the set, and the drop is
 stated. Never invent proof, stats, or customer stories.

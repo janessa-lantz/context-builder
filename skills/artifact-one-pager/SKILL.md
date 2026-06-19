@@ -27,7 +27,7 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 - `account`: required for the vertical format (the industry framing)
 - `jobs-to-be-done`: the problem statement, in the customer's words
 
-And the full [visual identity](../../context/visual-identity.md) for the render.
+And the full [visual identity](../../context/brand-visual-identity.md) for the render.
 
 If a required component has no canon entry, mark the affected section as a gap and say so.
 Never invent messaging to fill it.

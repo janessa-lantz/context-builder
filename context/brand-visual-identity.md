@@ -1,9 +1,10 @@
 # Visual Identity
 
-The brand's observable design facts, one section per element. This is the visual counterpart
-to the [messaging canon](messaging-canon.md): the canon is what the company says, the visual
-identity is what the company looks like. [Skills](../skills/) read both, so every generated
-asset looks like the company, not just sounds like it.
+The brand's observable design facts, one section per element. This is the visual counterpart to
+the [messaging canon](messaging-canon.md) and a sibling to [brand-writing-identity.md](brand-writing-identity.md):
+the canon is what the company says, the writing identity is how it says it, and the visual
+identity is what it looks like. [Skills](../skills/) read them, so every generated asset looks
+like the company, not just sounds like it.
 
 The same source rule as the canon applies. The LLM records only what is observable on live
 published surfaces (extracted by the [visual-identity job](../builder/jobs/visual-identity.md)),

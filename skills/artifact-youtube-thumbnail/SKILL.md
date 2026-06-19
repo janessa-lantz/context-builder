@@ -11,12 +11,12 @@ concept wins.
 
 ## Reads from context
 
-- The full [visual identity](../../context/visual-identity.md). Note the caveat in
+- The full [visual identity](../../context/brand-visual-identity.md). Note the caveat in
   [thumbnail-patterns.md](thumbnail-patterns.md): thumbnails run bolder and more saturated
   than the brand's web palette, so treat the identity as the base to push from, not a cage.
-- From the [canon](../../context/messaging-canon.md): `lexicon` for any words on the
-  thumbnail, and `themes`/`topics` to confirm the video sits in the company's content
-  territory.
+- From [brand-writing-identity](../../context/brand-writing-identity.md): `lexicon` for any
+  words on the thumbnail. From the [canon](../../context/messaging-canon.md): `themes`/`topics`
+  to confirm the video sits in the company's content territory.
 
 ## Asks the human
 

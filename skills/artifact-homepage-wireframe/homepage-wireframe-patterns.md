@@ -12,7 +12,7 @@ pages the user opens in a browser. Internal links work.
 
 This is the one artifact skill that does not apply the visual identity. No brand colors, no
 fonts, no imagery. Boxes, labels, hatched image placeholders, system sans-serif, black on
-white. Design happens after the IA and copy are approved. If you reach for visual-identity.md,
+white. Design happens after the IA and copy are approved. If you reach for brand-visual-identity.md,
 stop. (Contrast with artifact-landing-page, which is a campaign page rendered in brand colors.
 This is the main-site homepage, wireframe-first.)
 
@@ -87,7 +87,7 @@ Ground every line in approved messaging. Read the canon; pull verbatim where you
 human points you to a live product page, align that section's headline, subhead, and pillars to
 it. Never invent claims, proof, or numbers; an absent claim is a gap to flag, not fill.
 
-### Voice (from the canon lexicon)
+### Voice (from the brand-writing-identity lexicon)
 
 - No em dashes anywhere. Commas, colons, periods, parentheses.
 - No tricolons for cadence, no mirrored negation, no vague intensifiers.

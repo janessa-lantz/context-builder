@@ -23,7 +23,7 @@ Each skill is a folder named `artifact-{asset}` (matching the naming used across
 repos), holding:
 
 - **SKILL.md**: the workflow. It declares which canon components it reads (by ID), reads
-  [visual-identity](../context/visual-identity.md) for design facts, and asks the human only
+  [visual-identity](../context/brand-visual-identity.md) for design facts, and asks the human only
   for the job-specific variables context cannot hold (the deck's purpose, the campaign's
   offer, the post's topic). A skill never asks for positioning, audience, proof, voice, or
   brand colors; context already holds those.

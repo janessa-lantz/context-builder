@@ -15,7 +15,7 @@ Two steps.
 ## Step 1 — Build the v1 canon
 
 Fetch the company's key pages, extract the messaging into the components, and compile the
-result into [context/messaging-canon.md](../../context/messaging-canon.md).
+result into the [messaging canon](../../context/messaging-canon.md) (the per-group `canon-*.md` files).
 
 1. **Discover the pages** with [scans/key-pages.md](scans/key-pages.md): homepage, pricing,
    about/company, every product page in the top nav, customers/case studies, contact-sales /
@@ -28,7 +28,7 @@ result into [context/messaging-canon.md](../../context/messaging-canon.md).
    attribute its source, leave a component blank when it has no published copy, and never
    overwrite a human-authored (`source: human`) entry.
 
-The extraction covers the five messaging groups. It does **not** touch the **Programs** group
+The extraction covers the five messaging groups. It does **not** touch the **Themes** group
 (`themes` / `topics` / `campaigns`); those are populated later from owned content, not the
 domain scrape.
 

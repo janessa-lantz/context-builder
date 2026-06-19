@@ -25,7 +25,7 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 - `customer-proof`, `key-metrics`: evidence slides, where the argument needs them
 - `jobs-to-be-done`, `objections`: the customer's framing of the problem, in their words
 
-And the full [visual identity](../../context/visual-identity.md) for the render.
+And the full [visual identity](../../context/brand-visual-identity.md) for the render.
 
 ## Asks the human
 

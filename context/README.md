@@ -9,11 +9,12 @@ every AI tool you point at it) draws from the same source of truth.
 
 This folder is what you know: everything your team and AI tools draw from. It holds two
 things organized by these components: the [canon](messaging-canon.md), your approved
-messaging, and the [content index](content-index.md), a registry of everything you've
-published and which components each piece carries. Beside them sit two more files at
-different trust levels: the [visual identity](visual-identity.md), the brand's observable
-design facts (vetted, like the canon), and [entities](entities/), raw intelligence on the
-outside world you track (never vetted, never shipped).
+messaging (split by group across the `canon-*.md` files), and the [content index](content-index.md),
+a registry of everything you've published and which components each piece carries. Beside it sit
+two brand identity layers: [brand-writing-identity.md](brand-writing-identity.md) holds voice,
+guardrails, and lexicon (how the company sounds), and [brand-visual-identity.md](brand-visual-identity.md)
+holds how it looks. [entities](entities/) is raw intelligence on the outside world you track,
+never vetted and never shipped.
 
 The [builder](../builder/) writes into this folder and keeps it current;
 [skills](../skills/) read out of it to generate assets.
@@ -23,7 +24,7 @@ component's name (for example `point-of-view` or `value-drivers`). The ID is the
 downstream assets and AI tools use to reference the component. To add a component, give it a
 fresh kebab-case ID that no other component uses.
 
-There are 24 components across 6 groups.
+There are 23 components across 6 groups.
 
 ---
 
@@ -40,9 +41,6 @@ Where we sit in the market: what we do, who we do it for, and why we do it bette
 
 ### founder-story
 Why the founders started the company and what they uniquely saw.
-
-### lexicon
-Terms and definitions, key concepts, banned terms.
 
 ### company-description
 Company boilerplate: 200 words, 100 words, 50 words, tagline, one-liner (for speaking),
@@ -126,7 +124,7 @@ Free tier or trial and what's included.
 
 ---
 
-## Programs
+## Themes
 
 The content and demand-gen activation layer, built on top of the messaging. These change
 faster than the components above and organize what the company talks about and runs, rather

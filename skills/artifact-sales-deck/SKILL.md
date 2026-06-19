@@ -27,7 +27,7 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 - `objections`: what the deck should preempt
 - `pricing-model`, `packaging`: the path-forward slide, when pricing belongs in the deck
 
-And the full [visual identity](../../context/visual-identity.md) for the render.
+And the full [visual identity](../../context/brand-visual-identity.md) for the render.
 
 If a component the chosen framework needs has no canon entry, say which slide is affected and
 what is missing, build that slide as a clearly marked placeholder, and move on. Never invent

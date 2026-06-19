@@ -11,7 +11,7 @@ design-generation prompt for the hero (1200x630) and an optional social share ca
 
 ## Reads from context
 
-- The full [visual identity](../../context/visual-identity.md), especially the `style`
+- The full [visual identity](../../context/brand-visual-identity.md), especially the `style`
   section. If `style` records an image treatment per blog category, inherit it; editorial
   consistency within a category beats per-post novelty.
 - From the [canon](../../context/messaging-canon.md): `themes` and `topics`, to confirm where
