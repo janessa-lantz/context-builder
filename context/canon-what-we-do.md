@@ -5,6 +5,10 @@ Part of the [messaging canon](messaging-canon.md). One section per component; ea
 ## category-name
 
 
+## products
+*(umbrella name, then one entry per product: what it is and how it relates to the others)*
+
+
 ## unique-attributes
 *(overview, then the few attributes that set the product apart)*
 
