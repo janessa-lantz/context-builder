@@ -12,7 +12,7 @@ Fetch the company's key pages, extract the messaging into the components, and co
 
 1. **Discover the pages** with [scans/key-pages.md](scans/key-pages.md): homepage, pricing, about/company, every product page in the top nav, customers/case studies, contact-sales / sign-up, plus the about and segment-page variants it lists.
 2. **Run the extraction** (below) against those pages. It is organized by component ID (see [context/README.md](../../context/README.md)), so its output drops straight into the canon.
-3. **Compile into the canon** by component ID. The extraction's output is written directly into the per-group `canon-*.md` files; there is no intermediate artifact to file. Follow the canon rules in [AGENTS.md](../../AGENTS.md): fill each component from verbatim, currently-published copy, attribute the source, leave a component blank when it has no published copy, and never overwrite a `source: human` entry.
+3. **Compile into the canon** by component ID. The extraction's output is written directly into the per-group `canon-*.md` files, in the canon's [entry format](../../context/messaging-canon.md); there is no intermediate artifact to file. Follow the canon rules in [AGENTS.md](../../AGENTS.md): fill each component from verbatim, currently-published copy, attribute the source, leave a component blank when it has no published copy, and never overwrite a `source: human` entry.
 4. **Log and index the pages.** One `url` row per key page in the [ingestion log](ingestion-log.md) (result: "canon extraction"), and one [content-index](../../context/content-index.md) row per key page (`surface: key_page`, components from the extraction).
 
 The extraction covers every group except Themes (see below). It also extracts `lexicon`, which is written to [brand-writing-identity.md](../../context/brand-writing-identity.md), not the canon.
@@ -73,7 +73,7 @@ Do not fill gaps with assumptions. If a component has no published content, say 
 
 **narrative:** the origin and journey story, in order, that led to this product. Usually in About, Manifesto, or founder blog posts.
 
-**positioning:** the canonical claim of what the product is and for whom. The homepage hero is canonical; consistent secondary claims across pages are supporting. Use-case and segment headlines are overlays, not positioning.
+**positioning:** the canonical claim of what the product is and for whom. Output as labeled bullets: Primary (the homepage hero), then Supporting (consistent secondary claims across pages, with where each appears). Use-case and segment headlines are overlays, not positioning.
 
 **founder-story:** named founder(s), their background, and the moment or insight that led to starting the company. If not on the key pages, write "No founder story found on key pages."
 
