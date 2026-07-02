@@ -12,7 +12,7 @@ system: [jobs](../builder/jobs/) run on a cadence and write into
 ## The rule
 
 **Skills read context; they never write it.** A skill never edits the canon, the content
-index, the visual identity, or an entity. If a skill run reveals a gap (a component with no
+index, the brand identities, or an entity. If a skill run reveals a gap (a component with no
 canon entry, a missing color value), it surfaces the gap for a human and the
 [builder](../builder/) to fix. Generating an asset and updating the source of
 truth are different jobs, and keeping them separate is what makes the context trustworthy.
@@ -23,10 +23,11 @@ Each skill is a folder named `artifact-{asset}` (matching the naming used across
 repos), holding:
 
 - **SKILL.md**: the workflow. It declares which canon components it reads (by ID), reads
-  [visual-identity](../context/brand-visual-identity.md) for design facts, and asks the human only
-  for the job-specific variables context cannot hold (the deck's purpose, the campaign's
-  offer, the post's topic). A skill never asks for positioning, audience, proof, voice, or
-  brand colors; context already holds those.
+  [brand-visual-identity](../context/brand-visual-identity.md) for design facts and
+  [brand-writing-identity](../context/brand-writing-identity.md) for voice, guardrails, and
+  lexicon, and asks the human only for the job-specific variables context cannot hold (the
+  deck's purpose, the campaign's offer, the post's topic). A skill never asks for positioning,
+  audience, proof, voice, or brand colors; context already holds those.
 - **A reference file**: the distilled craft the skill applies. Platform specs and dimensions,
   copy density limits, layout patterns, anti-patterns. Facts and frameworks, not examples to
   imitate.

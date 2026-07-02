@@ -25,6 +25,21 @@ These four are the analyzer's comparisons. Issues can also carry other kinds sur
 from the same summaries, for example a recurring `objection` or a `product` signal. The set
 is open (see [issues](../issues/)).
 
+## The run
+
+1. Gather the parsed summaries added or updated since the backlog's most recent `last_run`.
+2. Run each comparison above, component by component, against those summaries. Skip a
+   comparison whose inputs don't exist yet: `mismatched` needs customer summaries,
+   `competitive` needs entity Profiles. Never force findings the data cannot support.
+3. Update the backlog per [issues](../issues/): add evidence to existing themes, raise
+   confidence as patterns strengthen, open new themes at `low`, and leave `actioned` and
+   `dismissed` themes closed.
+4. Stamp `last_run` on every theme touched.
+
+Run it after each meaningful batch of new summaries (a set of sales calls, a completed scan),
+or whenever someone asks what's off. The first run happens at the end of
+[setup](setup.md), to baseline the backlog.
+
 ## Output
 
 Findings land in [issues](../issues/) as **themes**: recurring patterns, each tagged

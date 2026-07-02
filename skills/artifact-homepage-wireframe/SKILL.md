@@ -20,11 +20,13 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 
 - `positioning`, `company-description`: the hero headline and audience framing
 - `point-of-view`, `narrative`: the reader-voice opening and the "why it's better" per section
-- `product`, `capabilities`, `benefits`, `how-it-works`: the per-product sections
-- `differentiators`: each product's OWN "why it's better", one per section, never reused
-- `jobs-to-be-done`, `account`, `buying-committee`: who each section is for
+- `products`, `value-proposition`, `how-it-works`: the per-product sections
+- `unique-attributes`: each product's OWN "why it's better", one per section, never reused
+- `icp`, `buying-committee`: who each section is for
 - `customer-proof`, `key-metrics`: proof points and stats used inside benefits
-- `lexicon`: the voice rules and banned terms to enforce
+
+Plus [brand-writing-identity](../../context/brand-writing-identity.md): the voice rules and
+banned terms to enforce.
 
 This skill deliberately does **not** read the visual identity. A wireframe has no brand colors,
 fonts, or imagery; design comes after the IA and copy are approved. If you reach for
@@ -59,8 +61,8 @@ One at a time, and only what context cannot hold:
    positioning subhead, one primary CTA, an optional credibility stamp.
 5. Build each product section to the locked pattern: eyebrow, headline, one who/what/why
    subhead, three benefit cards (no label, no numbers), CTA row. Pull each section's "why it's
-   better" from that product's own differentiator. Vary the body to a top-five directory list
-   for catalog sections.
+   better" from that product's own entry in `unique-attributes`. Vary the body to a top-five
+   directory list for catalog sections.
 6. Render and open after each piece (`open <file>` on macOS). Show it, wait for the reaction,
    change one thing at a time. Cut chrome by default (see the patterns file's cut list).
 7. When the homepage is approved, deploy: upload the HTML as-is via the pretty-page uploader
@@ -78,7 +80,7 @@ One at a time, and only what context cannot hold:
   not company-voice.
 - Each section: eyebrow, headline, ONE subhead carrying who it's for plus what it does plus why
   it's better, three benefits (no "Benefits" label, no numbers), CTA.
-- No two sections share a "why it's better"; each uses its own differentiator.
+- No two sections share a "why it's better"; each uses its own unique attribute.
 - No em dashes; no banned canon terms; specific over general.
 - Chrome is lean: no section counters, no redundant labels, no filler second sentences.
 - Deployed via pretty-page `upload.py` (not the renderer), HTML unchanged, under a project

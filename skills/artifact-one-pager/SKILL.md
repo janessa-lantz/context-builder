@@ -20,14 +20,15 @@ draft for human review.
 From the [canon](../../context/messaging-canon.md), by component ID:
 
 - `positioning`, `category-name`: the header and hero
-- `product`, `capabilities`: the body, scoped to the format
-- `benefits`, `value-drivers`: the benefit grid, framed as outcomes
+- `products`, `unique-attributes`: the body, scoped to the format
+- `value-proposition`, `value-drivers`: the benefit grid, framed as outcomes
 - `customer-proof`, `key-metrics`: the proof band
 - `ecosystem-integrations`: required for the integration format
-- `account`: required for the vertical format (the industry framing)
-- `jobs-to-be-done`: the problem statement, in the customer's words
+- `icp` (the account): required for the vertical format (the industry framing)
+- `icp` (the champion's job to be done): the problem statement, in the customer's words
 
-And the full [visual identity](../../context/brand-visual-identity.md) for the render.
+And the full [visual identity](../../context/brand-visual-identity.md) for the render, plus
+[brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
 If a required component has no canon entry, mark the affected section as a gap and say so.
 Never invent messaging to fill it.

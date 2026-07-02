@@ -30,20 +30,9 @@ is a signal, not a hole to patch.
 
 ## Discovering pages (websites)
 
-Always fetch: homepage, pricing, about or company, every product page in the top nav,
-customers or case studies, contact-sales or sign-up.
-
-For the about page, try in order: `/about`, `/about-us`, `/company`, `/our-story`, `/team`,
-`/careers`. Check the footer for a Manifesto or Principles link. When present it is usually
-the richest single source on the site.
-
-Add when found:
-- segment pages (`/startups`, `/enterprise`, "Who We Serve") for `account` and `buying-committee`
-- `/vs`, `/switch`, `/migrate` for `differentiators`
-- the pricing FAQ for `objections`
-
-If there is no about or manifesto page, check the blog for founder posts, fundraising
-announcements, or category-defining essays for `point-of-view` and `founder-story`.
+Discover key pages per [key-pages](jobs/scans/key-pages.md): the always-fetch list, the
+about-page variants, segment pages, and the competitive and FAQ pages worth checking. The
+same guidance serves the competitive-profile scan pointed at a competitor's domain.
 
 ## Working through a large queue
 
@@ -73,12 +62,13 @@ published assets). Classify them with a non-owned surface (`sales-call`, `custom
 - **Capture every objection**, even the ones handled well. Patterns across calls matter more than how any single one went.
 - **"Nothing to note"** for a section with no finding, so a reader knows you looked and found nothing rather than skipped it.
 
-For a sales or customer call, the components that usually carry signal are `account` (who the
-buyer is), `buying-committee` (who is involved in the decision), `jobs-to-be-done` (what they
-are trying to do), `value-drivers` (the business rationale), `objections`, and any competitor
-or alternative they mention (a `differentiators` signal). The company-side components
-(product, capabilities, positioning, proof) appear only where the seller described them;
-record those as the seller's framing, not as approved messaging.
+For a sales or customer call, the components that usually carry signal are `icp` (who the
+buyer is, the champion's job to be done, the alternatives they weigh, and their objections),
+`buying-committee` (who else is involved in the decision, and their objections),
+`value-drivers` (the business rationale), and any competitor or alternative they mention
+(signal for that competitor's [entity](../context/entities/) Feed). The company-side
+components (products, unique-attributes, positioning, proof) appear only where the seller
+described them; record those as the seller's framing, not as approved messaging.
 
 Two fields specific to these sources (see the [parsed summary](parsed-summaries/) frontmatter):
 
@@ -92,10 +82,10 @@ A few components are easy to confuse. The lines that matter:
 - `point-of-view` is a founding belief about the world, not culture statements or growth stats. A growth stat belongs in `key-metrics`.
 - `positioning` is the homepage canonical claim. Use-case and segment headlines are overlays, not positioning.
 - `lexicon` (coined or redefined terms, not feature names or inherited vocabulary) is written to brand-writing-identity, not the canon. If it is thin, say so rather than padding it.
-- `benefits` are product-level outcomes ("90% of transactions auto-coded"). `value-drivers` are business-level rationale, and each must map to revenue generation, efficiency, cost savings, or risk mitigation.
-- `differentiators` need a competitive frame ("vs. X," "the only platform that..."). "Easy to use" is not a differentiator without a comparison.
-- `customer-proof` is customer-specific outcomes. `key-metrics` and `social-proof` are company-level momentum numbers.
-- `jobs-to-be-done`: separate the economic buyer's outcome, the end user's task, and the champion's initiative where the evidence supports it.
+- Product-level outcomes ("90% of transactions auto-coded") belong in `value-proposition`. `value-drivers` are business-level rationale, and each must map to revenue generation, efficiency, cost savings, or risk mitigation.
+- `unique-attributes` and `value-proposition` need a competitive frame ("vs. X," "the only platform that..."). "Easy to use" is not differentiation without a comparison.
+- `customer-proof` is customer-specific outcomes. `key-metrics` is company-level momentum numbers; `market-proof` is institutional recognition.
+- Inside `icp`, separate the economic buyer's outcome, the end user's task, and the champion's initiative where the evidence supports it.
 
 ## The canon
 

@@ -11,5 +11,5 @@ How the company sounds. The verbal counterpart to [brand-visual-identity.md](bra
 
 
 ## Lexicon
-*(coined or redefined terms, key concepts, and banned terms, as term: definition or usage rule)*
+*(coined or redefined terms and key concepts, as term: definition or usage rule; banned phrases belong in Guardrails)*
 

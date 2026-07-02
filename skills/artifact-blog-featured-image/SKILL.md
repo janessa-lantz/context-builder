@@ -15,7 +15,8 @@ design-generation prompt for the hero (1200x630) and an optional social share ca
   section. If `style` records an image treatment per blog category, inherit it; editorial
   consistency within a category beats per-post novelty.
 - From the [canon](../../context/messaging-canon.md): `themes` and `topics`, to confirm where
-  the post sits, and `lexicon` for any text overlay.
+  the post sits. From [brand-writing-identity](../../context/brand-writing-identity.md): the
+  `lexicon` for any text overlay.
 
 If `style` has no per-category treatment yet, propose one from the archetypes in
 [featured-image-patterns.md](featured-image-patterns.md) and flag it for a human to record in

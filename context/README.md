@@ -24,7 +24,10 @@ component's name (for example `point-of-view` or `value-drivers`). The ID is the
 downstream assets and AI tools use to reference the component. To add a component, give it a
 fresh kebab-case ID that no other component uses.
 
-There are 24 components across 6 groups.
+There are 24 components across 6 groups. This is **version 1** of the component set. Bump the
+version when a component is added, removed, or redefined; each
+[parsed summary](../builder/parsed-summaries/) records the version it was parsed against as
+`components_version`, so you can tell which summaries predate a schema change.
 
 ---
 
@@ -54,7 +57,7 @@ elevator pitch (for speaking).
 What it is.
 
 ### products
-The discrete offerings that make up the product portfolio: what each one is, how they relate to each other, and how the portfolio is organized. For a single-product company, this is a single entry. For a platform company, this maps the product hierarchy — the umbrella and its components.
+The discrete offerings that make up the product portfolio: what each one is, how they relate to each other, and how the portfolio is organized. For a single-product company, this is a single entry. For a platform company, this maps the product hierarchy: the umbrella and its components.
 
 ### unique-attributes
 The "secret sauce": what the product does that makes it different. An overview, then the few

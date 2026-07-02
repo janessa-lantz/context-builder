@@ -10,7 +10,7 @@ Five parts, in order:
 
 1. **Name a big, undeniable shift in the world.** Open with something the audience cannot argue with. Not the product. Pull this from `point-of-view` and `narrative`.
 2. **Show there will be winners and losers.** Make the stakes personal: companies that adapt win, the rest lose.
-3. **Tease the promised land.** What winning looks like after the shift, concrete and specific. Pull from `value-drivers` and `benefits`.
+3. **Tease the promised land.** What winning looks like after the shift, concrete and specific. Pull from `value-drivers` and `value-proposition`.
 4. **Introduce the obstacles, then your magic.** What stands between the audience and the promised land, and the product as the unique way past it. The product appears here, not in part 1. This placement is what makes the framework work.
 5. **Present the proof.** Pull from `customer-proof`, `market-proof`, `key-metrics`.
 
@@ -35,9 +35,9 @@ Five parts, in order:
 
 For shorter decks where there is no time to build a full shift narrative.
 
-1. **Problem**: the specific pain, concrete and bounded (`jobs-to-be-done`, `objections`)
+1. **Problem**: the specific pain, concrete and bounded (the `icp` job to be done and objections)
 2. **Agitate**: the cost of not solving, quantified where canon proof supports it
-3. **Solve**: the product as the answer (`capabilities`, `how-it-works`)
+3. **Solve**: the product as the answer (`unique-attributes`, `how-it-works`)
 4. **Proof**: one anchor (`customer-proof` or `key-metrics`)
 5. **Next step**: explicit CTA
 

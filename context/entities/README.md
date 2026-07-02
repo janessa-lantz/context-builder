@@ -92,12 +92,12 @@ latest_summary: rival-co-2026-03-01
 - positioning: "The all-in-one platform for the close." Positions as a full-suite incumbent
   spanning import, review, and sign-off.
 - buying-committee: finance and accounting leaders.
-- differentiators: breadth across the full close workflow.
+- unique-attributes: breadth across the full close workflow.
 
 ## Feed
 
 | date | kind | component | detail | summary_id |
 |------|------|-----------|--------|------------|
-| 2026-02-18 | buyer-signal | differentiators | A prospect evaluated them but found the broad suite did not solve the specific close need | acme-winloss-0218 |
-| 2026-01-22 | product-update | capabilities | Shipped an AI assistant across the suite | rival-co-2026-01-22 |
+| 2026-02-18 | buyer-signal | unique-attributes | A prospect evaluated them but found the broad suite did not solve the specific close need | acme-winloss-0218 |
+| 2026-01-22 | product-update | products | Shipped an AI assistant across the suite | rival-co-2026-01-22 |
 ```

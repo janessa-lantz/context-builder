@@ -20,14 +20,15 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 
 - `positioning`, `company-description`: the title slide and the through-line
 - `point-of-view`, `narrative`: the shift and the why-now (pitch decks live on these)
-- `product`, `capabilities`, `how-it-works`: the solution slides
-- `benefits`, `value-drivers`: the promised land, framed as business outcomes
-- `differentiators`: competitive framing where the meeting calls for it
+- `products`, `unique-attributes`, `how-it-works`: the solution slides
+- `value-proposition`, `value-drivers`: the promised land, framed as business outcomes
+- `icp` (the champion's competitive alternatives): competitive framing where the meeting calls for it
 - `customer-proof`, `market-proof`, `key-metrics`: the proof slides
-- `objections`: what the deck should preempt
+- the objections in `icp` and `buying-committee`: what the deck should preempt
 - `pricing-model`, `packaging`: the path-forward slide, when pricing belongs in the deck
 
-And the full [visual identity](../../context/brand-visual-identity.md) for the render.
+And the full [visual identity](../../context/brand-visual-identity.md) for the render, plus
+[brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
 If a component the chosen framework needs has no canon entry, say which slide is affected and
 what is missing, build that slide as a clearly marked placeholder, and move on. Never invent

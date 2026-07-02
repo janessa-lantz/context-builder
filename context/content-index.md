@@ -19,7 +19,7 @@ Customer and market sources are out of scope here for now.
 
 ## Columns
 
-- `id`: unique kebab-case slug for the asset
+- `id`: unique kebab-case slug for the asset. Derive it from the URL path (`/pricing` becomes `pricing`, a blog post keeps its slug) or, for captured files, the filename. Prefix with the sub-brand or section only when needed to stay unique.
 - `title`: human-readable label
 - `source`: the locator (URL or file path)
 - `surface`: where the asset lives (see values below)
@@ -50,4 +50,4 @@ Customer and market sources, by surface. These are parsed for signal but **not**
 
 | id | title | source | surface | components | last_scanned |
 |----|-------|--------|---------|------------|--------------|
-| example-homepage | Homepage | https://example.com | key_page | positioning category-name product capabilities differentiators value-drivers | 2026-06-04 |
+| example-homepage | Homepage | https://example.com | key_page | positioning category-name products unique-attributes value-proposition value-drivers | 2026-06-04 |
