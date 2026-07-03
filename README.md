@@ -21,7 +21,7 @@ The context-builder keeps your messaging current and flags it the moment it drif
 2. **Ingests your knowledge as it accumulates.** Sales calls, win/loss notes, customer interviews, and everything you publish enter through one front door, get parsed against the components, and land as durable summaries. Customer language is captured the moment it shows up, not months later in a doc rewrite.
 3. **Surfaces messaging issues proactively.** The analyzer compares the canon against what customers actually say and what your company has published, then writes structured [issues](builder/issues/) tagged mismatched, misaligned, or missing for a human to act on. The LLM finds the drift; you decide what to do about it.
 
-With the canon stable and current, your team builds shared [skills](skills/) on top of it, so every asset is generated from approved messaging rather than from scratch.
+With the canon stable and current, your team builds shared [skills](skills%20-%20Work%20in%20Progress/) on top of it, so every asset is generated from approved messaging rather than from scratch.
 
 ![context-builder system diagram: the builder writes each source into context, the analyzer surfaces drift, and skills read context to produce assets, all organized by 24 messaging components](system-diagram.png)
 
@@ -31,7 +31,7 @@ Three groups, separated by one rule: the builder writes into context; skills rea
 
 - **[context/](context/)** is the source of truth your team and AI draw from: the [messaging canon](context/messaging-canon.md) (one statement per component, compiled from your key pages), the [content index](context/content-index.md) (every asset you've published and which components it carries), the [brand writing identity](context/brand-writing-identity.md) (voice, guardrails, and lexicon) and the [brand visual identity](context/brand-visual-identity.md) (the observable design facts), and [entities](context/entities/) (raw records of the outside world you track, kept at a different trust level from the canon). The canon and index are organized by a shared library of 24 messaging components.
 - **[builder/](builder/)** is everything that keeps context current. The [parser](builder/parser.md) fetches each source, maps it to the components, and writes a durable summary. [Jobs](builder/jobs/) are the recurring work you run: the [ingestion log](builder/jobs/ingestion-log.md) is the front door where every source (a URL, a transcript, a PDF) is logged and routed; [scans](builder/jobs/scans/) discover sources to feed it; the [analyzer](builder/jobs/analyzer.md) finds drift, and its findings land in [issues/](builder/issues/) for you to act on.
-- **[skills/](skills/)** is on-demand production. Each skill reads the canon and brand identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs write into context on a cadence; skills read out of it on demand.
+- **[skills - Work in Progress/](skills%20-%20Work%20in%20Progress/)** is on-demand production. Each skill reads the canon and brand identity to generate an asset (a deck, a one-pager, a carousel) when a human asks for one. Jobs write into context on a cadence; skills read out of it on demand.
 
 ## Key Concepts
 

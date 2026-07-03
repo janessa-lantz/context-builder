@@ -17,7 +17,7 @@ holds how it looks. [entities](entities/) is raw intelligence on the outside wor
 never vetted and never shipped.
 
 The [builder](../builder/) writes into this folder and keeps it current;
-[skills](../skills/) read out of it to generate assets.
+[skills](../skills%20-%20Work%20in%20Progress/) read out of it to generate assets.
 
 Each component is identified by a stable **ID** in lowercase kebab-case, derived from the
 component's name (for example `point-of-view` or `value-drivers`). The ID is the handle

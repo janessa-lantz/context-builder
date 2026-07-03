@@ -3,7 +3,7 @@
 Everything that writes into [context](../context/) and keeps it current. The builder reads a
 job, fetches the source, parses it against the components, writes the result into context,
 and compares what it finds against the canon to surface issues. Skills are the other side of
-the line: they [read out of context](../skills/) and never write into it.
+the line: they [read out of context](../skills%20-%20Work%20in%20Progress/) and never write into it.
 
 ## Elements
 
