@@ -21,8 +21,20 @@ rows as proof assets are parsed (a published case study is also an `owned` row i
 
 ## Register
 
-*(the first row is an example; delete it when you add real proof)*
+Deployment: **Mintlify**. The sitemap lists 32 customer pages; this setup run registered the
+2 sampled detail pages plus the artifacts visible on /customers and key pages. The remaining
+case-study pages are queued for the domain scan, not absent.
 
 | id | title | customer | type | source | claims | last_scanned |
 |----|-------|----------|------|--------|--------|--------------|
-| acme-case-study | How Acme cut close time 40% | Acme | case-study | https://example.com/customers/acme | clm-002 | 2026-07-07 |
+| coinbase-case-study | Coinbase: 20min → 60s doc updates | Coinbase | case-study | https://mintlify.com/customers/coinbase | clm-059 clm-066 | 2026-07-07 |
+| anthropic-case-study | Anthropic accelerates AI development and adoption | Anthropic | case-study | https://mintlify.com/customers/anthropic | clm-064 | 2026-07-07 |
+| claude-code-docs-story | How Claude Code's docs team makes feedback actionable | Anthropic (Claude Code) | case-study | https://mintlify.com/blog/how-claude-code-docs-team-uses-mintlify | | 2026-07-07 |
+| hubspot-outcome | HubSpot: 50% reduction in eng resources on docs | HubSpot | case-study | https://mintlify.com/customers/hubspot | clm-060 | 2026-07-07 |
+| zapier-outcome | Zapier: 3x faster documentation updates | Zapier | case-study | https://mintlify.com/customers/zapier | clm-061 | 2026-07-07 |
+| laravel-outcome | Laravel: 3-day migration | Laravel | case-study | https://mintlify.com/customers/laravel | clm-062 | 2026-07-07 |
+| fidelity-outcome | Fidelity: 99.99% uptime since launch | Fidelity | case-study | https://mintlify.com/customers/fidelity | clm-063 | 2026-07-07 |
+| browserbase-quote | "Our docs are the product" — Paul Klein, CEO | Browserbase | quote | https://mintlify.com/customers | clm-065 | 2026-07-07 |
+| replit-quote | Notion/Google-Docs interface backed by version control — Matt Palmer, DevRel | Replit | quote | https://mintlify.com/customers | | 2026-07-07 |
+| leffew-quote | "As agentic as the protocols we're shipping" — Kevin Leffew, AI GTM Lead | Coinbase | quote | https://mintlify.com/customers/coinbase | clm-066 | 2026-07-07 |
+| customers-logo-wall | 30 named customer logos | multiple | logo | https://mintlify.com/customers | | 2026-07-07 |

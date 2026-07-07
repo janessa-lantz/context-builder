@@ -5,13 +5,25 @@ rendered per [messaging-canon.md](messaging-canon.md). Do not edit here; mint, p
 add `source: human` claims in the register and the view follows on the next
 [analyzer](../builder/jobs/analyzer.md) compile.*
 
-## icp
-*(repeat per profile. account: firmographics, technographics, triggers. champion + title: job to be done, competitive alternatives + the problems with each, objections to our approach)*
+*Deployment: Mintlify · compiled 2026-07-07*
 
+## icp
+
+**Account**: developer-facing software companies, "from frontier AI companies to consumer
+brands" and global enterprises. Technographics: docs-as-code stacks (GitHub/GitLab, OpenAPI),
+Slack-centered teams. Triggers: surging AI-agent traffic to docs, migration off legacy docs
+tools, new startup/YC batch formation.
+**Champion**: the docs/DevEx owner (developer relations, technical writing, platform
+engineering) accountable for onboarding, activation, and support deflection.
+clm-055 · source: synthesis (use-cases, enterprise, startups, switch) — see iss-006
 
 ## buying-committee
-*(economic buyer, end user, others. per role: title, role in the buying decision, common objections)*
 
+*(no canon claims yet — zero row on the map; pricing-FAQ topics signal security/IT
+evaluators but nothing published addresses them; see iss-005)*
 
 ## value-drivers
-*(how the product delivers business value for the account, mapped to the categories your messaging supports: revenue generation, efficiency, cost savings, risk mitigation)*
+
+- **Cost savings**: docs deflect support — "fewer tickets and faster resolution" (help-center) · clm-056
+- **Efficiency**: "Automate documentation updates" frees engineering time (enterprise) · clm-057
+- **Revenue generation** — candidate: "Documentation is often the highest-traffic, highest-intent surface in the entire funnel." (demand-channel post) · clm-058 — see iss-002

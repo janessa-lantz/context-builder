@@ -21,8 +21,11 @@ rows as pricing and signup surfaces are parsed; expired offers are marked, never
 
 ## Register
 
-*(the first row is an example; delete it when you add real offers)*
+Deployment: **Mintlify** — setup run 2026-07-07.
 
 | id | name | type | description | source | claims | status | last_confirmed |
 |----|------|------|-------------|--------|--------|--------|----------------|
-| free-trial | 14-day free trial | trial | Full platform, 14 days, no credit card | https://example.com/pricing | | active | 2026-07-07 |
+| starter-free | Starter tier | free-tier | $0/mo: full platform, custom domain, web editor, authentication, MCP server, API playground; 10,000 credits/mo | https://mintlify.com/pricing | clm-076 clm-077 clm-080 | active | 2026-07-07 |
+| first-month-credits | First month of credits free | credit | "Get started for free, your first month of credits on us" | https://mintlify.com/pricing | clm-080 | active | 2026-07-07 |
+| startup-program | Startup program | program | Eligible startups and YC alumni: 50% off Pro for one year | https://mintlify.com/startups | clm-081 | active | 2026-07-07 |
+| yc-batch-program | YC current-batch program | program | 12 months of Pro free through launch, plus priority support | https://mintlify.com/startups | clm-081 | active | 2026-07-07 |

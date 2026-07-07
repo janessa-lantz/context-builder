@@ -35,11 +35,33 @@ own pages and posts are parsed and registered.
 
 ## Log
 
-*(the rows below are examples; delete them when you start logging real inputs)*
+Deployment: **Mintlify** — setup run of 2026-07-07. Step 2 ran as a sample (11 of ~200
+discoverable owned pages); the domain and blog scans have more to feed on later runs.
 
 | created | type | source | scan_id | route | status | result |
 |---------|------|--------|---------|-------|--------|--------|
-| 2026-07-07 | url | https://example.com | scan-keypages-0707 | parser + registers | done | registered as homepage; minted clm-001 clm-002, 2 evidence rows |
-| 2026-07-07 | url | https://competitor.com | scan-competitive-0707 | parser | done | parsed; competitor, entity updated, nothing minted |
-| 2026-07-07 | text | raw-assets/acme-winloss-0603.txt |  | parser | done | parsed; sales transcript, 3 private evidence rows |
-| 2026-07-11 | pdf | raw-assets/analyst-brief.pdf |  | parser | pending |  |
+| 2026-07-07 | url | https://mintlify.com | scan-keypages-0707 | parser + registers | done | registered as homepage; minted clm-001–003, 015, 020, 027, 069–072 |
+| 2026-07-07 | url | https://mintlify.com/pricing | scan-keypages-0707 | parser + registers | done | registered as pricing; minted clm-031, 033, 076–078, 080; Pro price not rendered to scraper (iss-007) |
+| 2026-07-07 | url | https://mintlify.com/customers | scan-keypages-0707 | parser + registers | done | registered as customers; minted clm-059–063, 065; 32 case studies discovered, 2 detail pages sampled |
+| 2026-07-07 | url | https://mintlify.com/enterprise | scan-keypages-0707 | parser + registers | done | registered as enterprise; minted clm-021, 024, 039, 040, 047, 057, 064 |
+| 2026-07-07 | url | https://mintlify.com/startups | scan-keypages-0707 | parser + registers | done | registered as startups; minted clm-068, 081 |
+| 2026-07-07 | url | https://mintlify.com/switch | scan-keypages-0707 | parser + registers | done | registered as switch; minted clm-037, 038, 046, 048, 049, 073, 079 |
+| 2026-07-07 | url | https://mintlify.com/use-cases/developer-documentation | scan-keypages-0707 | parser + registers | done | registered; minted clm-026, 028–030, 032, 035, 043, 053 |
+| 2026-07-07 | url | https://mintlify.com/use-cases/help-center | scan-keypages-0707 | parser + registers | done | registered; minted clm-022, 025, 034, 042, 056 |
+| 2026-07-07 | url | https://mintlify.com/use-cases/knowledge-base | scan-keypages-0707 | parser + registers | done | registered; minted clm-044 |
+| 2026-07-07 | url | https://mintlify.com/use-cases/slack-agent | scan-keypages-0707 | parser + registers | done | registered; minted clm-018, 023, 036, 041, 050 |
+| 2026-07-07 | url | https://mintlify.com/careers | scan-keypages-0707 | parser + registers | done | registered as careers; no claims minted (values page; story links out to YC post) |
+| 2026-07-07 | url | https://mintlify.com/contact/sales | scan-keypages-0707 | parser + registers | done | registered; minted clm-045, 052; repeat evidence for clm-001, 069 |
+| 2026-07-07 | url | https://mintlify.com/blog/documentation-is-dead | scan-keypages-0707 | parser + registers | done | founder POV essay (About-page substitute per key-pages scan); minted clm-005–007, 011 |
+| 2026-07-07 | url | https://mintlify.com/blog/series-b | scan-keypages-0707 | parser + registers | done | founder narrative (About-page substitute); minted clm-009, 010, 012, 013, 067, 074 |
+| 2026-07-07 | url | https://mintlify.com/blog/documentation-is-a-demand-channel | scan-blog-0707 | parser + registers | done | registered; minted clm-058 (candidate) |
+| 2026-07-07 | url | https://mintlify.com/blog/agents-launch | scan-blog-0707 | parser + registers | done | registered; minted clm-016 (candidate) |
+| 2026-07-07 | url | https://mintlify.com/blog/autopilot | scan-blog-0707 | parser + registers | done | registered; minted clm-019, 051 (candidates) |
+| 2026-07-07 | url | https://mintlify.com/blog/structured-docs-coding-agents | scan-blog-0707 | parser + registers | done | registered; minted clm-008 (candidate); evidence for clm-045 |
+| 2026-07-07 | url | https://mintlify.com/blog/how-claude-code-docs-team-uses-mintlify | scan-blog-0707 | parser + registers | done | registered; no new claims; customer-proof register row (Anthropic/Claude Code) |
+| 2026-07-07 | url | https://mintlify.com/blog/mintlify-acquires-trieve-to-improve-rag-search-in-documentation | scan-blog-0707 | parser + registers | done | registered; minted clm-004, 075 (candidates) |
+| 2026-07-07 | url | https://mintlify.com/blog/introducing-ai-assistant-2025 | scan-blog-0707 | parser + registers | done | registered; minted clm-017 (candidate) |
+| 2026-07-07 | url | https://mintlify.com/library/mintlify-vs-docusaurus-which-documentation-platform-should-you-choose | scan-domain-0707 | parser + registers | done | registered; evidence for clm-004, 061 |
+| 2026-07-07 | url | https://mintlify.com/customers/coinbase | scan-domain-0707 | parser + registers | done | registered; minted clm-066 (candidate); customer-proof register row |
+| 2026-07-07 | url | https://mintlify.com/customers/anthropic | scan-domain-0707 | parser + registers | done | registered; customer-proof register row; evidence for clm-064 |
+| 2026-07-07 | url | https://mintlify.com/docs | scan-domain-0707 | parser + registers | done | registered (light parse); minted clm-054 (candidate); evidence for clm-004, 039 |

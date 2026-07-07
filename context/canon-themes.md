@@ -5,13 +5,18 @@ rendered per [messaging-canon.md](messaging-canon.md). The content and demand-ge
 layer: what the company talks about and runs, rather than what it claims. These change faster
 than the rest of the canon. Do not edit here; change the claims and the view follows.*
 
-## themes
-*(durable narrative pillars the company organizes content around; a theme holds many topics)*
+*Deployment: Mintlify · compiled 2026-07-07*
 
+## themes
+
+*(no canon claims yet — setup defers Themes to owned-content analysis. Early signals from
+the sampled blog: agent-era knowledge infrastructure; docs as a growth/demand channel;
+self-updating documentation.)*
 
 ## topics
-*(specific subjects you create content about, with the keywords each targets; topics sit under themes)*
 
+*(no canon claims yet)*
 
 ## campaigns
-*(time-boxed, coordinated pushes that activate themes and topics toward a goal, across owned, earned, and paid surfaces)*
+
+*(no canon claims yet)*

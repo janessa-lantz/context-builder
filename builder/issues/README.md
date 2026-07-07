@@ -79,10 +79,17 @@ patterns, and you can seed hypotheses for it to evidence.
 
 ## Backlog
 
-*(the rows below are examples; delete them when the analyzer writes real themes)*
+Deployment: **Mintlify** — baselined by the setup run's analyzer pass, 2026-07-07. Only
+`missing` and `misaligned` (and `process`) have data: no customer sources or entity Profiles
+exist yet, so `mismatched` and `competitive` were skipped, not forced.
 
 | id | kind | component | claims | description | confidence | evidence | status | last_run |
 |----|------|-----------|--------|-------------|------------|----------|--------|----------|
-| iss-001 | mismatched | value-drivers | clm-014 | Customers frame the value as saving the deal; canon frames it as efficiency | high | acme-winloss-0603, vertex-0504, summit-0427 | open | 2026-06-04 |
-| iss-002 | missing | buying-committee | | Customers raise procurement-approval concerns; no canon claim covers it | medium | acme-winloss-0603, meridian-0417 | open | 2026-06-04 |
-| iss-003 | misaligned | positioning | clm-003 | Blog positions as a reporting tool; canon positions as a decision platform | low | blog-close-faster | open | 2026-06-04 |
+| iss-001 | misaligned | category-name | clm-003 clm-004 | Homepage now says "knowledge infrastructure"; docs, the Trieve post, and the library comparison still say "AI-native documentation platform" — the agent-era repositioning hasn't propagated | medium | blog-trieve-acquisition, docs, library-mintlify-vs-docusaurus | open | 2026-07-07 |
+| iss-002 | missing | value-drivers | clm-058 | Revenue-generation framing (docs as the highest-intent demand channel) lives only on an owned blog post; no key page makes the business case beyond support deflection | low | blog-demand-channel | open | 2026-07-07 |
+| iss-003 | missing | founder-story | | No About page exists on the domain; the origin story lives off-site (YC post linked from careers) and in blog posts | low | careers | open | 2026-07-07 |
+| iss-004 | misaligned | key-metrics | clm-069 clm-073 | Scale stats drift across surfaces: "20,000+ companies" (homepage) vs "over ten thousand companies" (careers); "100 million builders" (switch) vs "100 million people" (series-b); Anthropic "2M+" (enterprise) vs "1.5M developers" (case study) | medium | careers, switch, blog-series-b, customer-anthropic | open | 2026-07-07 |
+| iss-005 | missing | buying-committee | | Zero claims for the buying committee; pricing-FAQ topics (SOC 2, authentication, credits) signal evaluator objections but no published content addresses roles beyond the champion | low | pricing, claims-map zero row | open | 2026-07-07 |
+| iss-006 | process | company-description | clm-014 clm-055 | Spec gap: the extraction requires composed synthesis for company-description and icp, but the claims trust model says the LLM mints verbatim only — rows marked "synthesis" pending a codify ruling on how LLM synthesis is labeled | low | context/claims.md rows clm-014, clm-055 | open | 2026-07-07 |
+| iss-007 | process | pricing-model | clm-076 | The pricing page renders the Pro price as placeholder digits to the scraper (JS-rendered); the register carries tier structure but no Pro price — needs a browser-rendered fetch or human capture | low | pricing | open | 2026-07-07 |
+| iss-008 | missing | positioning | clm-001 | "Your docs have two readers now: the developers and the agents they sent ahead" appears only on contact-sales — the strongest supporting line is absent from the homepage and unminted | low | contact-sales | open | 2026-07-07 |
