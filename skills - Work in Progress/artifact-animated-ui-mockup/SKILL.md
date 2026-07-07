@@ -21,7 +21,7 @@ the mock UI use the company's lexicon. And the full
 [visual identity](../../context/brand-visual-identity.md): the mock UI is rendered in the
 brand's colors and type, with accent restraint.
 
-If `how-it-works` has no canon entry, ask the human to describe the workflow and flag the
+If `how-it-works` has no canon claims, ask the human to describe the workflow and flag the
 gap; do not invent product behavior.
 
 ## Asks the human

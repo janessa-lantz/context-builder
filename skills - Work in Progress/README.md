@@ -11,23 +11,30 @@ system: [jobs](../builder/jobs/) run on a cadence and write into
 
 ## The rule
 
-**Skills read context; they never write it.** A skill never edits the canon, the content
-index, the brand identities, or an entity. If a skill run reveals a gap (a component with no
-canon entry, a missing color value), it surfaces the gap for a human and the
-[builder](../builder/) to fix. Generating an asset and updating the source of
-truth are different jobs, and keeping them separate is what makes the context trustworthy.
+**Skills read context; they never write it.** A skill never edits the
+[claims register](../context/claims.md), the [registers](../context/registers/), the slices
+([lockups](../context/lockups.md), [entry points](../context/entry-points.md)), the brand
+identities, or an entity. If a skill run reveals a gap (a component with no canon claims, a
+draft lockup, a missing color value), it files the gap as a theme in
+[issues](../builder/issues/) for a human and the [builder](../builder/) to fix. Generating an
+asset and updating the source of truth are different jobs, and keeping them separate is what
+makes the context trustworthy.
 
 ## Anatomy of a skill
 
 Each skill is a folder named `artifact-{asset}` (matching the naming used across client
 repos), holding:
 
-- **SKILL.md**: the workflow. It declares which canon components it reads (by ID), reads
-  [brand-visual-identity](../context/brand-visual-identity.md) for design facts and
-  [brand-writing-identity](../context/brand-writing-identity.md) for voice, guardrails, and
-  lexicon, and asks the human only for the job-specific variables context cannot hold (the
-  deck's purpose, the campaign's offer, the post's topic). A skill never asks for positioning,
-  audience, proof, voice, or brand colors; context already holds those.
+- **SKILL.md**: the workflow. It declares what it reads, most-composed first: the
+  [lockups](../context/lockups.md) or [entry points](../context/entry-points.md) it renders
+  (`approved` only — a `draft` slice is a gap, not a pass), then canon
+  [claims](../context/claims.md) by component ID as the fallback when no slice covers a
+  section. It reads [brand-visual-identity](../context/brand-visual-identity.md) for design
+  facts and [brand-writing-identity](../context/brand-writing-identity.md) for voice,
+  guardrails, and lexicon, and asks the human only for the job-specific variables context
+  cannot hold (the deck's purpose, the campaign's offer, the post's topic). A skill never
+  asks for positioning, audience, proof, voice, or brand colors; context already holds those.
+  Only `canon` claims ship; a `candidate` is never rendered into an asset.
 - **A reference file**: the distilled craft the skill applies. Platform specs and dimensions,
   copy density limits, layout patterns, anti-patterns. Facts and frameworks, not examples to
   imitate.

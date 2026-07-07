@@ -8,13 +8,13 @@ tagged with the scan's id.
 Each scan is paired with the targets it should crawl. Fill in the targets in the scan's file,
 run it, and it queues a `url` job per source it finds.
 
-Scans split by where their output lands. Inward scans feed your own context (the canon and
-content index). Outward scans feed [entities](../../../context/entities/), the raw record of the
+Scans split by where their output lands. Inward scans feed your own context (the claims
+register and the registers). Outward scans feed [entities](../../../context/entities/), the raw record of the
 outside world you track.
 
 Inward:
 
-- **[key-pages](key-pages.md)**: your core company pages; the source for the canon
+- **[key-pages](key-pages.md)**: your core company pages; the source for canon claims
 - **[domain](domain.md)**: a full company domain
 - **[blog](blog.md)**: a blog
 

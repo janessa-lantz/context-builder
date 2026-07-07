@@ -1,12 +1,23 @@
 # Canon: What We Do
 
-Part of the [messaging canon](messaging-canon.md). One section per component; each entry is verbatim from a live surface (source noted) or human synthesis (`source: human`). See the [README](README.md) for what each component is.
+*Compiled view of the [claims register](claims.md): the `canon` claims in this group,
+rendered per [messaging-canon.md](messaging-canon.md). Do not edit here; mint, promote, or
+add `source: human` claims in the register and the view follows on the next
+[analyzer](../builder/jobs/analyzer.md) compile.*
 
 ## category-name
 
 
 ## products
 *(umbrella name, then one entry per product: what it is and how it relates to the others)*
+
+
+## capabilities
+*(what the product enables at workflow grain; one claim per capability)*
+
+
+## features
+*(claims about named functionality; the factual inventory lives in the [features register](registers/features.md))*
 
 
 ## unique-attributes
@@ -22,4 +33,3 @@ Part of the [messaging canon](messaging-canon.md). One section per component; ea
 
 
 ## ecosystem-integrations
-

@@ -4,14 +4,15 @@ Durable records of the outside-world actors the system tracks. Competitors first
 events, key people, and amplifiers. An entity page is the builder's accumulating knowledge of
 one actor: its current state and the history of how it changed.
 
-Entities are the outward-facing counterpart to the [content index](../content-index.md).
-The content index aggregates *your* assets; entities aggregate *the outside world you track*.
+Entities are the outward-facing counterpart to the [registers](../registers/). The registers
+aggregate *your* material; entities aggregate *the outside world you track*. Competitor
+material never mints [claims](../claims.md); it lands here.
 
 ## Raw, not vetted
 
 Entities live in `context/` because they are knowledge the team draws from, but they sit at a
-different trust level from everything else here. The canon, index, and visual identity are
-vetted and safe to ship. Entity pages are scraped and synthesized intelligence: useful, but
+different trust level from everything else here. The canon claims, registers, and visual
+identity are vetted and safe to ship. Entity pages are scraped and synthesized intelligence: useful, but
 unconfirmed and sometimes stale. Never treat an entity page as a sanctioned battlecard, and
 never drop its text into a published asset. Anything shippable is a separate, human-vetted
 artifact built on top of this raw material, never the material itself.
@@ -54,7 +55,7 @@ that evidenced it, so provenance holds no matter which job wrote the row.
 | `date` | when the change was observed or published, `YYYY-MM-DD` |
 | `kind` | the signal type (below) |
 | `component` | the message component it touches, by id, when one applies |
-| `detail` | a short description of the change |
+| `detail` | a short description of the change; when it contests a specific claim, name the `clm-` ID here so the [analyzer](../../builder/jobs/analyzer.md) can flag it `contested` on the [map](../claims-map.md) |
 | `summary_id` | the parsed summary that evidenced it |
 
 Signal kinds: `product-update` / `pricing-change` / `messaging-shift` / `partnership` /
