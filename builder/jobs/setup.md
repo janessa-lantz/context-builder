@@ -1,52 +1,54 @@
 # Setup
 
-The one-time bootstrap for a new deployment. Run it once, when you first point context-builder at a company. It stands up the [messaging canon](../../context/messaging-canon.md) and the [content index](../../context/content-index.md), then baselines the [issues backlog](../issues/README.md). After setup, keep them current with the recurring jobs, not by re-running setup.
+The one-time bootstrap for a new deployment. Run it once, when you first point context-builder at a company. It stands up the [claims register](../../context/claims.md) and the [registers](../../context/registers/), then baselines the [issues backlog](../issues/README.md) and compiles the first [claims map](../../context/claims-map.md). After setup, keep them current with the recurring jobs, not by re-running setup.
 
 Three steps.
 
 ---
 
-## Step 1: Build the v1 canon
+## Step 1: Fill the claims register from the existing site, and identify the gaps
 
-Fetch the company's key pages, extract the messaging into the components, and compile the result into the [messaging canon](../../context/messaging-canon.md) (the per-group `canon-*.md` files).
+Fetch the company's key pages, extract the messaging into components and claims, and mint the result into the [claims register](../../context/claims.md).
 
 1. **Discover the pages** with [scans/key-pages.md](scans/key-pages.md): homepage, pricing, about/company, every product page in the top nav, customers/case studies, contact-sales / sign-up, plus the about and segment-page variants it lists.
-2. **Run the extraction** (below) against those pages. It is organized by component ID (see [context/README.md](../../context/README.md)), so its output drops straight into the canon.
-3. **Compile into the canon** by component ID. The extraction's output is written directly into the per-group `canon-*.md` files, in the canon's [entry format](../../context/messaging-canon.md); there is no intermediate artifact to file. Follow the canon rules in [AGENTS.md](../../AGENTS.md): fill each component from verbatim, currently-published copy, attribute the source, leave a component blank when it has no published copy, and never overwrite a `source: human` entry.
-4. **Log and index the pages.** One `url` row per key page in the [ingestion log](ingestion-log.md) (result: "canon extraction"), and one [content-index](../../context/content-index.md) row per key page (`surface: key_page`, components from the extraction).
+2. **Run the extraction** (below) against those pages. It is organized by component ID (see [context/README.md](../../context/README.md)), and within each component it captures the claims: every assertable statement, verbatim, with its page.
+3. **Mint into the claims register** per the [parser's claim rules](../parser.md): each verbatim key-page claim becomes a `canon` row, sourced and dated; divergent phrasings become variant rows; one `public` [evidence](../../context/evidence.md) row per claim per page. Leave a component with no published claims empty — that zero is Step 3's sharpest finding. Never overwrite a `source: human` row.
+4. **Fill the material registers.** Case studies found among the key pages become [customer-proof](../../context/registers/customer-proof.md) rows; named functionality becomes [features](../../context/registers/features.md) rows; trials and programs become [offers](../../context/registers/offers.md) rows — each row carrying the `clm-` IDs it supports.
+5. **Log and register the pages.** One `url` row per key page in the [ingestion log](ingestion-log.md) (result: claims minted), and one [content-register](../../context/registers/content.md) row per key page (`surface: key_page`, components and claims from the extraction).
+6. **Compile the canon views**: render the six `canon-*.md` group files from the register, per [messaging-canon.md](../../context/messaging-canon.md).
 
-The extraction covers every group except Themes (see below). It also extracts `lexicon`, which is written to [brand-writing-identity.md](../../context/brand-writing-identity.md), not the canon.
-
----
-
-## Step 2: Build the v1 content index
-
-Index the company's full published surface (the whole domain, the docs, and the blog) and record which components each page carries, so the team gets a findable map of where every message already lives.
-
-1. **Discover URLs** with [scans/domain.md](scans/domain.md) and [scans/blog.md](scans/blog.md). Add each as a `url` row in the [ingestion log](ingestion-log.md). The domain scan will rediscover the Step 1 key pages; they are already logged and indexed, so skip them rather than parsing them twice.
-2. **Parse each page** per [parser.md](../parser.md): identify the components it carries and write a parsed summary.
-3. **Write one [content-index](../../context/content-index.md) row per page**: `id`, `title`, `source` URL, `surface` (`owned` for blog, docs, and case studies), the component IDs found, and `last_scanned`.
-
-Gaps become visible here. A component with thin coverage, or a page whose messaging does not match the canon, is signal for the [analyzer](analyzer.md).
+The extraction covers every group except Themes (see below). It also extracts `lexicon`, which is written to [brand-writing-identity.md](../../context/brand-writing-identity.md), not the claims register.
 
 ---
 
-## Step 3: Baseline the issues
+## Step 2: Build the v1 content register
 
-Run the [analyzer](analyzer.md) once over what setup built, so the team starts with a real backlog instead of an empty file.
+Register the company's full published surface (the whole domain, the docs, and the blog) and record which components and claims each page carries, so the team gets a findable map of where every message already lives.
+
+1. **Discover URLs** with [scans/domain.md](scans/domain.md) and [scans/blog.md](scans/blog.md). Add each as a `url` row in the [ingestion log](ingestion-log.md). The domain scan will rediscover the Step 1 key pages; they are already logged and registered, so skip them rather than parsing them twice.
+2. **Parse each page** per [parser.md](../parser.md): identify the components and claims it carries and write a parsed summary. New claims from these surfaces mint as `candidate` (they are owned but not key pages); matched claims gain evidence.
+3. **Write one [content-register](../../context/registers/content.md) row per page**: `id`, `title`, `source` URL, `surface` (`owned` for blog, docs, and case studies), the component IDs and `clm-` IDs found, and `last_scanned`.
+
+Gaps become visible here. A component with thin coverage, a canon claim no content carries, or a page asserting claims that aren't canon is signal for the [analyzer](analyzer.md).
+
+---
+
+## Step 3: Baseline the issues and compile the first map
+
+Run the [analyzer](analyzer.md) once over what setup built, so the team starts with a real backlog and a real [claims map](../../context/claims-map.md) instead of empty files.
 
 With only your own pages parsed, two of its four comparisons have data:
 
-- **missing**: components with no canon entry. The sharpest v1 finding: what the site does not say.
-- **misaligned**: a published page that says something different from the canon.
+- **missing**: components with zero claims, read straight off the map's zero rows. The sharpest v1 finding: what the site does not say.
+- **misaligned**: a published page carrying candidate or divergent-variant claims — saying something the canon doesn't.
 
-`mismatched` needs customer sources and `competitive` needs competitor Profiles; neither exists yet. Do not force findings the data cannot support. Those comparisons start working as transcripts and competitive scans are ingested.
+`mismatched` needs customer sources and `competitive` needs competitor Profiles; neither exists yet. Do not force findings the data cannot support. Those comparisons start working as transcripts and competitive scans are ingested — and as sales calls land, `private` evidence starts piling up per claim on the map.
 
 ---
 
 ## When setup is done
 
-The canon holds v1 of the approved messaging, the content index maps every published page to the components it carries, and the issues backlog holds the baseline findings. From here, keep them current with the recurring jobs. Do not re-run setup.
+The claims register holds v1 of the approved messaging (with the canon views compiled from it), the content register maps every published page to the components and claims it carries, the map shows coverage with the zeros written out, and the issues backlog holds the baseline findings. From here, keep them current with the recurring jobs. Do not re-run setup.
 
 Setup deliberately leaves parts of context empty:
 
@@ -59,7 +61,7 @@ Setup deliberately leaves parts of context empty:
 
 ## The extraction
 
-Run this against the Step 1 key pages, discovered per [scans/key-pages.md](scans/key-pages.md). The goal is an accurate snapshot of how the company talks about itself, written under the canon's component IDs.
+Run this against the Step 1 key pages, discovered per [scans/key-pages.md](scans/key-pages.md). The goal is an accurate snapshot of how the company talks about itself, written under the component IDs, with each component's claims captured verbatim and ready to mint.
 
 Do not fill gaps with assumptions. If a component has no published content, say so. Put each piece of content under exactly one component; if it spans more than one, assign the primary and note the secondary.
 
@@ -86,6 +88,10 @@ Do not fill gaps with assumptions. If a component has no published content, say 
 **category-name:** the label(s) the company uses for the space it competes in. List the primary (homepage or nav) and supporting variants.
 
 **products:** the discrete offerings in the portfolio: the umbrella name, then one entry per product (what it is and how it relates to the others). Pull from the top nav and product pages. A single-product company gets a single entry.
+
+**capabilities:** what the product enables at workflow grain, in the company's own words: "something the customer can now do." Coarser than a feature, finer than the value proposition. One claim per capability.
+
+**features:** claims about named functionality: what a specific part of the product does. The finest grain. Also seed the [features register](../../context/registers/features.md) with the functionality itself (`grain`: capability or feature), linking each row to the claims made about it.
 
 **unique-attributes:** the "secret sauce," what the product does that genuinely sets it apart, in the company's own words (not a full feature list). Output an overview paragraph, then 3-5 bullets on what makes it special. Watch for differentiating claims: "easier than…", "faster," "cheaper," "unlike other companies…".
 
@@ -149,7 +155,7 @@ Begin with the pages you scraped (including any 404s) and a one-line note on the
 point-of-view / narrative / positioning / founder-story / company-description
 
 ## What We Do
-category-name / products / unique-attributes / value-proposition / how-it-works / ecosystem-integrations
+category-name / products / capabilities / features / unique-attributes / value-proposition / how-it-works / ecosystem-integrations
 
 ## Who It's For
 icp (account + champion) / buying-committee / value-drivers
@@ -166,6 +172,7 @@ lexicon
 
 ### Quality checks before finishing
 
+- Every minted claim is verbatim, attributed to its page, and typed by exactly one component; nothing was minted from a non-owned source.
 - `point-of-view` is a genuine founding belief, not culture lines or growth stats.
 - `positioning` is the homepage canonical claim only, no use-case or segment headlines.
 - `lexicon` is coined or redefined terms only, written to brand-writing-identity, not the canon. If it's thin, say so and explain why.

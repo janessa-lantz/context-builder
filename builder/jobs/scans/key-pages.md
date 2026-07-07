@@ -1,7 +1,7 @@
 # Key Pages Scan
 
-Discovers your core company pages: the source for the
-[canon](../../../context/messaging-canon.md), so they route to the parser and the index.
+Discovers your core company pages: the source for canon
+[claims](../../../context/claims.md), so they route to the parser and the registers.
 This is also the single definition of what a key page is; the
 [setup job](../setup.md), the [parser](../../parser.md), and the
 [competitive-profile scan](competitive-profile.md) (this discovery pointed at a

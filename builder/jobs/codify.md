@@ -35,7 +35,8 @@ Classify each correction by what would have prevented it, and propose the update
 | The correction was about | It lands in |
 |---|---|
 | tone, phrasing, a banned or preferred term | [brand-writing-identity](../../context/brand-writing-identity.md): Voice, Guardrails, or Lexicon |
-| the message itself (a claim, a frame, an emphasis) | the [canon](../../context/messaging-canon.md) component, as a `source: human` entry; or an issue, if the correction contradicts currently published copy |
+| the message itself (a claim, a frame, an emphasis) | the [claims register](../../context/claims.md): a `source: human` canon row, the promotion of a candidate or variant, or an issue if the correction contradicts currently published copy |
+| the composition (which claims travel together, in what order) | the [lockup](../../context/lockups.md) or [entry point](../../context/entry-points.md) that produced the artifact |
 | the craft of one artifact type (layout, structure, section order, emphasis) | that skill's patterns or reference file, or its checklist, in [skills](../../skills%20-%20Work%20in%20Progress/) |
 | how the system itself behaved (a rule broken, a spec misread, a parse missed) | one new rule in [AGENTS.md](../../AGENTS.md), or a clarification in the job or spec that was misread |
 
@@ -49,8 +50,10 @@ Classify each correction by what would have prevented it, and propose the update
    `correction` theme at `low` confidence and wait for recurrence instead of writing a rule.
 3. Present the proposals to the human, one destination at a time: the exact entry, where it
    goes, and the evidence behind it.
-4. Write only what is approved. Mark canon and identity entries `source: human` with the
-   date. Never overwrite an existing human-authored entry; append, or ask.
+4. Write only what is approved. Mark claim and identity entries `source: human` with the
+   date. Never overwrite an existing human-authored entry; append, or ask. Promotions
+   (candidate → canon, variant → primary) are recorded here too: codify is the paved road
+   for the human-only status changes the register requires.
 5. Mark the consumed themes `actioned` and stamp their `last_run`.
 
 Run it after an artifact ships with human changes, or on a cadence against the backlog, the
@@ -58,6 +61,6 @@ way the [analyzer](analyzer.md) runs against new summaries.
 
 ## Output
 
-Approved entries in the canon and brand identities, sharpened skill and job specs, and at
-most one new AGENTS.md rule per real incident, each traceable to the correction that
+Approved rows in the claims register, sharpened lockups, identities, skill and job specs,
+and at most one new AGENTS.md rule per real incident, each traceable to the correction that
 produced it.

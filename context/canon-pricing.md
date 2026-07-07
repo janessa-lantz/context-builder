@@ -1,6 +1,9 @@
 # Canon: Pricing
 
-Part of the [messaging canon](messaging-canon.md). One section per component; each entry is verbatim from a live surface (source noted) or human synthesis (`source: human`). See the [README](README.md) for what each component is.
+*Compiled view of the [claims register](claims.md): the `canon` claims in this group,
+rendered per [messaging-canon.md](messaging-canon.md). Do not edit here; mint, promote, or
+add `source: human` claims in the register and the view follows on the next
+[analyzer](../builder/jobs/analyzer.md) compile.*
 
 ## pricing-model
 
@@ -12,4 +15,4 @@ Part of the [messaging canon](messaging-canon.md). One section per component; ea
 
 
 ## offers
-
+*(claims about the ways in; the offers themselves live in the [offers register](registers/offers.md))*

@@ -1,7 +1,8 @@
 # Parser
 
-The builder's engine. It maps each raw asset against your messaging canon: it reads a source,
-finds which components the asset carries, and writes the result into context. It does not
+The builder's engine. It maps each raw asset against the
+[claims register](../context/claims.md): it reads a source, captures the claims the asset
+carries and the components they're typed by, and writes the result into context. It does not
 invent messaging; it reads what is already there and files it.
 
 ## In and out
@@ -10,20 +11,25 @@ invent messaging; it reads what is already there and files it.
 URL or a file).
 
 **Out:**
-- a [parsed summary](parsed-summaries/) mapping the asset to the components
-- for marketing surfaces, a row in the [content index](../context/content-index.md), aggregated from that summary
-- for key pages, updated entries in the [canon](../context/messaging-canon.md)
-- for competitor sources, an updated [entity](../context/entities/) Profile, kept raw and never indexed or folded into the canon
+- a [parsed summary](parsed-summaries/) mapping the asset to components and claims
+- for owned surfaces, minted or matched rows in the [claims register](../context/claims.md) and [evidence](../context/evidence.md) rows
+- for marketing surfaces, rows in the [registers](../context/registers/): always [content](../context/registers/content.md), plus [customer-proof](../context/registers/customer-proof.md), [features](../context/registers/features.md), or [offers](../context/registers/offers.md) when the asset is that material
+- for sales-call and customer sources, `private` [evidence](../context/evidence.md) rows on matched claims
+- for competitor sources, an updated [entity](../context/entities/) Profile, kept raw and never registered or minted into claims
 - the job marked `done` (or `skipped`), with a note on what it produced
 
 ## The run
 
 1. Take the next `pending` job.
 2. Fetch the source. A website: discover and pull the key pages (below). A transcript or document: read it directly, and save it to [raw-assets](raw-assets/) (hosted URLs stay where they live).
-3. Classify the source by `surface` (see the content index for the values). Whether it is a marketing surface decides if it gets indexed.
-4. Extract against the [component definitions](../context/README.md). For each component, capture how it appears in this source, or record that it is absent. Put each section of content under exactly one component, and note secondary signals rather than double-filing.
-5. Write the [parsed summary](parsed-summaries/). For marketing surfaces, aggregate it into a content index row; for key pages, fold it into the canon.
-6. Mark the job `done` and record the result.
+3. Classify the source by `surface` (see the [content register](../context/registers/content.md) for the values). Whether it is a marketing surface decides if it gets registered.
+4. Extract against the [component definitions](../context/README.md). For each component, capture how it appears in this source, or record that it is absent. Put each section of content under exactly one component, and note secondary signals rather than double-filing. Within each component, capture the **claims**: every assertable statement, verbatim, and match each against the [claims register](../context/claims.md) — an existing claim (`clm-NNN`), a divergent phrasing of one (`variant-of:clm-NNN`), or `new`.
+5. Write the [parsed summary](parsed-summaries/), then route by surface:
+   - **key page**: mint `new` claims into the register as `canon`, add `public` evidence for every claim seen, write the content-register row; where the page is itself proof, feature, or offer material, add the matching register rows.
+   - **other owned surfaces**: mint `new` claims as `candidate`, add `public` evidence, write the register rows.
+   - **sales-call / customer**: add `private` evidence on matched claims only — never mint. Divergent customer framing is held for the analyzer, not filed as a claim.
+   - **competitor**: update the entity Profile only.
+6. Mark the job `done` and record the result (claims minted, evidence added, rows written).
 
 Rule throughout: do not fill gaps with assumptions. If a component is absent, say so. Absence
 is a signal, not a hole to patch.
@@ -53,9 +59,11 @@ so the next run does not re-queue them.
 ## Sales calls and other non-marketing sources
 
 Not every source is your own marketing. Sales-call and customer transcripts, win/loss notes,
-and competitor material are parsed for signal but are **not** indexed (they are not your
-published assets). Classify them with a non-owned surface (`sales-call`, `customer`,
-`competitor`) and parse them like this:
+and competitor material are parsed for signal but are **not** registered (they are not your
+published assets), and they **never mint claims** — a prospect echoing your value proposition
+is `private` [evidence](../context/evidence.md) on the matched claim; a prospect framing it
+differently is signal for the analyzer. Classify them with a non-owned surface (`sales-call`,
+`customer`, `competitor`) and parse them like this:
 
 - **The prospect's own words are the signal.** Quote them and attach a timestamp or location. Your paraphrase is the last resort.
 - **1:1 with this source.** Never reference another call, customer, or source by name inside a summary, even when a connection feels obvious. Cross-source patterns are the analyzer's job, not the parser's. If you notice one, hold it.
@@ -87,17 +95,26 @@ A few components are easy to confuse. The lines that matter:
 - `customer-proof` is customer-specific outcomes. `key-metrics` is company-level momentum numbers; `market-proof` is institutional recognition.
 - Inside `icp`, separate the economic buyer's outcome, the end user's task, and the champion's initiative where the evidence supports it.
 
-## The canon
+## Claims
 
-The [canon](../context/messaging-canon.md) holds two kinds of entry. What the LLM compiles is
-derived from the key-page extractions: one canonical statement per component, rolled up from
-every key page where that component appears, quoted verbatim and attributed. What a human adds
-is synthesis and context, marked `source: human`. On a re-run, refresh the verbatim entries and
-never overwrite a human-authored one. When key pages disagree (the homepage and pricing carry
-different positioning), flag the divergence rather than quietly picking one.
+The [claims register](../context/claims.md) is where extraction lands, and its rules govern
+minting:
+
+- **Mint from verbatim, company-published copy only**, source attributed. Key pages mint
+  `canon`; other owned surfaces mint `candidate`. Non-owned sources never mint.
+- **Match before minting.** The same statement seen again is evidence on the existing claim,
+  not a new row. A close-but-different phrasing is a variant row (`variant_of` pointing at
+  the primary), not a silent replacement — when key pages disagree (the homepage and pricing
+  carry different positioning), the variant row *is* the flag; file the issue too.
+- **Refresh, never overwrite.** On a re-run, stamp `last_confirmed` on claims still live.
+  Never edit a `source: human` row; never retire a claim the scan can't find — leave
+  `last_confirmed` stale and file an issue.
 
 ## Before you finish
 
+- Every minted claim is verbatim from the source, attributed, and typed by exactly one component.
+- Every evidence row carries its summary ID (or locator). No orphan evidence.
+- Nothing was minted from a non-owned source.
 - Every `value-drivers` entry maps to one of the four categories.
 - `positioning` is the homepage claim only.
 - `customer-proof` lists every named customer, not a truncated sample.

@@ -30,7 +30,7 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 And the full [visual identity](../../context/brand-visual-identity.md) for the render, plus
 [brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
-If a component the chosen framework needs has no canon entry, say which slide is affected and
+If a component the chosen framework needs has no canon claims, say which slide is affected and
 what is missing, build that slide as a clearly marked placeholder, and move on. Never invent
 messaging to fill the gap.
 

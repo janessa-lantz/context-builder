@@ -24,7 +24,7 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 And the full [visual identity](../../context/brand-visual-identity.md) for both outputs, plus
 [brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
-If a section's component has no canon entry, mark the section as a gap. Never invent proof,
+If a section's component has no canon claims, mark the section as a gap. Never invent proof,
 objections, or claims.
 
 ## Asks the human

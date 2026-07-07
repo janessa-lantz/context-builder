@@ -7,14 +7,23 @@ reach the market.
 Define each component once, keep it current, and every piece of customer-facing work (and
 every AI tool you point at it) draws from the same source of truth.
 
-This folder is what you know: everything your team and AI tools draw from. It holds two
-things organized by these components: the [canon](messaging-canon.md), your approved
-messaging (split by group across the `canon-*.md` files), and the [content index](content-index.md),
-a registry of everything you've published and which components each piece carries. Beside it sit
-two brand identity layers: [brand-writing-identity.md](brand-writing-identity.md) holds voice,
-guardrails, and lexicon (how the company sounds), and [brand-visual-identity.md](brand-visual-identity.md)
-holds how it looks. [entities](entities/) is raw intelligence on the outside world you track,
-never vetted and never shipped.
+This folder is what you know: everything your team and AI tools draw from. The unit is the
+**claim**: one assertable statement, typed by a component. The [claims register](claims.md)
+is the source of truth (rows with `status: canon` are the [canon](messaging-canon.md); the
+`canon-*.md` files are compiled per-group views of it). Around it: the
+[evidence ledger](evidence.md), where proof accumulates per claim; the
+[registers](registers/), logging your material (content, customer proof, features, offers)
+and the claims each item carries; [lockups](lockups.md) and [entry points](entry-points.md),
+named slices of claims that skills render; and the [claims map](claims-map.md), the compiled
+coverage view where gaps show up. Beside these sit two brand identity layers:
+[brand-writing-identity.md](brand-writing-identity.md) holds voice, guardrails, and lexicon
+(how the company sounds), and [brand-visual-identity.md](brand-visual-identity.md) holds how
+it looks. [entities](entities/) is raw intelligence on the outside world you track, never
+vetted and never shipped.
+
+**A component types claims (statements); a [register](registers/) logs material (stuff you
+have).** `customer-proof`, `features`, and `offers` exist as both: the component types the
+claim ("Acme cut close time 40%"), the register logs the artifact (the Acme case study).
 
 The [builder](../builder/) writes into this folder and keeps it current;
 [skills](../skills%20-%20Work%20in%20Progress/) read out of it to generate assets.
@@ -24,7 +33,8 @@ component's name (for example `point-of-view` or `value-drivers`). The ID is the
 downstream assets and AI tools use to reference the component. To add a component, give it a
 fresh kebab-case ID that no other component uses.
 
-There are 24 components across 6 groups. This is **version 1** of the component set. Bump the
+There are 26 components across 6 groups. This is **version 2** of the component set
+(version 2 added `capabilities` and `features`). Bump the
 version when a component is added, removed, or redefined; each
 [parsed summary](../builder/parsed-summaries/) records the version it was parsed against as
 `components_version`, so you can tell which summaries predate a schema change.
@@ -58,6 +68,15 @@ What it is.
 
 ### products
 The discrete offerings that make up the product portfolio: what each one is, how they relate to each other, and how the portfolio is organized. For a single-product company, this is a single entry. For a platform company, this maps the product hierarchy: the umbrella and its components.
+
+### capabilities
+What the product enables, at workflow grain: coarser than a feature, finer than the value
+proposition. A capability names something the customer can now do.
+
+### features
+Named product functionality, as claimed: what a specific part of the product does. The finest
+grain of product messaging. The factual inventory of what exists lives in the
+[features register](registers/features.md); this component types the claims made about it.
 
 ### unique-attributes
 The "secret sauce": what the product does that makes it different. An overview, then the few
@@ -103,7 +122,10 @@ generation, efficiency, cost savings, risk mitigation.
 ## Proof
 
 ### customer-proof
-Owned assets approved with customers: case studies, logos, quotes, references.
+Claims of customer success: what named customers achieved, as stated in approved proof. The
+artifacts themselves (case studies, logos, quotes, references) are logged in the
+[customer-proof register](registers/customer-proof.md); this component types the claims they
+prove.
 
 ### market-proof
 Institutional recognition: analysts, awards, press.
@@ -126,7 +148,9 @@ Editions (starter, pro, enterprise) and what's in each.
 Premium support, implementation.
 
 ### offers
-Free tier or trial and what's included.
+Claims about the ways in: what the free tier, trial, or program includes and promises. The
+offers themselves are logged in the [offers register](registers/offers.md); this component
+types the claims made about them.
 
 ---
 

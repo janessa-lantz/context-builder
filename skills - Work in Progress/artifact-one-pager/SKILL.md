@@ -17,11 +17,17 @@ draft for human review.
 
 ## Reads from context
 
-From the [canon](../../context/messaging-canon.md), by component ID:
+Slices first, from [lockups](../../context/lockups.md) and
+[entry-points](../../context/entry-points.md) (`approved` only):
 
-- `positioning`, `category-name`: the header and hero
-- `products`, `unique-attributes`: the body, scoped to the format
-- `value-proposition`, `value-drivers`: the benefit grid, framed as outcomes
+- the `value-prop-core` lockup: the hero and the benefit grid (its lead claim is the hero;
+  its capability and feature claims fill the body and benefits)
+- for the integration format: the matching integration entry point (e.g. `snowflake`)
+- for the vertical format: the matching persona or vertical entry point
+
+Then canon [claims](../../context/claims.md) by component ID, for what no slice covers:
+
+- `positioning`, `category-name`: the header, when the lockup doesn't carry them
 - `customer-proof`, `key-metrics`: the proof band
 - `ecosystem-integrations`: required for the integration format
 - `icp` (the account): required for the vertical format (the industry framing)
@@ -30,8 +36,9 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 And the full [visual identity](../../context/brand-visual-identity.md) for the render, plus
 [brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
-If a required component has no canon entry, mark the affected section as a gap and say so.
-Never invent messaging to fill it.
+If a needed slice is missing or `draft`, fall back to canon claims by component and log the
+gap. If a required component has no canon claims, mark the affected section as a gap and say
+so. Only `canon` claims are rendered. Never invent messaging to fill a hole.
 
 ## Asks the human
 
@@ -44,11 +51,12 @@ One at a time, and only what context cannot hold:
 
 ## Workflow
 
-1. Read the canon components and visual identity listed above. Note any gaps.
+1. Read the slices, canon claims, and visual identity listed above. Note any gaps (missing
+   slices, draft slices, empty components).
 2. Ask the four questions.
-3. Pick the format's layout from [one-pager-formats.md](one-pager-formats.md) and fill each section from canon language, enforcing the word counts in the reference file. If a section runs over, cut, never shrink the type.
+3. Pick the format's layout from [one-pager-formats.md](one-pager-formats.md) and fill each section from the slice's claims (then canon claims where no slice covers), enforcing the word counts in the reference file. If a section runs over, cut, never shrink the type.
 4. Render the one-pager per [rendering.md](../rendering.md): a `pptxgenjs` build on a page-sized custom layout (US Letter or A4), the visual identity mapped to color constants and the brand fonts, the format's section allocation laid out to the percentages in the reference file. Export to PDF when LibreOffice is available.
-5. Run content and visual QA per [rendering.md](../rendering.md). Write a short companion `.md` beside the file logging any canon gaps.
+5. Run content and visual QA per [rendering.md](../rendering.md). Write a short companion `.md` beside the file logging any gaps, and file each as a theme in [issues](../../builder/issues/) with this run as evidence.
 6. Run the checklist and hand back the file path.
 
 ## Checklist
@@ -56,7 +64,7 @@ One at a time, and only what context cannot hold:
 - Exactly 3 benefits; more dilutes
 - Every word count in the reference file is respected
 - The hero states an outcome, not a hedge ("helps you improve" is a hedge)
-- Proof band uses real canon proof; no generic "trusted by leading companies" lines
+- Proof band uses real canon `customer-proof` claims; no generic "trusted by leading companies" lines
 - CTA is visible on the page, not buried
-- All copy comes from canon language; nothing invented; no banned terms or em/en dashes survive the content QA
+- Every rendered statement traces to a `canon` claim (by `clm-` ID in the companion `.md`); nothing invented, no candidates; no banned terms or em/en dashes survive the content QA
 - The rendered file is page-sized, on-brand, and QA'd (visual pass run, or its absence stated in the handoff)

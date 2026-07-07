@@ -55,6 +55,7 @@ it.
 - `id`: unique identifier for the theme, `iss-NNN`, numbered sequentially
 - `kind`: mismatched / misaligned / missing / competitive / objection / product / ...
 - `component`: which message component the theme is about
+- `claims`: the `clm-` IDs the theme is about, space-separated; blank for component-level themes
 - `description`: a short summary of the pattern
 - `confidence`: high / medium / low
 - `evidence`: what supports the theme: parsed-summary or entity IDs, or for system kinds the run or artifact (a skill run, a shipped correction)
@@ -80,8 +81,8 @@ patterns, and you can seed hypotheses for it to evidence.
 
 *(the rows below are examples; delete them when the analyzer writes real themes)*
 
-| id | kind | component | description | confidence | evidence | status | last_run |
-|----|------|-----------|-------------|------------|----------|--------|----------|
-| iss-001 | mismatched | value-drivers | Customers frame the value as saving the deal; canon frames it as efficiency | high | acme-winloss-0603, vertex-0504, summit-0427 | open | 2026-06-04 |
-| iss-002 | missing | buying-committee | Customers raise procurement-approval concerns; no canon objection covers it | medium | acme-winloss-0603, meridian-0417 | open | 2026-06-04 |
-| iss-003 | misaligned | positioning | Blog positions as a reporting tool; canon positions as a decision platform | low | blog-close-faster | open | 2026-06-04 |
+| id | kind | component | claims | description | confidence | evidence | status | last_run |
+|----|------|-----------|--------|-------------|------------|----------|--------|----------|
+| iss-001 | mismatched | value-drivers | clm-014 | Customers frame the value as saving the deal; canon frames it as efficiency | high | acme-winloss-0603, vertex-0504, summit-0427 | open | 2026-06-04 |
+| iss-002 | missing | buying-committee | | Customers raise procurement-approval concerns; no canon claim covers it | medium | acme-winloss-0603, meridian-0417 | open | 2026-06-04 |
+| iss-003 | misaligned | positioning | clm-003 | Blog positions as a reporting tool; canon positions as a decision platform | low | blog-close-faster | open | 2026-06-04 |

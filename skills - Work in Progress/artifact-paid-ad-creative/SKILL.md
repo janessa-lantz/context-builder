@@ -25,7 +25,7 @@ Each ad angle maps to specific canon components (see the mapping in
 And the full [visual identity](../../context/brand-visual-identity.md) for the generation prompt,
 plus [brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
-An angle whose components have no canon entry is dropped from the set, and the drop is
+An angle whose components have no canon claims is dropped from the set, and the drop is
 stated. Never invent proof, stats, or customer stories.
 
 ## Asks the human
@@ -50,7 +50,7 @@ One at a time, and only what context cannot hold:
 
 - Every variant is a distinct angle
 - Copy respects each platform's limits (see the reference file)
-- Every claim and stat traces to a canon entry; nothing invented
+- Every claim and stat traces to a `canon` claim in the register; nothing invented
 - Accent color appears on one element per creative, not everywhere
 - CTA labels are platform defaults ("Learn more," "Download," "Sign up")
 - The generation prompt specifies exact dimensions per platform

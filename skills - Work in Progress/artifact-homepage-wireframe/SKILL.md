@@ -32,7 +32,7 @@ This skill deliberately does **not** read the visual identity. A wireframe has n
 fonts, or imagery; design comes after the IA and copy are approved. If you reach for
 `brand-visual-identity.md`, stop. Theming a wireframe defeats its purpose.
 
-If a section's claim has no canon entry, flag it as a gap. Never invent proof, claims, or numbers.
+If a section has no canon claim to carry, flag it as a gap. Never invent proof, claims, or numbers.
 
 ## Asks the human
 

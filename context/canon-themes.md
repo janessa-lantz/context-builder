@@ -1,6 +1,9 @@
 # Canon: Themes
 
-Part of the [messaging canon](messaging-canon.md). The content and demand-gen activation layer, built on top of the messaging: what the company talks about and runs, rather than what it claims. These change faster than the rest of the canon. See the [README](README.md) for what each component is.
+*Compiled view of the [claims register](claims.md): the `canon` claims in this group,
+rendered per [messaging-canon.md](messaging-canon.md). The content and demand-gen activation
+layer: what the company talks about and runs, rather than what it claims. These change faster
+than the rest of the canon. Do not edit here; change the claims and the view follows.*
 
 ## themes
 *(durable narrative pillars the company organizes content around; a theme holds many topics)*
@@ -12,4 +15,3 @@ Part of the [messaging canon](messaging-canon.md). The content and demand-gen ac
 
 ## campaigns
 *(time-boxed, coordinated pushes that activate themes and topics toward a goal, across owned, earned, and paid surfaces)*
-
