@@ -1,8 +1,9 @@
 # Issues
 
-Messaging issues produced by the [analyzer](../jobs/analyzer.md). Each issue points to a
-place the messaging needs attention, for you to act on. Every issue has a **kind**, and the
-set of kinds is open.
+Issues the system surfaces for you to act on. Most are messaging issues produced by the
+[analyzer](../jobs/analyzer.md); skill and job runs also file here when they hit a gap or
+produce something a human had to correct. Each issue points to a place the messaging, or the
+system itself, needs attention. Every issue has a **kind**, and the set of kinds is open.
 
 The analyzer's canon comparisons produce four:
 
@@ -15,6 +16,17 @@ Other kinds capture signals that aren't canon comparisons, for example:
 
 - **objection**: a recurring customer objection the messaging should address
 - **product**: a product signal customers raise
+
+Two kinds are about the system rather than the messaging, and are consumed by the
+[codify job](../jobs/codify.md):
+
+- **correction**: a human corrected a generated artifact before it shipped; the learning is
+  waiting to be codified into context or a skill file
+- **process**: the system misbehaved: a spec was misread, a rule broken, a parse missed
+  something
+
+A skill run that hits a canon gap files it as a **missing** theme with the run as its
+evidence; the gap is the same whether the analyzer or a skill finds it.
 
 More kinds can be added.
 
@@ -45,7 +57,7 @@ it.
 - `component`: which message component the theme is about
 - `description`: a short summary of the pattern
 - `confidence`: high / medium / low
-- `evidence`: the parsed-summary or entity IDs supporting the theme
+- `evidence`: what supports the theme: parsed-summary or entity IDs, or for system kinds the run or artifact (a skill run, a shipped correction)
 - `status`: `open` (default), `actioned`, or `dismissed` (set by a human)
 - `last_run`: when the analyzer last touched the theme
 
