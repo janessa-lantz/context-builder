@@ -38,11 +38,11 @@ is open (see [issues](../issues/)).
    confidence as patterns strengthen, open new themes at `low`, and leave `actioned` and
    `dismissed` themes closed. Name the `clm-` IDs a theme is about in its `claims` column.
 4. Stamp `last_run` on every theme touched.
-5. **Recompile the [claims map](../../context/claims-map.md) wholesale** — every component
-   row including the zeros, every claim's evidence and asset counts and flags, the
-   misaligned-assets table — and **recompile the six canon views** (`canon-*.md`) from the
-   register, per [messaging-canon.md](../../context/messaging-canon.md). Both are compiled
-   artifacts: replace them entirely; never hand-merge.
+5. **Recompile the compiled views wholesale**, in this order, each replaced entirely and
+   never hand-merged:
+   - the [claims map](../../context/claims-map.md) — every component row including the zeros, every claim's evidence and asset counts and flags, the misaligned-assets table;
+   - the six canon views (`canon-*.md`) from the register, per [messaging-canon.md](../../context/messaging-canon.md);
+   - the [dashboard](../../context/dashboard.md) — the home view, rolled up from the map, the registers, and the backlog. Keep its fixed sections and columns so every deployment renders the same; only the counts and deployment name change.
 
 Run it after each meaningful batch of new summaries (a set of sales calls, a completed scan),
 or whenever someone asks what's off. The first run happens at the end of
@@ -54,7 +54,8 @@ Findings land in [issues](../issues/) as **themes**: recurring patterns, each ta
 by kind, component, and the claims involved, rated with a confidence of high, medium, or low,
 and backed by the summary IDs that evidence them. See [issues](../issues/) for the backlog
 format. The recompiled [claims map](../../context/claims-map.md) is the other output: the
-coverage view the themes point into.
+coverage view the themes point into, rolled up into the [dashboard](../../context/dashboard.md)
+home view.
 
 The analyzer reads customer summaries from
 [parsed-summaries](../parsed-summaries/), which exist even though customer content is

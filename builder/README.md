@@ -20,7 +20,7 @@ surface issues. Skills are the other side of the line: they
 ```
 build:    job → raw asset → parsed summary → context (claims + evidence + registers)
 track:    competitive scans → parsed summaries → context (entities: profile + feed)
-analyze:  analyzer → summaries + claims + registers → issues + claims-map + canon views
+analyze:  analyzer → summaries + claims + registers → issues + claims-map + canon views + dashboard
 codify:   corrections + issues → codify → claims (human-approved) + lockups + sharper specs
 ```
 

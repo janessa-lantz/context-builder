@@ -33,9 +33,9 @@ Gaps become visible here. A component with thin coverage, a canon claim no conte
 
 ---
 
-## Step 3: Baseline the issues and compile the first map
+## Step 3: Baseline the issues and compile the views
 
-Run the [analyzer](analyzer.md) once over what setup built, so the team starts with a real backlog and a real [claims map](../../context/claims-map.md) instead of empty files.
+Run the [analyzer](analyzer.md) once over what setup built, so the team starts with a real backlog, a real [claims map](../../context/claims-map.md), and a populated [dashboard](../../context/dashboard.md) instead of empty files. The dashboard is the home view the team opens first.
 
 With only your own pages parsed, two of its four comparisons have data:
 

@@ -23,6 +23,7 @@ out of it.**
 - **"Build or refresh the visual identity"** → run [builder/jobs/visual-identity.md](builder/jobs/visual-identity.md): extract the observable identity from the live key pages, write it to [context/brand-visual-identity.md](context/brand-visual-identity.md), and never overwrite a human-authored entry.
 - **"Find issues" or "what's off in our messaging"** → run the analyzer per [builder/jobs/analyzer.md](builder/jobs/analyzer.md): read the parsed summaries and the canon, and write themes to [builder/issues/](builder/issues/).
 - **"This is what shipped" / "codify these corrections" / "learn from this edit"** → run [builder/jobs/codify.md](builder/jobs/codify.md): diff generated against shipped, classify each correction by what would have prevented it, propose where the learning lands (brand identity, the claims register, a lockup, a skill file, or a rule), and write only what the human approves.
+- **"Show me the dashboard" / "where do things stand"** → open [context/dashboard.md](context/dashboard.md), the compiled home view: vitals, canon by group, registers, and the open issues, each linking down. If it's stale (summaries newer than its compile date), run the [analyzer](builder/jobs/analyzer.md) to recompile it first.
 - **"Show me coverage" / "where are the gaps"** → read the [claims map](context/claims-map.md); if it's stale (summaries newer than its compile date), run the [analyzer](builder/jobs/analyzer.md) first, then answer from the map: zero-claim components, unevidenced or orphan claims, misaligned assets.
 - **"Build a lockup / entry point"** → draft it in [context/lockups.md](context/lockups.md) or [context/entry-points.md](context/entry-points.md) from canon claims only, per their composition rules, and leave it `draft`. A human flips it to `approved`; never approve your own draft.
 - **"Build me a deck / one-pager / carousel / ..."** → run the matching skill in [skills - Work in Progress/](skills%20-%20Work%20in%20Progress/). Read the slices and claims it names (approved lockups and entry points first, canon claims by component as fallback) plus the brand identities; ask the human only for the job-specific variables the skill defines, never for anything the context already holds.
@@ -40,6 +41,7 @@ out of it.**
 
 | To understand | Read |
 |---|---|
+| the deployment at a glance | [context/dashboard.md](context/dashboard.md) |
 | the components and their IDs | [context/README.md](context/README.md) |
 | claims, evidence, and their rules | [context/claims.md](context/claims.md) and [context/evidence.md](context/evidence.md) |
 | your material and the claims it carries | [context/registers/](context/registers/) |
