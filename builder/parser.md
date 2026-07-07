@@ -109,6 +109,10 @@ minting:
 - **Refresh, never overwrite.** On a re-run, stamp `last_confirmed` on claims still live.
   Never edit a `source: human` row; never retire a claim the scan can't find — leave
   `last_confirmed` stale and file an issue.
+- **Set `confidence` on mint** (see [claims register](../context/claims.md)): `high` for a
+  clean verbatim key-page claim; `medium` when a variant or a cross-surface stat conflict is
+  live, or the unit is ambiguous; `low` for a value you could not verify or for LLM
+  synthesis. The analyzer lowers it later when an open issue contradicts the claim.
 
 ## Before you finish
 
