@@ -25,7 +25,7 @@ less product-forward.
 |---|---|
 | Logo + solution label | 10% |
 | Hero H1 (use-case outcome) | 20% |
-| Use-case vignette (a day-in-the-life moment from `jobs-to-be-done`) | 20% |
+| Use-case vignette (a day-in-the-life moment from the `icp` job to be done) | 20% |
 | Capability grid (6 items, 2 columns) | 30% |
 | Outcomes: 3 quantified metrics | 10% |
 | Proof + CTA | 10% |

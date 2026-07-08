@@ -14,11 +14,12 @@ out-of-scope table in [ui-animation-patterns.md](ui-animation-patterns.md)).
 
 From the [canon](../../context/messaging-canon.md), by component ID:
 
-- `product`, `capabilities`, `how-it-works`: what the fake UI should plausibly show; the mockup must depict a workflow the product actually has
-- `lexicon`: labels and terms inside the mock UI use the company's language
+- `products`, `unique-attributes`, `how-it-works`: what the fake UI should plausibly show; the mockup must depict a workflow the product actually has
 
-And the full [visual identity](../../context/brand-visual-identity.md): the mock UI is rendered in
-the brand's colors and type, with accent restraint.
+Plus [brand-writing-identity](../../context/brand-writing-identity.md): labels and terms inside
+the mock UI use the company's lexicon. And the full
+[visual identity](../../context/brand-visual-identity.md): the mock UI is rendered in the
+brand's colors and type, with accent restraint.
 
 If `how-it-works` has no canon entry, ask the human to describe the workflow and flag the
 gap; do not invent product behavior.

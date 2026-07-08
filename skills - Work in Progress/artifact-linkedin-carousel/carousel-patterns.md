@@ -32,7 +32,7 @@ Slide 1 must stop the scroll. Fourteen patterns that consistently work on B2B Li
 
 Ground the chosen hook in the canon: a `point-of-view` carousel argues the company's thesis,
 a stat hook needs a real number from `key-metrics` or cited research, a customer-framing
-hook uses the language captured in `jobs-to-be-done`.
+hook uses the language captured in the `icp` job to be done.
 
 ## Density rules
 

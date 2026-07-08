@@ -11,7 +11,7 @@ out of it.**
 
 - **[context/](context/)** is what you know: the messaging **canon** (built on the components defined in [context/README.md](context/README.md)), the **content index** of company-owned assets, the brand identities for how it sounds (**[brand-writing-identity](context/brand-writing-identity.md)**) and how it looks (**[brand-visual-identity](context/brand-visual-identity.md)**), and **[entities](context/entities/)**, the raw record of the outside world you track. This is what the team and their AI tools draw from.
 - **[builder/](builder/)** is everything that keeps context current: the [parser](builder/parser.md), [raw-assets](builder/raw-assets/), [parsed-summaries](builder/parsed-summaries/), [issues](builder/issues/), and [jobs/](builder/jobs/), the recurring work you run (the [ingestion log](builder/jobs/ingestion-log.md), [scans](builder/jobs/scans/), and the [analyzer](builder/jobs/analyzer.md)). Jobs run the same way every time, on a cadence.
-- **[skills/](skills/)** is on-demand production: each skill reads the canon and brand identity to generate an asset when a human asks for one. Skills consume context; they never write to it.
+- **[skills - Work in Progress/](skills%20-%20Work%20in%20Progress/)** is on-demand production: each skill reads the canon and brand identity to generate an asset when a human asks for one. Skills consume context; they never write to it.
 
 ## What to do when the user asks
 
@@ -22,7 +22,7 @@ out of it.**
 - **"Run the competitive scans"** → [competitive-profile](builder/jobs/scans/competitive-profile.md) parses each competitor's key pages into that competitor's [entity](context/entities/) Profile; [competitive-feed](builder/jobs/scans/competitive-feed.md) appends Feed rows for new competitor signals. Competitor intelligence is raw: it lands in [context/entities/](context/entities/), never the canon or index.
 - **"Build or refresh the visual identity"** → run [builder/jobs/visual-identity.md](builder/jobs/visual-identity.md): extract the observable identity from the live key pages, write it to [context/brand-visual-identity.md](context/brand-visual-identity.md), and never overwrite a human-authored entry.
 - **"Find issues" or "what's off in our messaging"** → run the analyzer per [builder/jobs/analyzer.md](builder/jobs/analyzer.md): read the parsed summaries and the canon, and write themes to [builder/issues/](builder/issues/).
-- **"Build me a deck / one-pager / carousel / ..."** → run the matching skill in [skills/](skills/). Read the canon components and brand identity it names; ask the human only for the job-specific variables the skill defines, never for anything the context already holds.
+- **"Build me a deck / one-pager / carousel / ..."** → run the matching skill in [skills - Work in Progress/](skills%20-%20Work%20in%20Progress/). Read the canon components and brand identity it names; ask the human only for the job-specific variables the skill defines, never for anything the context already holds.
 
 ## Rules you must follow
 
@@ -45,4 +45,4 @@ out of it.**
 | voice, guardrails, and lexicon | [context/brand-writing-identity.md](context/brand-writing-identity.md) |
 | the outside world you track | [context/entities/](context/entities/) |
 | finding messaging issues | [builder/jobs/analyzer.md](builder/jobs/analyzer.md) and [builder/issues/](builder/issues/) |
-| generating assets from context | [skills/](skills/) |
+| generating assets from context | [skills - Work in Progress/](skills%20-%20Work%20in%20Progress/) |

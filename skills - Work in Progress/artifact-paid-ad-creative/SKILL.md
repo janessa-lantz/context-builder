@@ -15,14 +15,15 @@ Each ad angle maps to specific canon components (see the mapping in
 [ad-patterns.md](ad-patterns.md)):
 
 - `customer-proof`, `key-metrics`: social proof and customer story angles
-- `differentiators`: the comparison angle
-- `jobs-to-be-done`, `objections`: the problem/solution angle, in the customer's words
+- `unique-attributes`: the comparison angle
+- `icp` (job to be done, objections): the problem/solution angle, in the customer's words
 - `point-of-view`, `founder-story`: the founder POV angle
-- `positioning`, `benefits`: the claim and supporting copy throughout
+- `positioning`, `value-proposition`: the claim and supporting copy throughout
 - `offers`: what the ad drives to, when a free tier or trial is the destination
-- `buying-committee`, `account`: who the targeting should reach
+- `icp` (the account), `buying-committee`: who the targeting should reach
 
-And the full [visual identity](../../context/brand-visual-identity.md) for the generation prompt.
+And the full [visual identity](../../context/brand-visual-identity.md) for the generation prompt,
+plus [brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
 An angle whose components have no canon entry is dropped from the set, and the drop is
 stated. Never invent proof, stats, or customer stories.

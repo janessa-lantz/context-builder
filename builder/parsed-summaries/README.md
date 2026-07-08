@@ -41,7 +41,7 @@ parsed: 2026-06-04
 components_version: 1
 positioning: Positions as the simplest way for ops teams to close the books
 category-name: Calls the space "close management"
-capabilities: Three named modules (import, review, sign-off)
+unique-attributes: Three named modules (import, review, sign-off)
 point-of-view: null
 pricing-model: null
 ---
@@ -49,9 +49,9 @@ pricing-model: null
 ## positioning
 [the full positioning language found on the page]
 
-## capabilities
-[the full capability content found on the page]
+## unique-attributes
+[the full content found on the page]
 
 ## Confidence notes
-- differentiators: unclear whether "unlike legacy tools" is a real competitive frame or generic copy
+- unique-attributes: unclear whether "unlike legacy tools" is a real competitive frame or generic copy
 ```

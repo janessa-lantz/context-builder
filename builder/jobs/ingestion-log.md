@@ -25,7 +25,7 @@ Your own pages and posts are parsed and indexed.
 - `created`: date the input arrived, `YYYY-MM-DD`
 - `type`: `text`, `url`, or `pdf`
 - `source`: the input (a URL, or a [raw-asset](../raw-assets/) path for captured text and PDFs)
-- `scan_id`: the scan that produced this input, if any; blank for direct inputs
+- `scan_id`: the scan that produced this input, if any, as `scan-{name}-{MMDD}` (for example `scan-keypages-0604`); blank for direct inputs
 - `route`: `parser`, or `parser + index` for marketing surfaces
 - `status`: `pending`, `done`, or `skipped`
 - `result`: what happened

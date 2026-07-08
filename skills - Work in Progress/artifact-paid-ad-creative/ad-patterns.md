@@ -11,9 +11,9 @@ Match angle to funnel stage, and build each from the components listed.
 |---|---|---|---|
 | Social proof | "Join [number] [target role]s" | Mid; aware but hesitant | `key-metrics`, `customer-proof` |
 | Customer story | "How [customer] achieved [outcome]" | Mid to bottom; evaluating | `customer-proof` |
-| Comparison | direct contrast with the alternative | Bottom; competitive takeaway | `differentiators` |
+| Comparison | direct contrast with the alternative | Bottom; competitive takeaway | `unique-attributes` |
 | Stat shock | big number plus implication | Top; awareness | `key-metrics` or cited research |
-| Problem / solution | the pain in the customer's words, then the fix | Any; the workhorse | `jobs-to-be-done`, `benefits` |
+| Problem / solution | the pain in the customer's words, then the fix | Any; the workhorse | `icp`, `value-proposition` |
 | Founder POV | "I [experience]. Here's what I learned." | Top; brand | `founder-story`, `point-of-view` |
 
 ## Copy limits

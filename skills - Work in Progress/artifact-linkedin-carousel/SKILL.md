@@ -21,11 +21,12 @@ From the [canon](../../context/messaging-canon.md), by component ID:
 
 - `themes`, `topics`: the carousel must sit under an existing theme; if the requested topic matches none, say so before writing
 - `point-of-view`: the thesis a thought-leadership carousel argues
-- `lexicon`: coined terms to use correctly and banned terms to avoid
 - `customer-proof`, `key-metrics`: evidence slides, where the argument needs them
-- `jobs-to-be-done`, `objections`: the customer's framing of the problem, in their words
+- `icp` (job to be done, objections): the customer's framing of the problem, in their words
 
-And the full [visual identity](../../context/brand-visual-identity.md) for the render.
+And the full [visual identity](../../context/brand-visual-identity.md) for the render, plus
+[brand-writing-identity](../../context/brand-writing-identity.md): coined terms to use
+correctly, banned terms to avoid, and the voice rules.
 
 ## Asks the human
 
@@ -49,7 +50,7 @@ One at a time, and only what context cannot hold:
 
 - Slide 1 carries the thesis; no warm-up slides
 - One idea per slide; headline 10 words or fewer, body 35 words or fewer
-- No banned terms from `lexicon`; no em/en dashes survive the content QA
+- No banned terms from the brand writing identity; no em/en dashes survive the content QA
 - At least 3 slides are visual-led
 - Slide structures vary; not every slide is headline-plus-body
 - The post's first line matches slide 1 (the hook match rule)

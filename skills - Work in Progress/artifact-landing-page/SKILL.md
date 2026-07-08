@@ -13,15 +13,16 @@ single-file HTML with embedded CSS. A human reviews it before it ships.
 
 From the [canon](../../context/messaging-canon.md), by component ID:
 
-- `positioning`, `benefits`: the hero and value sections
-- `jobs-to-be-done`: the problem section, in the customer's words
-- `capabilities`, `how-it-works`: the solution bridge
+- `positioning`, `value-proposition`: the hero and value sections
+- `icp` (the champion's job to be done): the problem section, in the customer's words
+- `unique-attributes`, `how-it-works`: the solution bridge
 - `customer-proof`, `key-metrics`: the social proof section
-- `objections`: the objection-handler / FAQ section; answer the real objections the canon records, directly, not in marketing-speak
+- the objections in `icp` and `buying-committee`: the objection-handler / FAQ section; answer the real objections the canon records, directly, not in marketing-speak
 - `offers`: the conversion offer, when a trial or free tier is the destination
 - `buying-committee`: who the page is qualifying for
 
-And the full [visual identity](../../context/brand-visual-identity.md) for both outputs.
+And the full [visual identity](../../context/brand-visual-identity.md) for both outputs, plus
+[brand-writing-identity](../../context/brand-writing-identity.md) for voice, guardrails, and lexicon.
 
 If a section's component has no canon entry, mark the section as a gap. Never invent proof,
 objections, or claims.
@@ -49,7 +50,7 @@ One at a time, and only what context cannot hold:
 
 - Hero answers "am I in the right place" in 3 seconds; clear before clever
 - One primary CTA above the fold; at most one secondary
-- The FAQ answers canon `objections` directly
+- The FAQ answers the objections the canon records directly
 - Proof is specific: named customers or quantified outcomes, no "trusted by leading companies"
 - Form asks only the agreed fields
 - Mobile: H1 readable at 375px, CTA tappable at 44x44px minimum and above the fold, fields stacked
